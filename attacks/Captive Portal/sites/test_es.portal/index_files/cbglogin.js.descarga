@@ -1,0 +1,251 @@
+﻿$(function () {
+    if (window.addEventListener) {
+        try {
+            window.addEventListener('load', settime, false);
+        } catch (e) { }
+    } else if (window.attachEvent) {
+        try {
+            window.attachEvent('onload', settime);
+        } catch (e) { }
+    } else {
+        try {
+            var fn = window.onload;
+            window.onload = function () {
+                fn && fn();
+                settime();
+            }
+        } catch (e) { }
+    }
+
+    $("#userName").blur(function () {
+        IsEmptyUserName();
+    });
+    $("#pwd").blur(function () {
+        IsEmptyPwd();
+    });
+
+    $("#btnLogin").unbind("click").click(function () {
+        if (IsEmptyUserName() || IsEmptyPwd()) {
+            return;
+        }
+        var userName = $("#userName").val();
+        var pwd = $("#pwd").val();
+        var postUrl = $("#HidPostLoginUrl").val();
+        var params = {
+            "userName": userName,
+            "pwd": pwd,
+            "languages": $("#gLanguageCurrent").val(),
+            "fromsite": location.host,
+            "authMethod": "password"
+        }
+        try {
+            $.ajax({
+                url: postUrl,
+                data: params,
+                type: "POST",
+                dataType: "jsonp",
+                data: params,
+                cache: false,
+                async: false,
+                jsonp: "jsonpCallback"
+            });
+        } catch (e) {
+            return false;
+        }
+    });
+});
+
+//登录返回的数据
+function jsonpCallback(result) {
+    if (result.IsSuccuss == "true") {
+        var redirect = GetQueryString("redirect");
+        if (!IsEmpty(redirect)) {
+            window.location = decodeURI(redirect);
+        }
+        else {
+            // window.location = "/";
+            var language = getLanguages();
+            var returnUrl = "/" + language;
+            window.location = returnUrl;//window.location.host; 
+        }
+    }
+    else if (result.errorCode == "Login-10090006") {
+        var errMsg = result.errorMessage;
+        var tempNum = errMsg.match(/[\d]+/);
+        var num = "&nbsp<i id='errId'style='font-style:inherit'>" + tempNum + "</i>&nbsp";
+        errMsg = errMsg.replace(/[\d]+/, num);
+        $("#pwdErrMsg").html(errMsg);
+        countdown = tempNum;
+        settime();
+    }
+    else {
+        $("#pwdErrMsg").html(result.errorMessage)
+    }
+}
+
+//倒计时默认时间
+var countdown = 300;
+var timer = null;
+//倒计时
+function settime() {
+
+    if (countdown == 0) {
+        $("#userNameErrMsg").html("");
+        clearTimeout(timer);
+        //$("#btnLogin").setAttribute("disabled", false); 
+        //countdown = 300;
+    } else {
+        //$("#btnLogin").setAttribute("disabled",true);
+        countdown--;
+        $("#errId").html(countdown);
+        if (timer == null) {
+            timer = setInterval(function () {
+                settime()
+            }, 1000);
+        }
+    }
+}
+
+function getLanguages() {
+    var language = $("#gLanguageCurrent").val();
+    if (language == null) {
+        language = "en";
+    }
+    if (language == "ru-ru") {
+        language = "ru";
+    }
+    if (language == "zh") {
+        language = "cn";
+    }
+    return language.toLowerCase();
+}
+
+
+function getUrl() {
+    var url;
+    var ret = /\?/;
+    var path = window.location.href;
+    if (ret.exec(path) == "?") {
+        url = path + "&d=ws";
+    } else {
+        url = "?d=ws";
+    }
+    //&CertificateNum=" + encodeURIComponent($("#CertificateNum").val());
+    return url.replace("(", "u0028").replace(")", "u0029");;
+}
+
+$(".linkedinLogin").click(function () {
+    linkedinLogin();
+});
+
+
+document.onkeydown = function (e) {
+    var ev = document.all ? window.event : e;
+    if (ev.keyCode == 13) {
+        $("#btnLogin").trigger("click");
+        return false;
+    }
+}
+
+//登录提示信息隐藏
+$("#pwd").keydown(function (event) {
+    switch (event.keyCode) {
+        default:
+            {
+                $("#pwdErrMsg").html('');
+                break;
+            }
+    }
+});
+
+//判断用户名是否为空
+function IsEmptyUserName() {
+    if (IsEmpty($("#userName").val())) {
+        $("#userNameErrMsg").html($("#userNameTip").val());
+        return true;
+    }
+    else {
+        $("#userNameErrMsg").empty();
+        return false;
+    }
+}
+//判断密码是否为空
+function IsEmptyPwd() {
+    if (IsEmpty($("#pwd").val())) {
+        $("#pwdErrMsg").html($("#pwdTip").val());
+        return true;
+    }
+    else {
+        $("#pwdErrMsg").empty();
+        return false;
+    }
+}
+
+//判断字符串是否为空
+function IsEmpty(input) {
+    var temp = $.trim(input);
+    if (temp == "" || temp == null || temp == undefined) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+//取URL上的参数
+function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var str = window.location.search.substr(1).match(reg);
+    if (str != null) {
+        return unescape(str[2]);
+    }
+    return null;
+}
+
+function popupPageFeatures() {
+    var popupWidth = 760;
+    var popupHeight = 600;
+
+    var left = parseInt((screen.availWidth - popupWidth) / 2);
+    var top = parseInt((screen.availHeight - popupHeight) / 2);
+    return "left=" + left + "px,top=" + top + "px,width=" + popupWidth + "px,height=" + popupHeight + "px";
+}
+
+function tencentLogin(redirect) {
+    if (redirect) {
+        location.href = 'https://web.archive.org/web/20160826003116/https://uniportal.huawei.com/uniportal/oauth2/tencent?client=mobile';
+    } else {
+        window.open('https://web.archive.org/web/20160826003116/https://uniportal.huawei.com/uniportal/oauth2/tencent', 'QQ', popupPageFeatures());
+    }
+}
+
+function linkedinLogin(redirect) {
+    if (redirect) {
+        //location.href = "https://web.archive.org/web/20160826003116/https://uniportal-beta.huawei.com/uniportal/oauth2/linkedin?client=mobile";
+        location.href = "https://web.archive.org/web/20160826003116/https://uniportal.huawei.com/uniportal/oauth2/linkedin?client=mobile";
+    } else {
+        //window.open('https://web.archive.org/web/20160826003116/https://uniportal-beta.huawei.com/uniportal/oauth2/linkedin', 'Linkedin', popupPageFeatures());
+        window.open('https://web.archive.org/web/20160826003116/https://uniportal.huawei.com/uniportal/oauth2/linkedin', 'Linkedin', popupPageFeatures());
+    }
+}
+/*
+     FILE ARCHIVED ON 00:31:16 Aug 26, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:37:09 Feb 17, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 114.043 (3)
+  esindex: 0.008
+  captures_list: 137.406
+  CDXLines.iter: 13.802 (3)
+  PetaboxLoader3.datanode: 128.92 (4)
+  exclusion.robots: 0.269
+  exclusion.robots.policy: 0.248
+  RedisCDXSource: 4.339
+  PetaboxLoader3.resolve: 450.874
+  load_resource: 468.231
+*/

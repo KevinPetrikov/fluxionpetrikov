@@ -1,0 +1,97 @@
+﻿function Usearch(obj) {
+    var btn = $(obj);
+    var keyword;
+    if (btn.attr("id") == "btnSearch") {
+        keyword = encodeURIComponent(btn.prev().val());
+    } else {
+        keyword = encodeURIComponent(btn.next().val());
+    }
+    var language = $("#currentLanguage").val();
+    if (language == "zh") language = "cn";
+    
+    if ($("#psirtId").val() != undefined && $("#psirtId").val() == "psirtId") {
+        if (language == "cn") {
+            //window.open("https://web.archive.org/web/20160826093955/http://www.huawei.com/cn/search/#permissionSwitch=false&resType=psirt&searchType=ST-BULLETINS&searchString=" + keyword);
+            var url = "https://web.archive.org/web/20160826093955/http://www.huawei.com/cn/search/#permissionSwitch=false&resType=psirt&searchType=ST-BULLETINS&searchString=" + keyword;
+            $("#linkUrl").attr("href", url);
+            $("#forward").click();
+        } else if (language == "en") {
+            //window.open("https://web.archive.org/web/20160826093955/http://www.huawei.com/en/search/#permissionSwitch=false&resType=psirt&searchType=ST-BULLETINS&searchString=" + keyword);
+            var url = "https://web.archive.org/web/20160826093955/http://www.huawei.com/en/search/#permissionSwitch=false&resType=psirt&searchType=ST-BULLETINS&searchString=" + keyword;
+            $("#linkUrl").attr("href", url);
+            $("#forward").click();
+        } else {
+            //window.open($("#SearchUrl").val() + "?keywords=" + keyword + "&contentTypes=" + "{9704BDD0-A1CF-4706-BDFC-210721E028F2}");
+            var url = $("#SearchUrl").val() + "?keywords=" + keyword + "&contentTypes=" + "{9704BDD0-A1CF-4706-BDFC-210721E028F2}";
+            $("#linkUrl").attr("href", url);
+            $("#forward").click();
+        }
+        //Huawei.Personalization.CalculateTagByKeyWords(keyword);
+    }
+    else {
+        redirectUrl(keyword, language);
+    }
+}
+function Usearchs(obj) {
+    var btn = $(obj);
+    var keyword = encodeURIComponent(btn.val());
+    var language = $("#currentLanguage").val();
+    if (language == "zh") language = "cn";
+    redirectUrl(keyword, language);
+}
+function UsearchMobile() {
+    var warn = "Please type a keyword for your search";
+    var KeyText = $('#search-box-h-mobile').attr("value");
+    var language = $("#currentLanguage").val();
+    if (language == "zh") language = "cn";
+    if (KeyText == "") {
+        alert(warn);
+        return false;
+    } else {
+        if (KeyText.indexOf("@") > 0) {
+            KeyText = KeyText.replace("@", "%40");
+        }
+        redirectUrl(encodeURIComponent(encodeURIComponent(KeyText)), language);
+    }
+}
+
+function redirectUrl(keyword, language)
+{
+    if (language == "cn") {
+        //window.open("https://web.archive.org/web/20160826093955/http://www.huawei.com/cn/search/?lang=zh#currentPage=1&resLang=zh&searchType=www_all&searchString=" + keyword);
+        var url = "https://web.archive.org/web/20160826093955/http://www.huawei.com/cn/search/?lang=zh#currentPage=1&resLang=zh&searchType=www_all&searchString=" + keyword;
+        $("#linkUrl").attr("href", url);
+        $("#forward").click();
+    } else if (language == "en") {
+        //window.open("https://web.archive.org/web/20160826093955/http://www.huawei.com/en/search/?lang=en#currentPage=1&resLang=en&searchType=www_all&searchString=" + keyword);
+        var url = "https://web.archive.org/web/20160826093955/http://www.huawei.com/en/search/?lang=en#currentPage=1&resLang=en&searchType=www_all&searchString=" + keyword;
+        $("#linkUrl").attr("href", url);
+        $("#forward").click();
+    } else {
+        var url = $("#SearchUrl").val() + "?keywords=" + keyword;
+        $("#linkUrl").attr("href", url);
+        $("#forward").click();
+    }
+    //Huawei.Personalization.CalculateTagByKeyWords(keyword);
+}
+/*
+     FILE ARCHIVED ON 09:39:55 Aug 26, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:37:00 Feb 17, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 151.634 (3)
+  esindex: 0.006
+  captures_list: 172.862
+  CDXLines.iter: 11.307 (3)
+  PetaboxLoader3.datanode: 181.744 (5)
+  exclusion.robots: 0.261
+  exclusion.robots.policy: 0.246
+  RedisCDXSource: 5.299
+  PetaboxLoader3.resolve: 81.936 (4)
+  load_resource: 147.384
+*/
