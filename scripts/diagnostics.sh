@@ -7,15 +7,17 @@ declare -r HEADER_SIZE="####"
 
 if [ -d "lib" ];then
 	source lib/InterfaceUtils.sh
+    source lib/ChipsetUtils.sh
 elif [ -d "../lib" ];then
 	source ../lib/InterfaceUtils.sh
+    source ../lib/ChipsetUtils.sh
 else
   echo -e "\033[31mError lib folder not found\033[0m"
   exit 1
 fi
 
 if [ ! "$1" ]; then
-  echo "Usage ./scripts/diagnostics [wireless_interface]"
+  echo -e "\033[32mUsage ./scripts/diagnostics [wireless_interface]\033[0m"
   exit 1
 fi
 
@@ -25,6 +27,7 @@ if [ -f "fluxion.sh" ];then
 else
 	declare -r FLUXIONInfo=($(grep -oE "FLUXION(Version|Revision)=[0-9]+" ../fluxion.sh))
 fi
+
 echo "FLUXION V${FLUXIONInfo[0]/*=/}.${FLUXIONInfo[1]/*=/}"
 echo -ne "\n\n"
 
@@ -87,7 +90,7 @@ pyrit | head -n 3
 echo "**Scapy Version:** ${scapyver}"
 
 if [[ "$scapyver" != 2.3.? ]]; then
-    echo -e "\033[31mWarning: Pyrit has been reported to be incompatible with scapy version 2.4.0. Consult the wiki for further information. This should not affect you, if you don't choose to use pyrit in the script.\033[0m"
+    echo -e "\033[31mWarning: Pyrit has been reported to be incompatible with scapy version 2.4.0 and above. Consult the wiki for further information. This should not affect you, if you don't choose to use pyrit in the script.\033[0m"
 fi
 
 echo -ne "\n"
@@ -99,3 +102,10 @@ if [ -r "/proc/version" ]; then
 else
 	echo "**Chipset:** $(uname -r)"
 fi
+
+echo -ne "\n"
+echo "$HEADER_SIZE Chipset"
+chipset=$(airmon-ng | grep $1 | awk '{print $3}')
+
+echo "Chipset: $chipset"
+check_chipset $chipset
