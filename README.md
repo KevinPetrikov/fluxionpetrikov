@@ -1,32 +1,42 @@
+![Fuxion logo](https://github.com/FluxionNetwork/fluxion/raw/master/logos/logo.jpg)
 
 # Fluxion is the future of MITM WPA attacks
-Fluxion is a security auditing and social-engineering research tool. It is a remake of linset by vk496 with (hopefully) less bugs and more functionality. The script attempts to retrieve the WPA/WPA2 key from a target access point by means of a social engineering (phising) attack. It's compatible with the latest release of Kali (rolling). Fluxion's attacks' setup is mostly manual, but experimental auto-mode handles some of the attacks' setup parameters. Read the [FAQ](https://github.com/FluxionNetwork/fluxion/wiki/FAQ) before requesting issues.
+Fluxion is a security auditing and social-engineering research tool. It is a remake of linset by vk496 with (hopefully) less bugs and more functionality. The script attempts to retrieve the WPA/WPA2 key from a target access point by means of a social engineering (phishing) attack. It's compatible with the latest release of Kali (rolling). Fluxion's attacks' setup is mostly manual, but experimental auto-mode handles some of the attacks' setup parameters. Read the [FAQ](https://github.com/FluxionNetwork/fluxion/wiki/FAQ) before requesting issues.
 
-## Router login page
-Share your own router page with a simple script
-```
-cd scripts
-sudo sh router.sh
-```
-
+If you need quick help, fluxion is also avaible on gitter. You can talk with us on [Gitter](https://gitter.im/FluxionNetwork/Lobby) or on [Discord](https://discord.gg/G43gptk).
 ## Installation
+Read [here](https://github.com/FluxionNetwork/fluxion/wiki/Generate-ssh-keys) before you do the following steps.
+<br>
+**Download the latest revision**
 ```
-git clone --recursive https://github.com/FluxionNetwork/fluxion.git # Download the latest revision
-cd fluxion # Switch to tool's directory
-./fluxion.sh # Run fluxion (missing dependencies will be auto-installed)
+git clone --recursive git@github.com:FluxionNetwork/fluxion.git 
+```
+**Switch to tool's directory**
+```
+cd fluxion 
+```
+**Run fluxion (missing dependencies will be auto-installed)**
+```
+./fluxion.sh
 ```
 
-## :white_check_mark: Included dependency versions
-1. Aircrack : 1:1.2-0~rc4-0parrot0
-2. Lighttpd : 1.439-1
-3. Hostapd  : 1:2.3-2.3 _If you want to compare this type `dpkg -l | grep "name"`_
+**Fluxion is also available in arch** 
+```
+cd bin/arch
+makepkg
+```
+
+or using the blackarch repo
+```
+pacman -S fluxion
+```
 
 ## :scroll: Changelog
 Fluxion gets weekly updates with new features, improvements, and bugfixes.
 Be sure to check out the [changelog here](https://github.com/FluxionNetwork/fluxion/commits/master).
 
 ## :octocat: How to contribute
-All contributions are welcome! Code, documentation, graphics, or even design suggestions are welcome; use GitHub to its fullest. Submit pull requests, contribute tutorials or other wiki content -- whatever you have to offer, it'll be appreciated!
+All contributions are welcome! Code, documentation, graphics, or even design suggestions are welcome; use GitHub to its fullest. Submit pull requests, contribute tutorials or other wiki content -- whatever you have to offer, it'll be appreciated but please follow the [style guide](https://github.com/FluxionNetwork/fluxion/wiki/Code-style-guide).
 
 ## :book: How it works
 * Scan for a target wireless network.
@@ -60,7 +70,6 @@ For development I use vim and tmux. Here are my [dotfiles](https://github.com/de
 7. Ons Ali @wallpaper
 8. PappleTec @sites
 9. MPX4132 - Fluxion V3
-10. Kevin Petrikov - Sites
 
 ## Disclaimer
 * Authors do not own the logos under the `/attacks/Captive Portal/sites/` directory. Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research.
@@ -72,4 +81,7 @@ For development I use vim and tmux. Here are my [dotfiles](https://github.com/de
 
 * Fluxion **DOES NOT WORK** on Linux Subsystem For Windows 10, because the subsystem doesn't allow access to network interfaces. Any Issue regarding the same would be **Closed Immediately**
 
-
+## Links
+**Fluxion website:** https://fluxionnetwork.github.io/fluxion/ <br>
+**Discord:** https://discordapp.com/invite/G43gptk <br>
+**Gitter:** https://gitter.im/FluxionNetwork/Lobby <br>
