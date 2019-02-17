@@ -3,20 +3,17 @@
 /* ------------------------------------------------------------------------ */
 
 #tbs-header {
-    height: 84px;
+    height: 70px;
     margin-bottom: 12px;
-}
-
-#logo{
-  margin-top: 20px;
+	margin-top: 50px;
 }
 
 #tbs-header-content {
-    background-color: #00a9e0;
+    background-color: #000066;
     color: #fff;
     height: inherit;
     left:0;
-    line-height: 84px;
+    line-height: 70px;
     overflow: hidden;
     padding: 0 24px;
     position:fixed;
@@ -110,11 +107,6 @@ body.scrolled #tbs-header-content {
     padding: 12px;
 }
 
-#happy2{
-  height: 90px;
-  margin-bottom: -40px;
-}
-
 
 /* ------------------------------------------------------------------------ */
 /* Footer																	*/
@@ -135,12 +127,6 @@ body.scrolled #tbs-header-content {
 
 #tbs-footer .tbs-text-11 {
     color: #8c8c8c;
-}
-
-#key1{
-  height:50px;
-  font-style: 20px;
-  padding: 10px;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -267,6 +253,7 @@ fieldset[disabled] .btn-link:focus {
 }
 
 .tbs-text-zero {
+	margin-top: 10px;
     font-size: 0;
 }
 

