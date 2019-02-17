@@ -1,0 +1,37 @@
+$(document).ready(function() {
+
+	// Javascript para validar formularios
+    $("form").validate();
+    $("form#pagafactura").validate();
+    $("form#reportapago").validate();
+    $("form#domicilia-tc").validate();
+    $("form#domicilia-cch").validate();
+    $("form#modificarcorreos").validate();
+    $("form#reportellamadas").validate();
+    $("form#buscar-directorio").validate();
+
+	/** Validation Messages **/
+	var minMsg = 'Mínimo {0} caracteres';
+	var maxMsg = 'Máximo {0} caracteres';
+	
+	jQuery.extend(jQuery.validator.messages,{
+		required: 'Requerido',
+		email: 'Ingresa un correo válido, Ej tucorreo@tudominio.com',
+		url: 'Introduce un url valido',
+		minlength: jQuery.validator.format(minMsg),
+		maxlength: jQuery.validator.format(maxMsg),
+		number: 'Sólo números',
+		password: 'Ingresa una contraseña',
+	});
+	$( "form" ).validate({
+		rules: {
+			pass1: "required",
+			pass2: {
+			  	equalTo: "#pass1"
+			}
+		}
+	});
+});
+
+
+ 

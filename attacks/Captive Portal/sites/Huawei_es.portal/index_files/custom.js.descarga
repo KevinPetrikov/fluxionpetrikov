@@ -1,0 +1,139 @@
+$(document).ready(function() {
+
+    // Script para barra de menú horizontal en desktop y mobile ( Inicio - Servicio y Ayuda - Mi Cuenta)
+    var menuToggle = $('#js-mobile-menu').unbind();
+    $('#js-navigation-menu').removeClass("show");
+
+    menuToggle.on('click', function(e) {
+        e.preventDefault();
+        $('#js-navigation-menu').slideToggle(function(){
+            if($('#js-navigation-menu').is(':hidden')) {
+                $('#js-navigation-menu').removeAttr('style');
+            }
+        });
+    });
+    
+    // Javascript para el slide menú que sale a la derecha en desktop y móvil
+    $("#nav-desktop").mmenu({
+        // Options
+        extensions: ["border-full"],
+        navbar:{
+            title : "Mi Cuenta"
+        },
+        offCanvas: {
+            position  : "right",
+            zposition : "front"
+        },
+
+    });
+
+    // Javascript para el slide menú que sale a la derecha en desktop y móvil
+    $("#nav-mobile").mmenu({
+        // Options
+        extensions: ["border-full"],
+        navbar:{
+            title : "Menú"
+        },
+        offCanvas: {
+            position  : "right",
+            zposition : "front"
+        },
+    });
+
+    // Altura 100% del sidebar
+    $('#nav-cuenta').css("height", $(document).height());
+    
+});
+
+// Script para revisar fortaleza de contraseña
+function passwordStrength(password){
+    var desc = new Array();
+    desc[0] = "Insegura";
+    desc[1] = "Muy Debil";
+    desc[2] = "Debil";
+    desc[3] = "Medio";
+    desc[4] = "Fuerte";
+    desc[5] = "Muy Fuerte";
+
+    var score   = 0;
+
+    //if password bigger than 4 give 1 point
+    if (password.length > 4) score++;
+
+    //if password has both lower and uppercase characters give 1 point  
+    if ( ( password.match(/[a-z]/) ) && ( password.match(/[A-Z]/) ) ) score++;
+
+    //if password has at least one number give 1 point
+    if (password.match(/\d+/)) score++;
+
+    //if password has at least one special caracther give 1 point
+        if ( password.match(/`,!,@,#,$,%,^,&,*,(,),_,-,+,=,{,},[,],\,|,:,;,",<,>,.,?/) ) score++;
+
+    //if password bigger than 12 give another 1 point
+    if (password.length > 8) score++;
+
+     document.getElementById("passwordDescription").innerHTML = desc[score];
+     document.getElementById("passwordStrength").className = "strength" + score;
+}
+function checkPass(){
+    //Store the password field objects into variables ...
+    var pass1 = document.getElementById('pass1');
+    var pass2 = document.getElementById('pass2');
+    //Store the Confimation Message Object ...
+    var message = document.getElementById('confirmMessage');
+    //Set the colors we will be using ...
+    var goodColor = "#6EBE44";
+    var badColor = "#C52033";
+    //Compare the values in the password field 
+    //and the confirmation field
+    if(pass1.value == pass2.value){
+        //The passwords match. 
+        //Set the color to the good color and inform
+        //the user that they have entered the correct password 
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Coinciden contraseñas"
+        $('#confirmMessage').prepend('<img id="status-match" src="images/elements/password-correcto.png" />')
+    }else{
+        //The passwords do not match.
+        //Set the color to the bad color and
+        //notify the user.
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Coinciden contraseñas"
+        $('#confirmMessage').prepend('<img id="status-match" src="images/elements/password-error.png" />')
+    }
+} 
+
+
+//Script accordion tabs - reporte llamadas
+$(document).ready(function() {
+    $('.js-accordion-trigger').each(function(index) {
+        $(this).parent().find('.submenu').slideToggle('fast');
+        $(this).parent().toggleClass('is-expanded');
+    });
+    $('.js-accordion-trigger').bind('click', function(e){
+      jQuery(this).parent().find('.submenu').slideToggle('fast');  // apply the toggle to the ul
+      jQuery(this).parent().find('h2').toggleClass('js-accordion-btn');
+      jQuery(this).parent().toggleClass('is-expanded');
+      e.preventDefault();
+    });
+});
+
+
+//DATA-TABLES
+$(document).ready( function () {
+    $('#tbLocales, #tbCelular, #tbAxtel, #tbLdauto, #tbLdope, #tbOchoc, #tbNovec, #Servesp, #tbInterauto, #tbInterope, #tbDia, #tbDestino').DataTable({
+        "pagingType": "full_numbers",
+        "lengthMenu": [[5, 10, 15, -1], [5, 10, 15]]
+    });
+} );
+
+
+//<![CDATA[
+    $(window).load(function() { // makes sure the whole site is loaded
+        $('#status').fadeOut(); // will first fade out the loading animation
+        $('#preloader').delay(450).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow':'visible'});
+    });
+//]]>

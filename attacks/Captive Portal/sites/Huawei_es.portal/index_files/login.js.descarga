@@ -1,0 +1,172 @@
+$(document).ready(function(){
+		
+	validationRules = {
+				rules:[
+					  {
+							selector:'input[id*="itUsuario"]'  
+							, required : true
+							, validateOnChange: true
+							, requiredmessage:requiredMessage	
+					  }
+				]
+				,formSelector : 'form[id*="fLoginUser"]'
+				,buttonSelector : 'input[id*="cbUser"]'
+				,disableButton:false
+				,prevalidate:true
+			};
+			validationRulesPass = {
+				rules:[
+					  {
+							selector:'input[id*="isPassword"]'  
+							, required : true
+							, validateOnChange: true
+							, requiredmessage:requiredMessage								
+					  }
+				]
+				,formSelector : 'form[id*="fLoginPassword"]'
+				,buttonSelector : 'input[id*="cbEntrar"]'
+				,disableButton:false
+				,prevalidate:true
+			};
+			$(function(){  
+					registerValidations(validationRules);					
+			});
+	//$(".alert-box").show();
+	
+
+	$('.close').click(function(event) {
+		$(".alert-box").hide();
+		event.preventDefault();
+	});
+
+	//Validamos con un archivo captcha.php el slider de pre-registo-paso1.html
+	/*$('.QapTcha').QapTcha({
+		autoSubmit : false,
+		autoRevert : true,
+		PHPfile : 'http://'+document.domain+'/captcha.php'
+	});*/
+
+	$('#login-init').validate({
+		rules: {
+			'user-login': { required: true,
+				email: true,
+				minlength: 4,
+				maxlength: 50
+			}
+		},
+		ignore: "",
+		messages: {
+			'user-login':{ required: 'Ingresa correo electrónico', email: 'Ejemplo: hola@axtel.mx' }
+		},
+		errorClass:'error',
+		errorElement: 'div',
+		errorPlacement: function(error, element) {
+			if(element.parent().parent().hasClass('collapse')){
+				element.parent().parent().parent().next().append(error);
+				return true;
+			}else{
+				
+				element.parent().next().append(error);
+				return true;
+			}
+		},
+		submitHandler: function(){
+			alert("Formulario correcto. Revisar estas validaciones en el archivo login.js");
+		}
+	});
+
+	$('#login-contra').validate({
+		rules: {
+			'user-pass': { required: true,
+				minlength: 4,
+				maxlength: 50
+			}
+		},
+		ignore: "",
+		messages: {
+			'user-pass':{ required: 'Ingresa tu contraseña' }
+		},
+		errorClass:'error',
+		errorElement: 'div',
+		errorPlacement: function(error, element) {
+			if(element.parent().parent().hasClass('collapse')){
+				element.parent().parent().parent().next().append(error);
+				return true;
+			}else{
+				
+				element.parent().next().append(error);
+				return true;
+			}
+		},
+		submitHandler: function(){
+			alert("Formulario correcto. Revisar estas validaciones en el archivo login.js");
+		}
+	});
+
+});
+
+function hacerLogin(usuario, contrasenia) {
+    submitForm(usuario, contrasenia);
+}
+
+function submitForm(usuario, contrasenia) {
+    $("#miaxtel_usuario").val(usuario);
+    $("#miaxtel_password").val(contrasenia);
+    $("#ctl0_dnnSIGNIN_txtAccount").val(usuario);
+    $("#ctl0_dnnSIGNIN_txtPassword").val(contrasenia);
+     $("#LoginPDN").submit();
+}
+
+function submitEmpresarial(){
+    document.body.style.cursor = 'wait';
+    if(navigator.userAgent.match(/MSIE ([0-9]+)\./)){
+        $("#FormEmpresarial").attr('target','_blank');
+        $("#LoginPDN").attr('target','');
+        
+        $("#FormEmpresarial").submit();
+        $("#LoginPDN").submit()
+    }
+    else{
+        setTimeout('$("#FormEmpresarial").submit()',3000);
+    }
+}
+
+if (typeof jsf != 'undefined') {
+    jsf.ajax.addOnEvent(recarga);
+}
+
+function recarga(data) {
+    if (data.status == "success" && data.source.id.indexOf("login") >  - 1) {
+         reset();
+    }
+}
+
+function reset(){
+    $(document).ready(function () {
+		$('.close').click(function (event) {
+			$(".alert-box").hide();
+			event.preventDefault();
+		});
+		/*$(".QapTcha").html("");
+		$('.QapTcha').QapTcha({
+			autoSubmit : false,
+			autoRevert : true,
+			disabledSubmit : validateSlider,
+			PHPfile : '/portal_privado/qaptcha'
+		});		*/
+		validate();
+        preparaEmpresarial();
+                
+    });
+}
+
+function preparaEmpresarial(){
+    campo = $("#formulario").val();
+    isAvisoEmpresarial = campo != 'undefined' && campo != '' && campo == 'aviso_empresarial';
+    if(isAvisoEmpresarial){    
+        $("#cbUser").hide();
+        $('#interaction').ready(function(){
+            $("#cbUser").show();
+        });
+    }
+}

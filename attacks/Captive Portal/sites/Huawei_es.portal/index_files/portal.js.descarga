@@ -1,0 +1,91 @@
+(function () {
+    var ga = document.createElement("script");
+    ga.type = "text/javascript";
+    ga.async = true;
+    ga.src = ("https:" == document.location.protocol ? "https://" : "http://") + "stats.g.doubleclick.net/dc.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+
+$(document).ready(
+	function(){
+		var fecha = new Date(); 
+		var anio = fecha.getYear(); anio = anio + 1900;
+		$('#idCopyRight').html('Copyright &copy;' + anio);
+	}
+);
+
+if (typeof jsf != 'undefined') {
+    jsf.ajax.addOnEvent(recarga);
+    jsf.ajax.addOnError(handleError);
+}
+
+function handleError(data) {
+	//window.location = window.location.href;
+    //if (typeof data.errorName != 'undefined' && data.errorName.indexOf('ViewExpiredException') > 0) {
+    //    window.location = window.location.href;
+    //}
+	 window.location = window.location.href;
+}
+
+function recarga(data) {
+	disableOnAjax(data);
+    if (data.status == "success") {
+        document.body.style.cursor = 'default';
+        loadJsStack(data);
+    }
+
+    if (data.status == "begin") {
+        document.body.style.cursor = 'wait';
+    }
+	
+	$('a.close').click(function() {
+        $('div.alert-box').hide();
+    });
+}
+
+function msgAnalytics(categoriaGA, accionGA, mensajeGA) {
+    try {
+        console.log("categoriaGA: " + categoriaGA + ";accionGA:" + accionGA + "; mensajeGA: " + mensajeGA);
+    }
+    catch (e) {
+        //es un navegador no compatible con console.log
+    }
+}
+
+function loadJsStack(data) {
+    if (data.status == "success" && !(data.source.id.indexOf("ajaxBtn") >  - 1)) {
+        $('input[id*="ajaxBtn"]').click();
+    }
+}
+
+function disableOnAjax(data){
+	var source = data.source;	
+	if(typeof source != 'undefined' && source != null){
+		var className = source.className;
+		var esDeshabilitable = className != null && className != '' && className.indexOf('disableOnAjax') > -1;
+		var id = source.id;
+		var escapedId = id.split(':').join('\\:');
+		//Se deja la funcionalidad de manera general
+		if(true || esDeshabilitable){
+			if(data.status == "begin"){
+					$("#" + escapedId).attr('function',$("#" + escapedId).attr('onClick'));
+					$("#" + escapedId).attr('disabled','disabled');
+					$("#" + escapedId).attr('onClick','return false');
+			}
+			if(data.status == "success"){
+					$("#" + escapedId).removeAttr('disabled');
+					if($("#" + escapedId).attr('onClick') == 'return false'){
+						$("#" + escapedId).attr('onClick',$("#" + escapedId).attr('function'));
+					}
+			}
+		}
+	}
+}
+
+//Funcion para cerrar los mensajes de exito y error
+$(document).ready( function () {
+    $('a.close').click(function() {
+        $('div.alert-box').hide();
+    });
+});

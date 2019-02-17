@@ -1,0 +1,311 @@
+/**
+  * Validaciones en campos de formularios de COL
+  * Autor: Rosas, Luis
+  * Fecha: 05/Mar/2013
+  * Versi?n: 1.0.1
+  * (?) Copyleft
+  *
+  *
+  * Los campos a validar deben tener asociado un elemento <h:message /> con id = idCampo + 'Error'
+  * ? especificar el id del elemento que muestra el mensaje de error.
+  * Tambi?n es posible indicar el mensaje a desplegar para 'Requerido' e 'Incorrecto', 
+  * si no se quieren los mensajes default.
+  */
+
+  var emailRegExp = new RegExp("^[a-zA-Z0-9]([a-zA-Z0-9-\\._]){0,31}?[a-zA-Z0-9\\._][@][a-zA-Z0-9]([a-zA-Z0-9-]{0,})([a-zA-Z0-9-])*[a-zA-Z0-9](\\.([\\w{1,}-])*[a-zA-Z0-9]){1,3}$");
+
+/*
+ * Variables de mensajes (se deben asignar los valores en la secci?n que corresponda)
+ * Ejemplo:
+ *    <h:outputScript>
+ *         required = "#{label['portalprivado.view.general.requerido']}";
+ *         incorrect = "#{label['portalprivado.view.general.incorrecto']}";
+ *    </h:outputScript>
+ * 
+ */
+var required = 'Campo requerido';
+var incorrect = 'Valor incorrecto';
+
+/*
+ * Validar campos de texto (Requerido)
+ * Usos: onblur="valInputText(this.id)"
+ *       onblur="valInputText(this.id, 'idMsjError')"
+ *       onblur="valInputText(this.id, false, 'Mensaje <requerido> personalizado')"
+ */
+function valInputText(id, idMsg, reqMessage){
+	var val = $(escapeId(id)).val();
+	if( val == ''){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', reqMessage?reqMessage:required);
+	}else{
+		return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+	}
+}
+
+/*
+ * Validar campos de texto con minimo 
+ * de longitud <maxlength>
+ * Usos: onblur="valInputText(this.id, 3)"
+ *       onblur="valInputText(this.id, 4, 'idMsjError')"
+ *       onblur="valInputText(this.id, 10, false, 'Mensaje <requerido> personalizado')"
+ *       onblur="valInputText(this.id, 3, false, false, 'Mensaje <incorrecto> personalizado')"
+ */
+function valInputTexMinimum(id, minlength, idMsg, reqMessage, wrongMessage){
+	var val = $(escapeId(id)).val();
+	if( val == ''){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', reqMessage?reqMessage:required);
+	}else if(val.length < minlength){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', wrongMessage?wrongMessage:incorrect);
+	}else{
+		return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+	}
+}
+
+/*
+ * Validar campos de texto segun Regex
+ * de longitud <maxlength>
+ * Usos: onblur="valInputText(this.id, '[a-zA-Z]')"
+ *       onblur="valInputText(this.id, '[0-9]', 'idMsjError')"
+ *       onblur="valInputText(this.id, '\\d', false, 'Mensaje <requerido> personalizado')"
+ *       onblur="valInputText(this.id, '^[0-9](A-Z)+$', false, false, 'Mensaje <incorrecto> personalizado')"
+ */
+function valInputRegex(id, regex, idMsg, reqMessage, wrongMessage){
+	var val = $(escapeId(id)).val();
+	var rx = new RegExp(regex);
+	if( val == ''){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', reqMessage?reqMessage:required);
+	}else if(!rx.test(val)){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', wrongMessage?wrongMessage:incorrect);
+	}else{
+		return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+	}
+}
+
+/*
+ * Validar selecci?n en combos (Requerido)
+ * Usos: onblur="valSelect(this.id)"
+ *       onblur="valSelect(this.id, 'idMsjError')"
+ *       onblur="valSelect(this.id, 'idMsjError', 'Mensaje <requerido> personalizado')"
+ */
+function valSelect(id, idMsg, reqMessage){
+	var val = $(escapeId(id)).val();
+	if( val == '' || val == '0' ){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', reqMessage?reqMessage:required);
+	}else{
+		return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+	}
+}
+
+/*
+ * Validar campos de email
+ * Usos: onblur="valInputMail(this.id)"
+ *       onblur="valInputMail(this.id, 'idMsjError')"
+ *       onblur="valInputMail(this.id, 'idMsjError', 'Mensaje <requerido> personalizado')"
+ *       onblur="valInputMail(this.id, 'idMsjError', false, 'Mensaje <incorrecto> personalizado')"
+ * Ejemplos de entradas:
+ *       Correctas{ pruebas@axtel.com.mx, c5@ax-tel.c.x, c5@ax-tel.com.x9, c_5-2.0@ax-tel.com.x9 }
+ *       Incorrectas{ 5pruebas@axtel.com.mx, .5@ax-tel.c.x, c5@axte.com.mx, c_5-@-xtel.com.x9, correo@axtel.com.9 }
+ */
+function valInputMail(id, idMsg, reqMessage, wrongMessage){
+	var val = $(escapeId(id)).val();
+	if( val == ''){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', reqMessage?reqMessage:required);
+	}else{
+		
+		if(!emailRegExp.test(val)){
+			return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', wrongMessage?wrongMessage:incorrect);
+		}else{
+			return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+		}
+	}
+}
+
+/*
+ * Validar campos num?ricos
+ * Usos: onblur="valInputNumber(this.id, 5)"
+ *       onblur="valInputNumber(this.id, 5, 'idMsjError')"
+ *       onblur="valInputNumber(this.id, 5, false, 'Mensaje <requerido> personalizado')"
+ *       onblur="valInputNumber(this.id, 5, 'idMsjError', false, 'Mensaje <incorrecto> personalizado')"
+ * Ejemplos de entradas (length=5):
+ *       Correctas{ 12345 }
+ *       Incorrectas{ 1, 12, 123, 1234, 123456, a, asd }
+ */
+function valInputNumber(id, length, idMsg, reqMessage, wrongMessage){
+	var val = $(escapeId(id)).val();
+	var rx = new RegExp('[0-9]{' + length + '}');
+	if( val == ''){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', reqMessage?reqMessage:required);
+	}else if(!rx.test(val)){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', wrongMessage?wrongMessage:incorrect);
+	}else{
+		return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+	}
+}
+
+/*
+ * Validar campos num?ricos opcionales (solo cuando tienen contenido)
+ * Usos: onblur="valInputNumberOptional(this.id, 5)"
+ *       onblur="valInputNumberOptional(this.id, 5, 'idMsjError')"
+ *       onblur="valInputNumberOptional(this.id, 5, false, 'Mensaje <requerido> personalizado')"
+ *       onblur="valInputNumberOptional(this.id, 5, false, false, 'Mensaje <incorrecto> personalizado')"
+ * Ejemplos de entradas (length=5):
+ *       Correctas{ 12345,  } //Vac?o es v?lido
+ *       Incorrectas{ 1, 12, 123, 1234, 123456, a, asd }
+ */
+function valInputNumberOptional(id, length, idMsg, reqMessage, wrongMessage){
+	var val = $(escapeId(id)).val();
+	var rx = new RegExp('[0-9]{' + length + '}');
+	if( val != ''){
+		if(rx.test(val)){
+			return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+		}else{
+			return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', wrongMessage?wrongMessage:incorrect);
+		}
+	}
+	return true;
+}
+
+/*
+ * Validar si un checkbox ha sido seleccionado
+ * Usos: onblur="valCheckBox(this.id)"
+ *       onblur="valCheckBox(this.id, 'idMsjError')"
+ *       onblur="valCheckBox(this.id, 'idMsjError', 'Mensaje <requerido> personalizado')"
+ */
+function valCheckBox(id, idMsg, reqMessage){
+	var val = $(escapeId(id)).is(':checked');
+	if(!val){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', reqMessage?reqMessage:required);
+	}else{
+		return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+	}
+}
+
+/*
+ * Validar si un text tiene longitud entre min y máx
+ * Usos: onblur="valRadio(this.id)"
+ *       onblur="valRadio(this.id, 'idMsjError')"
+ *       onblur="valRadio(this.id, 'idMsjError', 'Mensaje <requerido> personalizado')"
+ */
+function valLengthMinMax(id, idMsg, min, max, wrongMessage){
+	var len = $(escapeId(id)).val().length;
+	if(len<min || len>max){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', wrongMessage?wrongMessage:incorrect);
+	}else{
+		return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+	}
+}
+
+/* Validar confirmaciones */
+function valConfirmation(id,idConf,idMsgExtra,message){
+	var campo = $(escapeId(id)).val();
+	var confirm = $(escapeId(idConf)).val();
+	if(campo!=confirm){
+		if($(escapeId(idMsgExtra)).is(':hidden')){
+			showMessage(escapeId(idConf) + 'Error',message);
+		}
+		return false;
+	}else{
+		return hideMessage(escapeId(idConf) + 'Error');
+	}
+}
+
+
+/*
+ * Evitar copy/paste
+ * Ejemplo Uso: onfocus="noCopyPaste(this.id)" 
+ */
+function noCopyPaste(id){
+	$(escapeId(id)).bind("cut copy paste drag drop contextmenu",function(e) {e.preventDefault();});
+}
+
+/*
+ * Mostrar mensaje de error
+ */
+function showMessage(id, message){
+	try{
+		$(id).text(message).attr('class', 'error').show().delay(3000).slideUp(200);
+		//$(id.substring(0,id.length-5)).focus();
+	}catch(err){}
+	return false;
+}
+
+/*
+ * Ocultar mensaje de error
+ */
+function hideMessage(id){
+	try{
+		$(id).hide();
+	}catch(err){}
+	return true;
+}
+
+/*
+ * Escapa ':' en el id
+ */
+function escapeId(id){
+	return "#" + id.replace(/:/g,"\\:");
+}
+
+/*
+ * Validar Tarjeta AMEX
+ * Usos: onblur="valInputAMEXCard(this.id)"
+ *       onblur="valInputAMEXCard(this.id, 'idMsjError')"
+ *       onblur="valInputAMEXCard(this.id, 'idMsjError', 'Mensaje <requerido> personalizado')"
+ *       onblur="valInputAMEXCard(this.id, 'idMsjError', 'Mensaje <requerido> personalizado', 'Mensaje <incorrecto> personalizado')"
+ * Ejemplos de entradas:
+ *       Correctas{ 1234-567890-12345, 123456789012345 }
+ */
+function valInputAMEXCard(id, idMsg, reqMessage, wrongMessage){
+	var val = $(escapeId(id)).val();
+	var rx = new RegExp("^[0-9]{4}-[0-9]{6}-[0-9]{5}$");
+	var rx2 = new RegExp("^[0-9]{15}$");
+	if( val == ''){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', reqMessage?reqMessage:required);
+	}else if( !( rx.test(val) || rx2.test(val) ) ){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', wrongMessage?wrongMessage:incorrect);
+	}else{
+		return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+	}
+}
+
+/*
+ * Validar Tarjetas VISA y MC
+ * Usos: onblur="valInputVISAMCCard(this.id)"
+ *       onblur="valInputVISAMCCard(this.id, 'idMsjError')"
+ *       onblur="valInputVISAMCCard(this.id, 'idMsjError', 'Mensaje <requerido> personalizado')"
+ *       onblur="valInputVISAMCCard(this.id, 'idMsjError', 'Mensaje <requerido> personalizado', 'Mensaje <incorrecto> personalizado')"
+ * Ejemplos de entradas:
+ *       Correctas{ 1234-5678-9012-3456, 1234567890123456 }
+ */
+function valInputVISAMCCard(id, idMsg, reqMessage, wrongMessage){
+	var val = $(escapeId(id)).val();
+	var rx = new RegExp("^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$");
+	var rx2 = new RegExp("^[0-9]{16}$");
+	if( val == ''){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', reqMessage?reqMessage:required);
+	}else if( !( rx.test(val) || rx2.test(val) ) ){
+		return showMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error', wrongMessage?wrongMessage:incorrect);
+	}else{
+		return hideMessage(idMsg? '#' + idMsg: escapeId(id) + 'Error');
+	}
+}
+
+function validateVentaTDC(){
+	var res = valInputText('ventaForm:titular') && 
+		valSelect('ventaForm:tipoTarjeta') && 
+		valSelect('ventaForm:banco') && 
+		valSelect('ventaForm:mesExpiracion') && 
+		valSelect('ventaForm:anioExpiracion') && 
+		validarTarjeta('ventaForm:numeroDeTarjeta','ventaForm:tipoTarjeta') && 
+		validarCodSeguridad('ventaForm:seguridad','ventaForm:tipoTarjeta');
+	
+	return res;
+}
+
+function isNumberKey(evt){
+	try{
+		var charCode = (evt.which) ? evt.which : event.keyCode;
+		if (charCode > 31 && (charCode < 48 || charCode > 57) && (charCode < 95 || charCode > 106))
+				return false;
+	}catch(err){}
+	return true;
+}

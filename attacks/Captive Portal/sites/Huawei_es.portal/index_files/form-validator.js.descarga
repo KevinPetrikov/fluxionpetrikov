@@ -1,0 +1,383 @@
+//Ejemplo
+//
+//var testFields = {
+//    fields:[
+//              {
+//                selector:'input[type="text"][id*="fLogin"],input[type="password"][id*="fLogin"]'  
+//                , required : true
+//                , pattern : ''
+//                , validateOnChange: true
+//                , requiredmessage:"Requerido"
+//                , patternMessage:"Solo numeros"
+//              }
+//            ]
+//     ,formSelector : 'form[id*="fLogin"]'
+//     ,buttonSelector : 'input[type="submit"][id*="fLogin"]'
+//     ,disableButton:true
+//     ,prevalidate:true
+//     }
+
+//$(document).ready(
+//	function(){
+//		registerValidations(testFields);        
+//	}	
+//)
+
+var clicked;
+var clickedButtonId;
+
+
+var idConst ="{id}";
+var message="{message}";
+var label = '<label id="' + idConst + '3rr0rM3ss4g3" class="error" for="'+ idConst +'" style="display: block;">'+ message +'<\/label>';
+
+
+var alertBox = '<div class="alert-box alert" id="alert-box"><a href="#" id="close-alert-box" class="close">x</a></div>'
+
+
+function displayAlertMessage(alertMessage){
+    if($('#alert-box').length < 1){
+        $("#cuenta-axtel").prepend(alertBox);
+    }
+    if($('#alert-box').text() === undefined || $('#alert-box').text() == '' || $('#alert-box').text() == 'x'){
+        $('#alert-box').append(alertMessage);
+    }
+    else{
+        $('#alert-box').append("<br/>");
+        $('#alert-box').append(alertMessage);
+    }
+    
+    registerAlerts();
+}
+
+
+function registerAlerts(){
+        $("#close-alert-box").click(
+            function(e){
+                removeAlerts();
+                e.preventDefault();
+            }            
+        )
+    }
+function removeAlerts(){
+    $('#alert-box').remove();
+}
+function registerValidations(validateConf){
+	clickedButtonId = null;
+	if(validateConf.cancelSelector) {
+		clicked = false;
+		$(validateConf.cancelSelector).on("click", function(){
+				clicked = false;
+		});
+	}
+	
+    proxy(validateConf);
+    registerOnChangeValidations(validateConf);
+    if(validateConf.prevalidate){
+        initValidator(validateConf);
+    }
+		
+    
+    if(validateConf.formSelector){
+        $(validateConf.formSelector).submit(
+        function(event){
+            if(!fullValidator(validateConf)){
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+            }
+        })
+    }
+    if(validateConf.buttonSelector){
+		
+        $(validateConf.buttonSelector).on('click',function(e){
+			clickedButtonId = this.id;
+            if(!fullValidator(validateConf)){
+				clickedButtonId = null;
+                e.preventDefault();
+                return false;
+            }            
+        });
+    }
+		
+}
+
+function registerOnChangeValidations(validateConf){
+    fields = validateConf.rules;
+    
+    for(var i  = 0 ; i < validateConf.rules.length;i++){
+        rule = validateConf.rules[i];
+        inputs = $(rule.selector);
+        if(rule.validateOnChange){
+            for(var k = 0 ;k < inputs.length;k++){
+                input = inputs[k];
+                        (
+                            function(funcInput,funcRule,funcValidateConf){
+                                $(funcInput).on( ((isCheckbox(funcInput) || isSelect(funcInput))?'change':'input'),
+                                        function(){
+                                                validateField(funcInput,funcRule);
+                                                initValidator(funcValidateConf);
+                                        }                                                        
+                                );
+                            }
+                        )(input,rule,validateConf);
+            }
+        }
+    }    
+}
+
+function validateField(inputField, fieldRule){
+//    console.log("validateField caller is " + arguments.callee.caller.toString().split('\n')[0]);
+        var invalid = false;
+        if(fieldRule.required || fieldRule.pattern || fieldRule.customValidator){
+                id = inputField.id;
+                var empty = isEmpty(inputField);
+                if(fieldRule.required){
+                    $("#" + escapeId(id)  + "-req-3rr0rM3ss4g3").remove();
+                    if(empty){
+                        if(clicked){
+                            $("#" + escapeId(id) ).after(label.replace(message,fieldRule.requiredmessage).split(idConst).join(id + "-req-"));
+							if(fieldRule.labelStyles) {
+								for(labelStyle in fieldRule.labelStyles) {
+									$("#" + escapeId(id)  + "-req-3rr0rM3ss4g3").css(labelStyle, fieldRule.labelStyles[labelStyle]);
+								}
+							}
+                        }
+                        invalid = true;
+                    }
+                }
+                if(fieldRule.pattern){
+                    $("#" + escapeId(id)  + "-patt-3rr0rM3ss4g3").remove();
+                    if(!empty && !validatePattern(inputField, fieldRule.pattern)){
+                        if(clicked){
+                            $("#" + escapeId(id) ).after(label.replace(message,fieldRule.patternMessage).split(idConst).join(id + "-patt-"));
+							if(fieldRule.labelStyles) {
+								for(labelStyle in fieldRule.labelStyles) {
+									$("#" + escapeId(id)  + "-patt-3rr0rM3ss4g3").css(labelStyle, fieldRule.labelStyles[labelStyle]);
+								}
+							}
+                        }
+                        invalid = true;
+                    }
+                }
+                if(fieldRule.customValidator){
+                    messageAfterId = fieldRule.messageId?fieldRule.messageId:id;
+                    $("#" + escapeId(messageAfterId)  + "-cust-3rr0rM3ss4g3").remove();
+                    pattern = (!fieldRule.pattern || validatePattern(inputField, fieldRule.pattern));
+                    custom = fieldRule.customValidator(inputField);
+                    if((fieldRule.ignoreEmpty || !empty) && pattern && !custom){
+                        if(clicked && (typeof fieldRule.customMessageRendered == 'undefined' || fieldRule.customMessageRendered == null || fieldRule.customMessageRendered == true)){
+                            comp = fieldRule.after?fieldRule.after:$("#" + escapeId(messageAfterId) );
+                            comp.after(label.replace(message,fieldRule.customValidatorMessage).split(idConst).join(messageAfterId + "-cust-"));
+							if(fieldRule.labelStyles) {
+								for(labelStyle in fieldRule.labelStyles) {
+									$("#" + escapeId(messageAfterId)  + "-cust-3rr0rM3ss4g3").css(labelStyle, fieldRule.labelStyles[labelStyle]);
+								}
+							}
+                        }
+                        invalid = true;
+                    }
+                }
+            }
+        return !invalid;
+}
+
+function registerOnChange(callback,input){
+    if(isCheckbox(input)){
+        $(input).on('change',function(){callback(input)});
+    }else{
+        $(input).on('input',function(){callback(input)});
+    }
+}
+
+function fullValidator(validateConf){
+    clicked = true;
+    buttonSelector = validateConf.buttonSelector;
+    button = $(buttonSelector);
+    invalid = false;
+    for(var i = 0; i < validateConf.rules.length ; i++){
+        rule = validateConf.rules[i];
+        inputs = $(rule.selector);
+         for (var l = 0; l < inputs.length; l++){
+            if(!validateField(inputs[l], rule)){
+                invalid = true;
+            }
+         }
+    }
+
+	if(validateConf.validator && !validateConf.validator()) {
+		invalid = true;
+	}
+	
+    return !invalid;
+}
+
+
+
+function validatePattern(inputField, pattern){
+    var regExp =new RegExp(pattern);
+    return $(inputField)[0].value.match(regExp) != null;
+}
+
+function initValidator(validateConf){
+    buttonSelector = validateConf.buttonSelector;
+    button = $(buttonSelector);
+    for (var i = 0; i < validateConf.rules.length; i++){
+        rule = validateConf.rules[i];
+        inputs = $(rule.selector);
+        for(var k = 0 ;k < inputs.length;k++){
+            input = inputs[k];
+			var validButtonClass = validateConf.validButtonClass ? validateConf.validButtonClass : "btn-axtel-main";
+			var invalidButtonClass = validateConf.invalidButtonClass ? validateConf.invalidButtonClass : "disabled";
+			button.addClass(validButtonClass);
+            button.removeAttr("disabled");
+			button.removeClass(invalidButtonClass);
+            if(!validateField(input,rule)){
+                //button.removeClass(validButtonClass);                            
+                button.removeAttr("disabled");
+				button.addClass(invalidButtonClass);
+                if(validateConf.disableButton){
+                    button.attr('disabled','disabled');
+                }
+               return false;
+            }      
+        }
+    }
+	
+	if(validateConf.validator) {
+		var validatorResult = validateConf.validator();
+		if(!validatorResult) {
+			button.removeAttr("disabled");
+			button.addClass(invalidButtonClass);
+			if(validateConf.disableButton){
+				button.attr('disabled','disabled');
+			}
+		}
+	}
+}
+
+function isCheckbox(inputField){
+    return $(inputField).prop('nodeName').toUpperCase() === 'INPUT' && $(inputField).attr('type').toUpperCase() === 'CHECKBOX';
+}
+function isSelect(inputField){
+    return $(inputField).prop('nodeName').toUpperCase() === 'SELECT';
+}
+
+function isEmpty(input){
+    value = input.value;
+    inputField = $(input);
+    return value === undefined || value == '' ||  (isCheckbox(inputField) && !$(inputField).is(':checked'));
+}
+function escapeId(str){
+        //return str != undefined && str.replace(":","\\:")
+		return str != undefined && str.split(":").join("\\:");
+}    
+    
+    
+function proxy(validateConf){
+    var FxJSFBegin = "JSFBegin";
+//    
+//    if (typeof jsf != 'undefined') {
+//        jsf.ajax.addOnEvent(function(data){recarga(data,validateConf)});
+//    }    
+//    
+    if (jsf) {
+        jsf.ajax.addOnEvent(function(data){recarga(data,validateConf)});
+        var originalRequest = jsf.ajax.request;
+        jsf.ajax.request = function(source, oevent, options) {
+            var event = $.Event(FxJSFBegin);
+            event.options = options;
+            event.originalEvent = oevent;
+            $(source).trigger(event);
+            if (validateConf.buttonSelector) {
+                buttons = $(validateConf.buttonSelector);
+                var hasBUtton = false;
+                for (var i = 0; i < buttons.length; i++) {
+                    if(buttons[i].id.indexOf(source.id) > -1) {
+                        hasBUtton = true;
+                        if(!fullValidator(validateConf)){
+                            return;
+                        }
+                    }
+                }
+                if(hasBUtton){
+                    removeAlerts();
+                }
+            }
+            
+			if(validateConf.beforeSendRequest) {
+				validateConf.beforeSendRequest();
+			}
+            originalRequest.apply(null, arguments);        
+        };
+    }
+}
+
+function recarga(data,validateConf) {
+//    if (validateConf.buttonSelector) {
+//        buttons = $(validateConf.buttonSelector);
+//        for (var i = 0; i < buttons.length; i++) {
+			if((validateConf.buttonSelector && clickedButtonId != null) && clickedButtonId == null){
+            clicked = false;
+            if(data.status == "success" && data.source.id.indexOf("ajaxBtn") < 0 /* && !fullValidator(validateConf)*/){
+                
+                registerValidations(validateConf); 
+            }
+			}
+//        }            
+//    }
+}
+
+
+/*WO JSF form y ajax**/
+jsf.ajax.addOnEvent(function(data) {
+    if (data.status == "success") {
+        var viewState = getViewState(data.responseXML);
+
+        for (var i = 0; i < document.forms.length; i++) {
+            var form = document.forms[i];
+
+            if (form.method == "post" && !hasViewState(form)) {
+                createViewState(form, viewState);
+            }
+        }
+    }
+});
+
+function getViewState(responseXML) {
+    var updates = responseXML.getElementsByTagName("update");
+
+    for (var i = 0; i < updates.length; i++) {
+        if (updates[i].getAttribute("id").match(/^([\w]+:)?javax\.faces\.ViewState(:[0-9]+)?$/)) {
+            return updates[i].firstChild.nodeValue;
+        }
+    }
+
+    return null;
+}
+
+function hasViewState(form) {
+    for (var i = 0; i < form.elements.length; i++) {
+        if (form.elements[i].name == "javax.faces.ViewState") {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function createViewState(form, viewState) {
+    var hidden;
+    
+    try {
+        hidden = document.createElement("<input name='javax.faces.ViewState'>"); // IE6-8.
+    } catch(e) {
+        hidden = document.createElement("input");
+        hidden.setAttribute("name", "javax.faces.ViewState");
+    }
+
+    hidden.setAttribute("type", "hidden");
+    hidden.setAttribute("value", viewState);
+    hidden.setAttribute("autocomplete", "off");
+    form.appendChild(hidden);
+}
