@@ -12,8 +12,8 @@ declare -r FLUXIONScanDB="dump"
 declare -r FLUXIONNoiseFloor=-90
 declare -r FLUXIONNoiseCeiling=-60
 
-declare -r FLUXIONVersion=3
-declare -r FLUXIONRevision=10
+declare -r FLUXIONVersion=5
+declare -r FLUXIONRevision=8
 
 declare -r FLUXIONDebug=${FLUXIONDebug:+1}
 declare -r FLUXIONWIKillProcesses=${FLUXIONWIKillProcesses:+1}
