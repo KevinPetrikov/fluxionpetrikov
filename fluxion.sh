@@ -234,11 +234,11 @@ if [ ! $FLUXIONDebug ]; then
 	FLUXIONBanner=()
 
 	format_center_literals " ⌠▓▒▓▒   ⌠▓╗     ⌠█┐ ┌█   ┌▓\  /▓┐   ⌠▓╖   ⌠◙▒▓▒◙   ⌠█\  ☒┐"; FLUXIONBanner+=("$FormatCenterLiterals");
-	format_center_literals " ║▒_     │▒║     │▒║ ║▒    \▒\/▒/    │☢╫   │▒┌╤┐▒   ║▓▒\ ▓║"; FLUXIONBanner+=("$FormatCenterLiterals");
-	format_center_literals " ≡◙◙     ║◙║     ║◙║ ║◙      ◙◙      ║¤▒   ║▓║☯║▓   ♜◙\✪\◙♜"; FLUXIONBanner+=("$FormatCenterLiterals");
-	format_center_literals " ║▒      │▒║__   │▒└_┘▒    /▒/\▒\    │☢╫   │▒└╧┘▒   ║█ \▒█║"; FLUXIONBanner+=("$FormatCenterLiterals");
+	format_center_literals " ║▒_     │▒║     │▒║ ║▒    \▒\/▒/    │☢╫   │▒┌╤┐▒  ║▓▒\ ▓║"; FLUXIONBanner+=("$FormatCenterLiterals");
+	format_center_literals " ≡◙◙     ║◙║     ║◙║ ║◙      ◙◙      ║¤▒   ║▓║☯║▓  ♜◙\✪\◙♜"; FLUXIONBanner+=("$FormatCenterLiterals");
+	format_center_literals " ║▒      │▒║__   │▒└_┘▒    /▒/\▒\    │☢╫   │▒└╧┘▒  ║█ \▒█║"; FLUXIONBanner+=("$FormatCenterLiterals");
 	format_center_literals " ⌡▓      ⌡◘▒▓▒   ⌡◘▒▓▒◘   └▓/  \▓┘   ⌡▓╝   ⌡◙▒▓▒◙   ⌡▓  \▓┘"; FLUXIONBanner+=("$FormatCenterLiterals");
-	format_center_literals "¯¯¯     ¯¯¯¯¯¯  ¯¯¯¯¯¯¯  ¯¯¯    ¯¯¯ ¯¯¯¯  ¯¯¯¯¯¯¯  ¯¯¯¯¯¯¯¯"; FLUXIONBanner+=("$FormatCenterLiterals");
+	format_center_literals "Kevin Petrikov 2019¯¯¯     ¯¯¯¯¯¯  ¯ ¯¯¯¯  ¯¯¯¯¯¯¯  ¯¯¯¯¯¯¯¯"; FLUXIONBanner+=("$FormatCenterLiterals");
 
 	clear
 
