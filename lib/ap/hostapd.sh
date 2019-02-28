@@ -1,98 +1,83 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # ================================================================
 # Configuration Section
 # ================================================================
+VIGW=$WIAccessPoint
+VIAP=$WIAccessPoint
+
+# HostAPD sets the virtual interface mode
+# to master, which is supported by dhcpd.
+VIAPAddress=$VIGWAddress
+
 APServiceConfigDirectory=$FLUXIONWorkspacePath
 # ================================================================
+
 
 #if [ "$APServiceVersion" ]; then return 0; fi
 #readonly APServiceVersion="1.0"
 
-function ap_service_stop() {
-  if [ "$APServicePID" ]; then
-    kill $APServicePID &> $FLUXIONOutputDevice
-  fi
 
-  APServicePID=""
+function ap_stop() {
+	if [ "$APServicePID" ]
+		then kill $APServicePID &> $FLUXIONOutputDevice
+	fi
+
+	APServicePID=""
 }
 
-function ap_service_reset() {
-  ap_service_stop
+function ap_reset() {
+	ap_stop
 
-  # Reset MAC address to original.
-  ip link set $APServiceInterface down
-  sleep 0.25
+	# Reset MAC address to original.
+	ifconfig $VIAP down
+    sleep 0.5
 
-  macchanger -p $APServiceInterface &> $FLUXIONOutputDevice
-  sleep 0.25
+	macchanger -p $VIAP &> $FLUXIONOutputDevice
+    sleep 0.5
 
-  ip link set $APServiceInterface up
-  sleep 0.25
-
-  APServiceAccessInterface=""
-
-  APServiceChannel=""
-  APServiceMAC=""
-  APServiceSSID=""
-  APServiceInterfaceAddress=""
-  APServiceInterface=""
-
+    ifconfig $VIAP up
+    sleep 0.5
 }
 
-function ap_service_route() {
-  echo "APService: No custom routes for hostapd" > $FLUXIONOutputDevice
+function ap_route() {
+	echo "APService: No custom routes for hostapd" > $FLUXIONOutputDevice
 }
 
-function ap_service_prep() {
-  if [ ${#@} -lt 5 ]; then return 1; fi
-  
-  APServiceInterface=$1
-  APServiceInterfaceAddress=$2
-  APServiceSSID=$3
-  APServiceMAC=$4
-  APServiceChannel=$5
-  
-  ap_service_stop
+function ap_prep() {
+	ap_stop
 
-  # Prepare the hostapd config file.
-  echo "\
-interface=$APServiceInterface
+	# Prepare the hostapd config file.
+	echo "\
+interface=$VIAP
 driver=nl80211
-ssid=$APServiceSSID
-channel=$APServiceChannel" \
-  > "$APServiceConfigDirectory/$APServiceMAC-hostapd.conf"
+ssid=$APTargetSSID
+channel=$APTargetChannel\
+" > "$APServiceConfigDirectory/$APRogueMAC-hostapd.conf"
 
-  # Spoof virtual interface MAC address.
-  ip link set $APServiceInterface down
-  sleep 0.5
+	# Spoof virtual interface MAC address.
+	ifconfig $VIAP down
+    sleep 0.5
 
-  macchanger --mac=$APServiceMAC $APServiceInterface &> $FLUXIONOutputDevice
-  sleep 0.5
+	macchanger --mac=$APRogueMAC $VIAP &> $FLUXIONOutputDevice
+    sleep 0.5
 
-  ip link set $APServiceInterface up
-  sleep 0.5
-
-  # HostAPD sets the virtual interface mode
-  # to master, which is supported by dhcpd.
-  APServiceAccessInterface=$APServiceInterface
+    ifconfig $VIAP up
+    sleep 0.5
 }
 
-function ap_service_start() {
-  ap_service_stop
+function ap_start() {
+    ap_stop
 
-  xterm $FLUXIONHoldXterm $TOP -bg "#000000" -fg "#FFFFFF" \
-    -title "FLUXION AP Service [hostapd]" -e \
-    hostapd "$APServiceConfigDirectory/$APServiceMAC-hostapd.conf" &
-  local parentPID=$!
+	xterm $FLUXIONHoldXterm $TOP -bg "#000000" -fg "#FFFFFF" -title "FLUXION AP Service [hostapd]" -e hostapd "$APServiceConfigDirectory/$APRogueMAC-hostapd.conf" &
+    local parentPID=$!
 
-  # Wait till hostapd has started and its virtual interface is ready.
-  while [ ! "$APServicePID" ]; do
-    sleep 1
-    APServicePID=$(pgrep -P $parentPID)
-  done
+	# Wait till hostapd has started and its virtual interface is ready.
+	while [ ! "$APServicePID" ]
+	    do sleep 1; APServicePID=$(pgrep -P $parentPID)
+	done
 
-  ap_service_route
+	ap_route
 }
 
 # FLUXSCRIPT END

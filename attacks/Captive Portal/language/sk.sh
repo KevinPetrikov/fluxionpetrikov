@@ -1,11 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # identifier: Captive Portal
 # description: Vytvorí prístupový bod "zlé dvojča"
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-CaptivePortalJammerInterfaceQuery="Select an interface for jamming."
-CaptivePortalAccessPointInterfaceQuery="Select an interface for the access point."
+CaptivePortalInterfaceQuery="Vyberte adaptér pre 'Captive Portal'."
+CaptivePortalStartingInterfaceNotice="Spúšťam 'Captive Portal'..."
 CaptivePortalCannotStartInterfaceError="${CRed}Nepodarilo sa spustiť adaptér 'Captive Portal' $CClr, vraciam sa!"
+CaptivePortalStartedInterfaceNotice="${CGrn}Success${CClr}, 'Captive Portal' adaptér pripravený!"
 CaptivePortalStaringAPServiceNotice="Spúšťam službu 'Captive Portal' prístupového bodu..."
 CaptivePortalStaringAPRoutesNotice="Spúšťam smerovanie 'Captive Portal' prístupového bodu..."
 CaptivePortalStartingDHCPServiceNotice="Spúšťam službu DHCP prístupového bodu ako 'daemon'..."
@@ -13,10 +14,6 @@ CaptivePortalStartingDNSServiceNotice="Spúšťam službu DNS prístupového bod
 CaptivePortalStartingWebServiceNotice="Spúšťam 'Captive Portal' prístupového bodu ako 'daemon'..."
 CaptivePortalStartingJammerServiceNotice="Spúšťam blokovanie prístupového bodu ako 'daemon'..."
 CaptivePortalStartingAuthenticatorServiceNotice="Spúšťam autentifikačný skript..."
-# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-CaptivePortalAPServiceQuery="Select an access point service"
-CaptivePortalAPServiceHostapdOption="Rogue AP - hostapd (${CGrn}recommended$CClr)"
-CaptivePortalAPServiceAirbaseOption="Rogue AP - airbase-ng (${CYel}slow$CClr)"
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 CaptivePortalVerificationMethodQuery="Vyberte spôsob overenia hesla"
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

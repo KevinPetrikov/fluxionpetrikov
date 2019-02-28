@@ -1,23 +1,21 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 if [ -f "/etc/SuSE-release" ]; then
-  PackageManagerCLT="zypp"
-  PackageManagerCLTInstallOptions="install"
-  PackageManagerCLTRemoveOptions="remove"
+	PackageManagerCLT="zypp"
+	PackageManagerCLTInstallOptions="install"
+	PackageManagerCLTRemoveOptions="remove"
 
-  PackageManagerOutputDevice="/dev/stdout"
+	PackageManagerOutputDevice="/dev/stdout"
 
-  unprep_package_manager() {
-    echo "Nothing to unprepare." >$PackageManagerOutputDevice
-  }
+	PackageManagerLog="/tmp/lib_package_manager.log"
 
-  check_package_manager() {
-    echo "Nothing to check." >$PackageManagerOutputDevice
-  }
+	function unprep_package_manager() {
+		echo "Nothing to unprepare." > $PackageManagerOutputDevice
+	}
 
-  prep_package_manager() {
-    echo "Nothing to prepare." >$PackageManagerOutputDevice
-  }
+	function prep_package_manager() {
+		echo "Nothing to prepare." > $PackageManagerOutputDevice
+	}
 fi
 
 # FLUXSCRIPT END

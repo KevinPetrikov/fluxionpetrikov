@@ -1,11 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # identifier:  Πύλη αιχμαλωσίας
 # description: Δημιουργεί ένα σημείο πρόσβασης "κακό δίδυμο".
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-CaptivePortalJammerInterfaceQuery="Select an interface for jamming."
-CaptivePortalAccessPointInterfaceQuery="Select an interface for the access point."
+CaptivePortalInterfaceQuery="Διαλεξτε μια διεπαφη για την πύλη αιχμαλωσίας."
+CaptivePortalStartingInterfaceNotice="Ξεκιναω το περιβάλλον της πύλης αιχμαλωσίας..."
 CaptivePortalCannotStartInterfaceError="${CRed}Αδυνατον να ξεκινησω το περιβάλλον της πυλης αιχμαλωσιας$CClr, επιστρεφω!"
+CaptivePortalStartedInterfaceNotice="${CGrn}Success${CClr}, περιβάλλον πυλης αιχμαλωσιας έτοιμο!"
 CaptivePortalStaringAPServiceNotice="Ξεκιναω την υπηρεσία για το περιβάλλον της πύλης αιχμαλωσίας..."
 CaptivePortalStaringAPRoutesNotice="Ξεκιναω τις διαδρομες για το περιβάλλον της  πύλης αιχμαλωσίας..."
 CaptivePortalStartingDHCPServiceNotice="Ξεκιναω τις υπηρεσίες του δικτυου πρόσβασης DHCP σαν daemon..."
@@ -13,10 +14,6 @@ CaptivePortalStartingDNSServiceNotice="Ξεκιναω τις υπηρεσιες 
 CaptivePortalStartingWebServiceNotice="Ξεκιναω την πυλη αιχμαλωσίας του δικτύου πρόσβασης σαν daemon..."
 CaptivePortalStartingJammerServiceNotice="Ξεκιναω τον παρεμβολεα του δικτύου πρόσβασης σαν daemon..."
 CaptivePortalStartingAuthenticatorServiceNotice="Ξεκιναω το πρόγραμμα επιβεβαίωσης..."
-# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-CaptivePortalAPServiceQuery="Select an access point service"
-CaptivePortalAPServiceHostapdOption="Rogue AP - hostapd (${CGrn}recommended$CClr)"
-CaptivePortalAPServiceAirbaseOption="Rogue AP - airbase-ng (${CYel}slow$CClr)"
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 CaptivePortalVerificationMethodQuery="Μέθοδος επαλήθευσης κωδικού πρόσβασης"
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -32,4 +29,4 @@ CaptivePortalConnectivityDisconnectedOption="Αποσυνδεδεμενο (${CGr
 CaptivePortalConnectivityEmulatedOption="προσποιητα συνδεδεμενο"
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-# FLUXSCRIPT END
+# FLUXSCRIPT END zartaz edit :D

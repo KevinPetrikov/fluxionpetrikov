@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # export FLUXIONAuto=1
 # export FLUXIONDebug=1

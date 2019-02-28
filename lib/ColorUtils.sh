@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 if [ "$ColorUtilsVersion" ]; then return 0; fi
 readonly ColorUtilsVersion="1.0"

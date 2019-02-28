@@ -1,88 +1,59 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # ================================================================
 # Configuration Section
 # ================================================================
-#APServiceConfigDirectory=$FLUXIONWorkspacePath
+VIGW="at0"
+VIAP=$WIAccessPoint
+
+# airbase-ng uses a monitor-mode virtual interface
+# and creates a separate interface, atX, for dhcpd.
+VIAPAddress="$VIGWNetwork.2"
+
+# APServiceConfigDirectory=$FLUXIONWorkspacePath
 # ================================================================
+
 
 #if [ "$APServiceVersion" ]; then return 0; fi
 #readonly APServiceVersion="1.0"
 
-function ap_service_stop() {
-  if [ "$APServicePID" ]; then
-    kill $APServicePID &> $FLUXIONOutputDevice
-  fi
 
-  APServicePID=""
+function ap_stop() {
+	if [ "$APServicePID" ]
+		then kill $APServicePID &> $FLUXIONOutputDevice
+	fi
+
+	APServicePID=""
 }
 
-function ap_service_reset() {
-  ap_service_stop
-
-  APServiceAccessInterface=""
-
-  APServiceChannel=""
-  APServiceMAC=""
-  APServiceSSID=""
-  APServiceInterfaceAddress=""
-  APServiceInterface=""
+function ap_reset() {
+	ap_stop
 }
 
-function ap_service_route() {
-  local networkSubnet=${APServiceInterfaceAddress%.*}
-  local networkAddress=$(( ( ${APServiceInterfaceAddress##*.} + 1 ) % 255 ))
-
-  if [ $hostID -eq 0 ]; then
-    let hostID++
-  fi
-
-  # TODO: Dynamically get the airbase-ng tap interface & use below.
-  # WARNING: Notice the interface below is STATIC, it'll break eventuajly!
- if ! ip addr add "at0" $networkSubnet.$networkAddress/24; then
-    return 1
-  fi
-
-  if ! sysctl net.ipv6.conf.at0.disable_ipv6=1 &> $FLUXIONOutputDevice; then
-    return 2
-  fi
+function ap_route() {
+	ifconfig $VIAP $VIAPAddress netmask 255.255.255.0
+	sysctl net.ipv6.conf.at0.disable_ipv6=1 &> $FLUXIONOutputDevice
 }
 
-function ap_service_prep() {
-  if [ ${#@} -lt 5 ]; then return 1; fi
+function ap_prep() {
+	ap_stop
 
-  APServiceInterface=$1
-  APServiceInterfaceAddress=$2
-  APServiceSSID=$3
-  APServiceMAC=$4
-  APServiceChannel=$5
-
-  ap_service_stop
-
-  # Spoof virtual interface MAC address.
-  # This is done by airbase-ng automatically.
-
-  # airbase-ng uses a monitor-mode virtual interface
-  # and creates a separate interface, atX, for dhcpd.
-  APServiceAccessInterface="at0"
+	# Spoof virtual interface MAC address.
+	# This is done by airbase-ng automatically.
 }
 
-function ap_service_start() {
-  ap_service_stop
+function ap_start() {
+    ap_stop
 
-  xterm $FLUXIONHoldXterm $TOP -bg "#000000" -fg "#FFFFFF" \
-    -title "FLUXION AP Service [airbase-ng]" -e \
-    airbase-ng -P -e $APServiceSSID -c $APServiceChannel \
-      -a $APServiceMAC $APServiceInterface &
-  local parentPID=$!
+	xterm $FLUXIONHoldXterm $TOP -bg "#000000" -fg "#FFFFFF" -title "FLUXION AP Service [airbase-ng]" -e airbase-ng -P -e $APTargetSSID -c $APTargetChannel -a $APRogueMAC $VIAP &
+	local parentPID=$!
 
-  # Wait till airebase-ng starts and creates the extra virtual interface.
-  while [ ! "$APServicePID" ]; do
-    sleep 1
-    APServicePID=$(pgrep -P $parentPID)
-  done
+	# Wait till airebase-ng has started and created the extra virtual interface.
+	while [ ! "$APServicePID" ]
+		do sleep 1; APServicePID=$(pgrep -P $parentPID)
+	done
 
-  ap_service_route
+	ap_route
 }
 
 # FLUXSCRIPT END
