@@ -1,0 +1,313 @@
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #f9fbfd inset !important;
+}
+
+.despliegue-login {
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+
+
+.despliegue-login .logo-login {
+
+  height: 87px;
+  margin-top:25px;
+  margin-bottom:25px;
+}
+
+
+
+@media (max-width: 1199px) {
+  .despliegue-login .logo-login {
+    
+        margin: 8em;
+    margin-top: 2%;
+    heigth:67px;
+    margin-bottom:25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .despliegue-login .logo-login {
+    margin: 8em;
+    margin-top: 1%;
+    width: 79%;
+    height: 100%;
+    display: block;
+    margin-left: 34px;
+    margin-bottom:25px;
+  }
+}
+
+@media (max-width: 600px) {
+ .despliegue-login .caja-login .tit-log {
+font-family: "Telefonica", Arial, Helvetica, Geneva, sans-serif;
+  color: #00A9E0;
+  font-weight: bold;
+  margin: 25px 0;
+  font-size: 18px;
+   margin-top: 15px;
+
+}
+}
+
+@media (max-width: 1190) {
+  .despliegue-login .caja-login {
+    
+         max-width: 10px;
+ 
+  }
+}
+@media (max-width: 600px) {
+.despliegue-login .caja-login {
+  max-width: 10px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 16px;
+  height: 520px ;
+    margin-top: -90px;
+}
+}
+
+.despliegue-login .caja-login {
+    width: 86%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: 16px;
+    height: 480px;
+    
+    /* max-height: 520px; */
+    margin-top: 0;
+}
+
+
+.despliegue-login .caja-login .tit-log {
+font-family: "Telefonica", Arial, Helvetica, Geneva, sans-serif;
+  color: #00A9E0;
+  font-weight: bold;
+  margin: 32px 0px 0px 0px;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+
+}
+
+.despliegue-login .caja-login .tit-log img {
+  margin-top: -4px;
+}
+
+.despliegue-login .caja-login .tit-capt {
+  font-weight: 100;
+  font-size: 14px;
+  color: #5a5b6b;
+  margin: 15px 0;
+}
+
+.despliegue-login .caja-login .captcha {
+  text-align: left;
+  border: 1px solid #e6e9ed;
+  padding: 8px 15px;
+  margin-bottom: -1px;
+  background: #f9fbfd;
+  border-radius: 3px;
+  font-size: 18px;
+  height: 45px;
+  color: #5a5b6b;
+  position: relative;
+}
+
+.despliegue-login .caja-login .reload {
+  width: 50px;
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 1px solid #e6e9ed;
+  padding: 10px 13px;
+  font-family: "Telefonica", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.despliegue-login .caja-login .reload:before {
+  font-size: 23px;
+  color: #cdd1da;
+  height: 45px;
+}
+
+.despliegue-login .caja-login .wraper {
+ padding: 30px 7% 0px 7%;
+}
+
+.despliegue-login .caja-login form input {
+  display: block;
+  width: auto;
+  height: 45px;
+  color: #5a5b6b;
+  float:left;
+  margin-bottom:40px;
+}
+
+@media(max-width: 900px){
+
+	
+}
+
+
+
+.despliegue-login .caja-login form input[type="text"]{
+border: 1px solid #e6e9ed;
+    padding: 15px;
+    padding-right: 11px;
+    width: 100%;
+    padding-left: 11px;
+    background: #f9fbfd;
+    border-radius: 3px;
+    font-size: 15px;
+    box-shadow: none;
+    font-family: "Telefonica", Arial, Helvetica, Geneva, sans-serif;
+    
+    
+
+}
+
+.despliegue-login .caja-login form input[type="password"] {
+border: 1px solid #e6e9ed;
+    padding: 15px;
+    padding-right: 11px;
+    width: 100%;
+    padding-left: 11px;
+    background: #f9fbfd;
+    border-radius: 3px;
+    font-size: 15px;
+    box-shadow: none;
+    font-family: "Telefonica", Arial, Helvetica, Geneva, sans-serif;
+	
+	
+	
+	
+	}
+.despliegue-login .caja-login form input[type="submit"] {
+   
+padding: 15px;
+    background: #f9fbfd;
+    border-radius: 3px;
+    box-shadow: none;
+    background-color: #99cc00;
+    padding-bottom: 15px;
+    width: 100%;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-family: "Telefonica", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.despliegue-login .caja-login .olvido {
+  color: #3793ee;
+  font-size: 14px;
+  text-decoration: none;
+  background: #f6f8fa;
+ display: block;
+    /* margin: 20px; */
+    margin-top: 35px;
+    margin-bottom: 23px;
+    padding: 11px;
+  font-family: "Telefonica", Arial, Helvetica, Geneva, sans-serif;
+ 
+}
+
+.despliegue-login .no-reg {
+  font-size: 14px;
+  margin-top: 2em;  
+  color:#00A9E0;
+  font-family: "Telefonica", Arial, Helvetica, Geneva, sans-serif;  
+  margin: 4em auto;  
+  font-weight:bold;
+}
+
+@media (max-width: 767px) {
+  .despliegue-login .no-reg {
+    padding: 22px;
+  }
+}
+
+.despliegue-login .no-reg a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.despliegue-login .no-reg a span {
+  font-weight: 700;
+  color: #fff;
+}
+
+.caja-mensaje {
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  color: #5a5b6b;
+  text-align: left;
+  line-height: 1.8;
+  padding: 0 15px 15px 15px;
+  font-weight: 300;
+  position: relative;
+  padding-left: 25px;
+  width:86%;
+}
+
+.caja-mensaje p {
+  margin: 0;
+}
+
+.caja-mensaje a {
+  text-decoration: none;
+  color: #3793ee;
+}
+
+.caja-mensaje .tit {
+  font-family: 'MovistarHeadline';
+  color: #005c84;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top:13px;
+}
+
+.caja-mensaje .intento {
+  color: #cdd1da;
+}
+
+.caja-mensaje .glyphicon-remove {
+  color: #cdd1da;
+  margin-right: -10px;
+}
+
+.caja-mensaje:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 100%;
+  background: #00c6d7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.copyright {
+  color: #fff;
+  text-align: center;
+}
+
+.clase {
+  color: #333;
+}

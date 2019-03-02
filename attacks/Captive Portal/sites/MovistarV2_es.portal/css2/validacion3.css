@@ -1,0 +1,382 @@
+div.error, .error-especial {
+  background: #e04857;
+  border-radius: 3px;
+  font-family: Roboto;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  position: relative;
+  text-align: left;
+  padding-right: 20px;
+  margin-left: 35%;
+  width: 40.5%;
+
+
+
+
+
+}
+
+
+.hideShowPassword-wrapper {
+	float:left;
+	width:100%;
+}
+
+
+.hideShowPassword-wrapper .my-toggle {
+	 top: initial;
+    margin: 0 !important;
+    right: 20px !important;
+    bottom: 48px;
+}
+
+
+
+div.error-segunda-clave {
+  background: #e04857;
+  border-radius: 3px;
+  margin: 1em 0;
+  font-family: Roboto;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+.error-segunda-clave:after {
+    border-style: solid;
+    border-width: 15px 10px 0 10px;
+    border-color: #e04857 transparent transparent transparent;
+    bottom: -15px;
+    content: '';
+    display: block;
+    height: 0;
+    right: 10px;
+    position: absolute;
+    width: 0;
+}
+@media (max-width: 1199px) {
+  div.error, .error-especial {
+    margin-left: 35.5%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.error, .error-especial {
+    width: auto;
+    margin: 0 15px;
+  }
+  
+  #rut-error {
+
+  }
+}
+
+#captcha-error {
+
+
+  right: 91px;
+}
+
+@media (max-width: 767px) {
+  #captcha-error {
+  }
+  .error-verificacion {
+  top:0 !important;
+   margin-bottom:15px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #serie-error {
+  
+  }
+  .captcha-incorrect {
+  top:0 !important;
+  }
+}
+
+.bgCheck {
+  background-image: url("../img2/check-verde.svg");
+  background-position: 68% center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .bgCheck {
+    background-position: 91.5% center;
+  }
+  .bgCheck input {
+    width: calc(100% - 34px);
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .bgCheck {
+    background-position: 95% center;
+  }
+  .bgCheck input {
+    width: calc(100% - 34px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .bgCheck {
+    background-position: 86% center;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+
+#login div.error {
+    background: #e04857 solid;
+    border-radius: 3px;
+    font-family: "Telefonica", Arial, Helvetica, Geneva, sans-serif;
+    color: white;
+    padding: 6px;
+    font-size: 14px;
+    position: relative;
+    padding-right: 20px;
+    width: 100%;
+    float: left;
+    margin: 0;
+}
+
+.contra div.error {
+    margin-left: 41.5%;
+    width: 56.2%;
+    margin-top:-15px;
+}
+
+.contra2 div.error {
+    margin-left: 33.2%;
+    width: 56.2%;
+}
+
+.validacion-2 div.error {
+    margin-left: 41.6%;
+    width: 56.2%;
+}
+@media (max-width: 1199px) {
+.validacion-2 div.error {
+
+    width: 56.2%;
+}
+}
+
+@media (max-width: 991px) {
+.validacion-2 div.error {
+ margin-left: 33.4%;
+  width: 55.8%;
+}
+}
+
+@media (max-width: 767px) {
+.validacion-2 div.error {
+ margin-left:0;
+  width: 100%;
+}
+}
+
+@media (max-width: 992px) {
+  .contra div.error {
+    margin-left: 32.5%;
+    width: 59%;
+  }
+}
+
+@media (max-width: 767px) {
+  .contra div.error {
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #login div.error {
+
+    right: 0;
+
+}
+}
+
+.error-2 div.error {
+  margin-left: 25%;
+  width: 49.5%;
+}
+
+@media (max-width: 992px) {
+  .error-2 div.error {
+    margin-left: 25%;
+    width: 66.2%;
+  }
+}
+
+@media (max-width: 767px) {
+  .error-2 div.error {
+    width: auto;
+    margin-right: 15px;
+    margin-left: 17px;
+  }
+}
+
+.error-3 div.error {
+  margin-left: 35.5%;
+  width: 50%;
+}
+
+@media (max-width: 992px) {
+  .error-3 div.error {
+    margin-left: 35.5%;
+    width: 49%;
+  }
+}
+
+@media (max-width: 767px) {
+  .error-3 div.error {
+    width: auto;
+    margin-right: 15px;
+    margin-left: 17px;
+  }
+  
+   #registro div.error {
+
+  }
+}
+
+input.error {
+/*  border: 1px solid #e04857 !important;
+  margin-bottom: 0px !important; */ 
+}
+
+.error:after {
+  border-style: solid;
+  border-width: 10px 5px 0 5px;
+  border-color: #e04857 transparent transparent transparent;
+  bottom: -15px;
+  content: '';
+  display: block;
+  height: 0;
+  right: 50px;
+  position: absolute;
+  width: 0;
+  top: 30px;
+  z-index: 10;
+}
+
+.clic {
+  background-image: url("../img2/Delete_16.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 8px;
+  background-size: 10px 10px;
+}
+
+div.error.checked {
+  background-color: transparent;
+  /*background-image: url('../img2/check-verde.svg');*/
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: -20px;
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 767px) {
+  div.error.checked {
+    background-image: none;
+    background-color: transparent;
+  }
+}
+
+div.error.checked:after {
+  display: none;
+}
+
+.no-check div.error.checked {
+  background-image: url("");
+}
+
+div.error.sin-trian:after {
+  display: none;
+}
+
+.passStrengthify {
+  width: 100%;
+}
+
+.marginLinkMedioContacto{
+	margin: 20px 0 5px;
+}
+
+.linkMedioContacto
+{
+	color: #3793ee;
+    font-size: 14px;
+}
+
+.icoCaptchaOk {
+	position: relative;
+    float: right;
+    top: -42px;
+    left: 35px;
+}
+
+#segunda-clave div.error {
+  background: #e04857;
+  border-radius: 3px;
+  margin: 1em 0;
+  font-family: Roboto;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  position: relative;
+  text-align: left;
+  padding-right: 20px;
+  /* margin-top: -40px;*/
+  width: 100%;
+}
+
+#latch div.error {
+	background: #e04857;
+    border-radius: 3px;
+    margin: 1em 0;
+    font-family: Roboto;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    position: relative;
+    text-align: left;
+    padding-right: 20px;
+    margin-left: 50%;
+    width: 24.5%;
+}
+
+@media (max-width: 767px) {
+  #latch div.error{
+    background: #e04857;
+    border-radius: 3px;
+    margin: 1em 0;
+    font-family: Roboto;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    position: relative;
+    text-align: left;
+    padding-right: 20px;
+    width: auto;
+  }  
+}
