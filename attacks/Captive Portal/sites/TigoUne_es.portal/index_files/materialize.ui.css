@@ -1,0 +1,56 @@
+
+div.row.pages-set {
+	margin-left: 0px;
+    margin-right: 0px;
+}
+
+div.row.pages-set div.col.s12.page {
+	position: absolute;
+	left: 0px;
+    margin-left: 100%;
+}
+
+div.row.pages-set div.col.s12.page.active {
+    margin-left: auto;
+}
+
+div.input-field .dropdown-button.dropdown-select{
+
+	display: block;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #9e9e9e;
+	border-radius: 0;
+	outline: none;
+	height: 3rem;
+	width: 100%;
+	font-size: 1rem;
+	margin: 0 0 20px 0;
+	padding: 0;
+	box-shadow: none;
+	box-sizing: content-box;
+	transition: all 0.3s;
+	color : #000;
+	text-transform: none;
+	text-align: left;
+
+}
+
+
+div.input-field .prefix + .dropdown-button.dropdown-select {
+
+	margin-left: 3rem;
+    width: 92%;
+    width: calc(100% - 3rem);
+
+}
+
+div.input-field .prefix ~ .dropdown-content {
+
+	margin-left: 3rem;
+    
+}
+
+div.input-field.col label.center.center-align {
+    left: 0px;
+}

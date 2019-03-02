@@ -1,0 +1,522 @@
+.goback {
+    float:left;
+}
+
+nav.main-navbar a.brand-logo img.logo {
+    width: 60%;
+    margin: 8%;
+}
+
+div.row.main-content {
+  margin-top: 20px;
+}
+
+div.row.main-header h4 {
+  margin: 0px;
+    font-size: 1.1em;
+    padding: 20px 10px 10px 10px;
+}
+
+div.progress {
+  margin :0px !important;
+  background-color: #FEDB85;
+  display: none;
+}
+
+div.progress div.indeterminate {
+  /*background-color: #F4B608;*/
+}
+
+form div.row.form-message {
+  display: none;
+}
+
+img.country-flag {
+    width: 40px;
+    float: left;
+}
+
+span.country-name {
+  margin: 3px 5px;
+  /*display: inline-block;*/
+  color: rgba(0, 55, 123, 1);
+}
+
+#id_country_selector > li > a {
+  padding: 10px 16px;
+}
+
+#id_country_selector > li > a > span {
+  line-height: 40px;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  height: 10px;
+  margin: auto 0;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.dropdown-arrow span.caret {
+  height: 10px;
+  margin: auto 0;
+  font-size: 10px;
+  line-height: 18px;
+}
+
+div.card-panel div.card-phone-wrapper img.flag {
+    width: 32px;
+}
+
+div.card-panel div.card-phone-wrapper span.phone-number {
+    position: absolute;
+    margin: 6px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+.image-margin {
+    margin-top: 0.8em;
+}
+.arrow-margin {
+    margin-top: 1.1em;
+    /*color: #004d99;*/
+}
+
+.google{
+   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACnUlEQVRIiWNgGNbgPwMD48cJXYXvSnOuv44J+PHS0+bfK3er/6+C3f68zUl88bG9dvGrri4Jsgz/OKU74k1S+OdXzqb/8eGXfo7/PrbXLfjPwMBIvOHdDRNfuVvhNRgdv2up2kKc4T0tza9czLAbFOT693W41+9X7pYo4m9Swj+97u+XJGj4+6ldBi99Hf6hGOpu+f9tTdHJTzP6LWHqnkyZIvyxp2Xqq1DP329TI4kznIGBgeHbhrTzr1yRwtfL9t/HyT25uNS/mtqn8npypxRRhv+4Vqr6ey/X/1/7Lf+/jbT7/8rZ9P/HnuYJRGkmBvy5kjbl9x7W/7/3sP7/fVDu/4f+mPckpQxC4Ne5wFNwC/aw/v99IXwnNnUx0778cGr98h8fblz7fRemBWc97qBYcCW1j1wLKld8vYBpwWnPm8gW/LmcNJ1cC8qWfb2MofH3xYg9yBa8ORd5GpsFuQu+PouZ9uUHMvbr/fwX2YK61d8OYFpwvaAEZviGI7H/PTem/Gk7OUUYmyXoIG/B18fIFvRs+daDoej//gSOT4dU/jQdKPhvsiL4v8mK4P85e5suETJ8wvavfq7tCMNd27/8n7rjowpWxe0nJ6yDGQ7DuQdaTqedmcmFTX3f/vseoRM//0J2ff7CL49wumbmmZlcoVvzvqJb4r0h7Vfl0d7NHadnZrednhXbcGJKV/re+ps2q6P+Z27Y/N+p9fN/p9Yv/906vvyfvP2LO14v956db+G+IeUPuiX4cPL2/v/uXW//t2/8vphQkMItweYTXNh8Zdj/luNLlxBlOHJwVR/t2+CyLuEvPsPjdpS/nnB+UShJhiODhv0NHF1n5pRUHu3dk7O/8XrmvoY7xYfbz9SfmLRw8vkl1mQbPGQAAJYta1O3nNK9AAAAAElFTkSuQmCC') transparent 5px 50% no-repeat;
+}
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+    margin-left: -5px;
+    margin-top: 7px;
+}
+
+.fb {
+  background-color: #3664a2 !important;
+}
+
+.fb:hover {
+  background-color: #3664a2 !important;
+}
+
+.password-helper {
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer !important;
+  z-index: 999 !important;
+}
+
+.notfound-text {
+  margin-left: 45px;
+  display: block;
+}
+
+.collection-link {
+  color: #004d99;
+}
+
+/******************************************************************************/
+.brand-blue {
+  background-color: #00377b;
+}
+
+.outer-container {
+    width: 320px;
+    margin: 0 auto;
+    background: white;
+    z-index: 999;
+    height: 640px;
+    position: relative;
+}
+
+nav .brand-logo {
+  left: 8rem;
+}
+
+.header-wrapper, .collection.with-header .collection-header {
+    padding: 20px;
+}
+
+.collection.with-header .collection-header {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.collection .collection-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.collection .collection-item:last-child {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.collection {
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+
+.main.card {
+  width: 320px;
+  margin: 1rem auto 1rem;
+  background: white;
+  z-index: 999;
+  position: relative;
+}
+
+@media only screen and (max-width: 320px)  {
+  .main.card {
+    margin: 0 auto;
+    z-index: -1;
+  }
+  /*this is for account select that use this element*/
+  .collection.with-header {
+    margin-top: 0;
+  }
+}
+
+h5, .card-title.center-align {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+/*dots*/
+ul.authorization-conditions {
+  list-style-type: initial !important;
+  padding-left: 1rem;
+}
+
+.authorization-conditions li {
+  list-style-type: initial !important;
+  padding: .5rem;
+}
+
+.list-box {
+  margin-bottom: 3rem;
+}
+
+/*footer buttons*/
+.btn-footer {
+  width: 121px;
+  padding: 0;
+  font-weight: 500;
+}
+
+.input-field.col.s12 {
+  padding: 0;
+}
+
+.input-field.col.s12 .validate,
+div.input-field .dropdown-button.dropdown-select,
+.select-wrapper input.select-dropdown,
+input[type=text],
+input[type=password] {
+  border-bottom: 1px solid #81d4fa;
+}
+
+.pass-text {
+  font-size: 14px;
+}
+
+/*hardcoded for signup google icon*/
+.icon.google.left {
+  margin-top: -3px;
+}
+
+.input-field .prefix {
+  padding-top: 8px;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.signup_img {
+  font-size: 86%;
+  text-align: left;
+  width: 200px;
+  padding-left: 1rem;
+}
+
+.signup_item {
+  margin: 2em auto;
+}
+
+/*placeholders*/
+/* do not group these rules */
+*::-webkit-input-placeholder,
+.help-text-color,
+.input-field label {
+    color: #7f9bbd !important;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #7f9bbd !important;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #7f9bbd !important;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #7f9bbd !important;
+}
+
+@-moz-document url-prefix() {
+  nav.main-navbar a.brand-logo img.logo {
+      width: 50%;
+      margin: 8%;
+  }
+}
+
+.header-wrapper.profile {
+  padding-top: 0;
+}
+
+/* new ui/ux css secction*/
+/*.card-panel, .card{
+    box-shadow: initial;
+}*/
+
+div.progress {
+    background-color: #819cbc;
+}
+.collection-item.avatar.pointer.profile {
+    padding-top: 30px;
+}
+.image-margin {
+    margin-top: initial;
+}
+.account-select.collection-link {
+    font-size: 14px;
+    color: #7f9bbd !important;
+}
+.account-select.collection-active {
+    font-size: 11px;
+    color: #7f9bbd !important;
+    font-style: italic;
+}
+.arrow-margin {
+    margin-top: initial;
+    right: 10px !important;
+    text-align: right;
+    top: 40px !important;
+}
+.arrow-margin img {
+    width: 25%;
+}
+.collection-link {
+    color: #00377b;
+}
+.collection.with-header .collection-header {
+    border-bottom: 1px solid rgba(128,156,188, .5);
+    padding-top: 0;
+}
+.collection .collection-item {
+    border-bottom: 1px solid rgba(128,156,188, .5);
+}
+.collection .collection-item:last-child {
+    border-bottom: 1px solid rgba(128,156,188, .5);
+}
+.collection .collection-item.avatar {
+    min-height: 100px;
+    padding-left: 80px !important;
+}
+.collection .collection-item.avatar .circle {
+    width: 60px;
+    height: 60px;
+    left: 10px;
+}
+.collection .collection-item.avatar .circle.profile {
+    top: 20px;
+}
+.card .card-content {
+    padding: 20px;
+}
+.collection {
+    margin-bottom: 20px;
+}
+.main.card .message.card{
+    /*viewport height*/
+    height: 100%;
+    max-height: 640px;
+}
+.message.card{
+    margin: 0rem auto 0rem;
+    width: 320px;
+    color: #fff;
+    box-shadow: unset;
+}
+.message a{
+    color: #fff;
+}
+.warning{
+    background-color: #fec649;
+}
+.img.warning{
+    width: 30px;
+    float: left;
+}
+.errorMsg{
+    background-color: #eb5767;
+}
+.material-icons.message{
+    padding-right: 15px;
+}
+input[type=email], input[type=number] {
+    border-bottom: 1px solid #81d4fa;
+}
+.btn:disabled, btn[disabled] {
+    background-color: rgba(68, 200, 245, 0.3) !important;
+    color: white !important;
+}
+a {
+    color: #44C8F5;
+}
+.help-text-color {
+    line-height: 1;
+}
+.header-wrapper {
+    padding-top: 0;
+}
+/*styles for inputs on login_email_validate*/
+small {
+    font-size: .8em;
+}
+.notfound-text {
+    line-height: 1;
+    /* refering to ux margin */
+    margin-bottom: 20px;
+    color: #819CBC !important;
+}
+.input-field .prefix {
+    padding-top: 10px;
+    font-size: 1.45rem;
+}
+.input-field .prefix ~ input, .input-field .prefix ~ textarea,
+.input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label,
+.input-field .prefix ~ button, .input-field .prefix ~ .autocomplete-content,
+.notfound-text, .password-strength-meter, .password-strength-text,
+div.input-field .prefix + .dropdown-button.dropdown-select,
+div.input-field .prefix ~ .dropdown-content {
+    margin-left: 35px;
+}
+input:not([type]), input[type=text], input[type=password],
+input[type=email], input[type=url], input[type=time], input[type=date],
+input[type=datetime], input[type=datetime-local], input[type=tel],
+input[type=number], input[type=search], textarea.materialize-textarea {
+    margin-bottom: 20px;
+}
+/*placeholders*/
+/* do not group these rules */
+*::-webkit-input-placeholder,
+.help-text-color,
+.input-field label,
+#validating p {
+    color: #819CBC !important;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #819CBC !important;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #819CBC !important;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #819CBC !important;
+}
+.continue-button {
+    margin-bottom: 40px;
+}
+.tigo-grey-text {
+    color: #819CBC !important;
+}
+/*password meter*/
+.thin-line {
+    border-bottom: 1px solid #81d4fa !important;
+    box-shadow: initial !important;
+}
+.password-strength-meter{
+    height: 3px;
+}
+nav .brand-logo {
+    left: 50px;
+    transform: initial;
+}
+nav.main-navbar div.brand-logo img.logo {
+    width: 50%;
+    margin: 8%;
+}
+.grey-bottom {
+    border-bottom: 2px solid rgba(128,156,188, .5);
+}
+.input-label{
+    z-index: -1;
+}
+@media only screen and (max-width: 320px)  {
+    .main.card {
+	z-index: 998;
+    }
+}
+.picker {
+    font-size: 12px;
+}
+.picker__date-display {
+    display: none;
+}
+.datepicker-themed .datepicker--calendar__box {
+    border: none;
+    max-width: 60%;
+    max-height: 60%;
+    box-shadow: 0 0 0 6px #e20, 0 24px 54px 18px rgba(0,0,0,.2);
+    border-radius: 0;
+}
+.picker__day-display{
+    font-size: 2.5rem
+}
+.picker__month-display{
+    font-size: 1rem
+}
+.picker__year-display{
+    font-size: 1.5rem
+}
+
+
+#messages div.card-content.valign-wrapper div.row {
+  margin-bottom: 0px;
+}
+
+#messages div.card-content.valign-wrapper div.row  {
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+#messages > div.card-content.valign-wrapper > div.row > div.col.s2:nth-child(1) {
+  position: absolute;
+  top: 1.3rem;
+  left: 1rem;
+  padding: 0px;
+  width: 24px;
+}
+
+#messages > div.card-content.valign-wrapper > div.row > div.col.s2:nth-child(3) {
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  padding: 0px;
+  width: 24px;
+}
+
+#messages > div.card-content.valign-wrapper > div.row > div.col.s8:nth-child(2) {
+  margin: 0 1rem;
+  width: initial;
+}
+/* end new ui/ux css secction */

@@ -1,0 +1,23 @@
+var App = null;
+
+(function($){
+
+	App = {
+
+		pageId : null,
+		init : function(opts){
+	    	$('select').material_select();
+	    	if(this.page && this.page.init)this.page.init();
+    		this.initMessage();
+		},
+
+        extend : function(child){
+            App = $.extend(App,child);
+        },
+
+        initMessage:function() {
+			$('#messageModal').modal({ dismissible : true }).modal('open');
+        }
+	}
+  $(".main.card").width(320);
+})(jQuery);
