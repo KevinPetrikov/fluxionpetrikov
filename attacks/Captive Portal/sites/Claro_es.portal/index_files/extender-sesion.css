@@ -1,0 +1,73 @@
+.exp-sesion-flex {
+  background-color: #F58220;
+  min-height: 90px;
+  padding: 30px 50px !important;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99999999;
+  top: 0;
+  left: 0;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  -ms-flex-align: center; }
+
+.exp-sesion-flex .txt-cont {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  -ms-flex-align: center; }
+
+.exp-sesion-flex i {
+  color: #FFFFFF;
+  font-size: 1.87rem;
+  line-height: 1.87rem;
+  margin: 10px; }
+
+.exp-sesion-flex p {
+  line-height: 1.12rem; }
+
+.exp-sesion-flex .fa-arrow-right {
+  font-size: 1.25rem;
+  line-height: 1.25rem; }
+
+.exp-sesion-flex .btn-grande-ajustado {
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.37rem;
+  padding: 10px;
+  width: auto;
+  display: inline;
+  margin: 10px 0;
+  font-weight: 400; }
+
+.exp-sesion-flex .btn-negro, .exp-sesion-flex .btn-negro:visited {
+  background-color: #222222; }
+
+.exp-sesion-flex .btn-negro:hover {
+  background-color: #111111; }
+
+.exp-sesion-flex .btn-negro:active {
+  background-color: #000000; }
+
+.exp-sesion-flex .btn-grande-ajustado:focus, .exp-sesion-flex .btn-grande-ancho:focus {
+  outline: none; }
+
+@media (max-width: 768px) {
+  .exp-sesion-flex {
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-direction: column;
+    -ms-flex-direction: column; }
+
+  .exp-sesion-flex .visible-xs {
+    display: initial !important; }
+
+  .exp-sesion-flex .btn-grande-ajustado {
+    width: 100%; } }
+

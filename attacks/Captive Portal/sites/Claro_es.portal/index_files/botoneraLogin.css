@@ -1,0 +1,56 @@
+html {
+  font-size: 1rem; }
+
+.login .nav-tabs {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  align-content: space-between;
+  -ms-flex-pack: justify;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+
+.login .nav-tabs li {
+  display: flex;
+  display: -ms-flexbox;
+  flex: 1;
+  flex-flow: column nowrap;
+  -ms-flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-grow: 1;
+  order: 1;
+  flex-shrink: 1;
+  float: none;
+  margin-bottom: 0 !important; }
+
+.login .nav-tabs li.activo {
+  background-color: #fff; }
+
+.login .nav-tabs li a {
+  flex-grow: 1;
+  -ms-flex-order: 1;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  -ms-flex-align: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  border-radius: 0 !important;
+  padding: 8px;
+  width: 100%; }
+
+.login .nav-tabs li + li a {
+  border-left: 1px solid #fff; }
+
+/*==== IE 10 FIX ====*/
+html[data-useragent*='MSIE 10.0'] .login .nav-tabs {
+  display: table !important;
+  width: 100% !important; }
+
+html[data-useragent*='MSIE 10.0'] .login .nav-tabs li {
+  width: auto !important;
+  display: table-cell !important; }
+

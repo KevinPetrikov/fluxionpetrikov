@@ -1,0 +1,4077 @@
+/*=================================
+Media Querys
+=================================*/
+@media (min-width: 768px) {
+  .container {
+    width: 768px; } }
+@media (min-width: 992px) {
+  .container {
+    width: 992px; } }
+@media (min-width: 1100px) {
+  .container {
+    width: 1100px; } }
+@media (min-width: 1281px) {
+  .container {
+    width: 1250px !important; } }
+/*=================================
+General
+=================================*/
+/*.container {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}*/
+/*.content{
+margin-top: 100px;
+padding: 0px !important;
+/*min-height: 585px;*/
+/*min-height: 720px;
+}
+*/
+/*.content {
+  padding: 0px !important;
+}
+*/
+/*.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding: 0px;
+}*/
+hr {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  border-bottom: 1px dashed #AFAFAF;
+  clear: both; }
+
+.table {
+  margin: 0px; }
+
+/*.row {
+  margin-right: 0px;
+}*/
+a:focus {
+  outline: none;
+  text-decoration: none; }
+
+/*=================================
+Header Navigation
+=================================*/
+/*=================================
+Footer
+=================================*/
+/*=================================
+Libreria
+=================================*/
+.boxExample {
+  background-color: #d1d1d1;
+  padding: 30px;
+  overflow: hidden; }
+
+h2.lineRed {
+  border-bottom: 2px solid #DA262C; }
+
+tr {
+  background-color: #FFFFFF;
+  border-bottom: 1px dashed #CCCCCC; }
+
+td {
+  border-top: 0px !important; }
+
+a {
+  color: #1F97AE;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+a.icon-angle-right:after {
+  content: "\f105";
+  font-family: "FontAwesome";
+  margin-left: 5px; }
+
+a.icon-gear:before {
+  content: "\f013";
+  font-family: "FontAwesome";
+  margin-right: 5px; }
+
+a.icon-shopping:before {
+  content: "\f07a";
+  font-family: "FontAwesome";
+  margin-right: 5px; }
+
+.txt-phone {
+  font-size: 26px;
+  color: #222222;
+  font-weight: 700; }
+
+.txt-grey-xs {
+  font-size: 13px;
+  color: #858585;
+  padding-bottom: 1px; }
+
+.txt-red-error {
+  color: #AA2233; }
+
+.txt-green {
+  color: #0F7806; }
+
+.block3 {
+  width: 100%;
+  height: 3px;
+  overflow: hidden; }
+
+.block5 {
+  width: 100%;
+  height: 5px;
+  overflow: hidden; }
+
+.block10 {
+  width: 100%;
+  height: 10px;
+  overflow: hidden; }
+
+.block20 {
+  width: 100%;
+  height: 20px;
+  overflow: hidden; }
+
+.block30 {
+  width: 100%;
+  height: 30px;
+  overflow: hidden; }
+
+.block40 {
+  width: 100%;
+  height: 40px;
+  overflow: hidden; }
+
+.block {
+  background-color: #c1c1c1;
+  padding: 20px 20px 0px 20px; }
+
+.block a {
+  text-decoration: underline;
+  color: #1F97AE; }
+
+.block a:hover {
+  text-decoration: none;
+  color: #2a6496; }
+
+.table {
+  font-family: 'Roboto', sans-serif; }
+
+.tr-dark {
+  background-color: #333333;
+  color: #FFFFFF;
+  font-weight: 700; }
+
+.txt-center {
+  text-align: center; }
+
+.tr-grey {
+  background-color: #EBEBEB; }
+
+.full-width {
+  width: 100%;
+  display: block;
+  padding: 19px 10px; }
+
+.full-width-md {
+  width: 100%;
+  display: block;
+  padding: 19px 10px; }
+
+.full-width-xs {
+  width: 100%;
+  display: block;
+  padding: 16px 10px; }
+
+/*=================================
+Login
+=================================*/
+/*.body-login {
+background-color: #F7F7F7;
+overflow: hidden;
+width: 100%;
+height: 100%;
+/*min-height: 800px;*/
+/*
+    overflow-y: scroll;
+}*/
+.body-login {
+  background-color: #F7F7F7;
+  overflow: hidden;
+  width: 100%;
+  /*sacarle el height:100%; */
+  /*min-height: 800px;*/
+  overflow-y: scroll;
+  padding-top: 0px; }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  border: 0px;
+  border-radius: 0px; }
+
+.nav-tabs > li {
+  margin-bottom: -2px; }
+
+.nav > li > a {
+  padding: 10px 20px;
+  background-color: #EBEBEB; }
+
+.nav > li.active > a {
+  background-color: #FFFFFF; }
+
+.nav-tabs > li > a {
+  margin-right: 0px;
+  color: #222222; }
+
+.nav-tabs > li > a:hover {
+  border-color: #C3C3C3;
+  background-color: #C3C3C3;
+  color: #222222; }
+
+.nav-tabs {
+  border: 0px !important; }
+
+.login {
+  margin: 0% 31% 0% 31%;
+  padding: 2% 0%; }
+
+.login-content {
+  border: 1px solid #FFFFFF;
+  background-color: #FFFFFF;
+  min-height: 200px;
+  min-width: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 3%; }
+
+.logo-miclaro {
+  width: 45%; }
+
+.no-margin {
+  margin: 0px !important; }
+
+.float-right {
+  float: right; }
+
+.claim {
+  padding: 0 15%;
+  text-align: center; }
+
+.claim p {
+  margin: 0px; }
+
+.login-content label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  display: block; }
+
+.form-login {
+  padding: 0 5%; }
+
+.form-login input {
+  width: 100%;
+  height: 42px;
+  display: block;
+  padding-left: 10px; }
+
+.txt-helper {
+  color: #999999;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 5px; }
+
+.btn-login {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif; }
+
+.error-input {
+  border: 1px solid #b7202e; }
+
+.error-label {
+  color: #b7202e; }
+
+.alert-danger {
+  border-radius: 0px;
+  color: #b7202e;
+  background-color: #F2DEDE;
+  border: none; }
+
+.alert-danger p {
+  color: #AA2233; }
+
+.alert > p + p {
+  margin-top: 0px; }
+
+.alert-danger ul {
+  padding-left: 0px; }
+
+.alert-danger ul li {
+  list-style: none;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif; }
+
+.alert-success {
+  border-radius: 0px;
+  border: none;
+  color: #0F7806;
+  background-color: #DFF0D8; }
+
+.alert-success p {
+  color: #3c763d; }
+
+.block-none {
+  display: none; }
+
+.txt-hogar {
+  margin: 0px; }
+
+.txt-clave {
+  font-size: 20px; }
+
+.icon-mantenimiento {
+  font-size: 50px;
+  padding-bottom: 10px; }
+
+.box-captcha {
+  width: 100%;
+  min-height: 100px;
+  background-color: #DDDDDD;
+  margin-bottom: 5px; }
+
+.box-captcha ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: 5px auto 0 auto;
+  display: table; }
+
+.box-captcha ul li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+  font-size: 25px;
+  padding: 10px 5px; }
+
+.box-captcha ul li a {
+  color: #222222;
+  border: 1px solid #DDDDDD;
+  padding: 10px 15px; }
+
+.box-captcha ul li a:hover {
+  border: 1px dashed #B7202E;
+  background-color: #f4c7c3; }
+
+.captcha-active {
+  border: 1px dashed #B7202E !important;
+  background-color: #f4c7c3; }
+
+/*=================================
+Home
+=================================*/
+.main-content {
+  float: left; }
+
+.main-content-inner {
+  float: left;
+  /*padding: 7px 30px 0px 15px;*/
+  overflow: hidden; }
+
+.card {
+  background-color: #eaeaea;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 2px #ccc;
+  min-height: 90px;
+  margin: 10px 5px 5px 10px;
+  padding: 15px;
+  font-family: 'Roboto', sans-serif; }
+
+.card:hover {
+  cursor: pointer;
+  background-color: #DA262C; }
+
+.card:hover .text {
+  color: #FFFFFF; }
+
+.card:hover .icon {
+  color: #FFFFFF; }
+
+.card .text {
+  font-size: 18px;
+  padding-top: 22px;
+  text-align: left;
+  font-weight: bold;
+  color: #222222;
+  float: left; }
+
+.card .doble-line {
+  padding-top: 12px; }
+
+.card .icon {
+  font-size: 46px;
+  padding-top: 8px;
+  text-align: center;
+  color: #222222;
+  float: left;
+  margin-right: 20px;
+  margin-left: 10px; }
+
+.slide {
+  margin-top: 15px; }
+
+.carousel-indicators .active {
+  background-color: #d32c1c; }
+
+.carousel-control {
+  display: none; }
+
+.carousel:hover .carousel-control {
+  display: block; }
+
+.panel-info {
+  min-height: 93px; }
+
+.panel-date {
+  font-family: 'Roboto', sans-serif; }
+
+.panel-date p {
+  margin: 0px; }
+
+.line-grey {
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #D1D1D1;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  clear: both; }
+
+.txt-normal {
+  font-size: 18px;
+  font-weight: 700; }
+
+.pagination {
+  margin: 0 auto;
+  display: table; }
+
+.pagination > li > a, .pagination > li > span {
+  color: #000; }
+
+.number-question {
+  font-size: 12px;
+  text-align: center;
+  margin: 0px; }
+
+.txt-question {
+  font-size: 14px;
+  text-align: center;
+  margin: 0px; }
+
+.pagination > li > a:hover, .pagination > li > span:hover {
+  color: #000; }
+
+.pagination > li > a:focus, .pagination > li > span:focus {
+  color: #fff;
+  background-color: #222222;
+  border-color: #222222; }
+
+.insatisfecho p {
+  text-align: left;
+  margin: 0px;
+  font-size: 12px; }
+
+.satisfecho p {
+  text-align: right;
+  margin: 0px;
+  font-size: 12px; }
+
+.total-bullet {
+  background-color: #0F7806;
+  min-height: 104px; }
+
+.total-bullet-red {
+  background-color: #AF272F;
+  min-height: 124px; }
+
+.total-bullet {
+  color: #FFFFFF;
+  font-size: 23px;
+  text-align: center;
+  padding-top: 10px; }
+
+.total-date {
+  background-color: #DFF0D8;
+  min-height: 93px;
+  padding-left: 10px;
+  padding-top: 8px;
+  font-family: 'Roboto', sans-serif;
+  color: #222222;
+  font-weight: 300; }
+
+.total-date-red {
+  background-color: #F2DEDE; }
+
+.total-date p {
+  margin: 0px;
+  display: block; }
+
+.txt-total {
+  font-size: 12px; }
+
+.txt-price {
+  font-size: 22px;
+  font-weight: 700; }
+
+.txt-exp {
+  font-size: 12px;
+  padding-top: 6px; }
+
+.txt-date {
+  font-size: 16px;
+  font-weight: 700; }
+
+.btn-ver {
+  width: 100px;
+  height: 30px;
+  background-color: #0F7806;
+  text-align: center;
+  padding-top: 5px; }
+
+.btn-ver:hover {
+  background-color: #1F4014; }
+
+.btn-ver-red {
+  background-color: #AF272F; }
+
+.btn-ver-red:hover {
+  background-color: #5C1C1C; }
+
+.btn-ver a {
+  color: #FFFFFF; }
+
+.float-left {
+  float: left; }
+
+.line-suspended {
+  background-color: #F2DEDE;
+  min-height: 61px;
+  padding-top: 13px;
+  padding-left: 16px; }
+
+.total-bulled-red-hight {
+  min-height: 113px; }
+
+.txt-suspended {
+  font-size: 16px;
+  font-weight: 700; }
+
+.pagination-sm > li > a, .pagination-sm > li > span {
+  padding: 5px 10px; }
+
+.bullet-option {
+  float: right;
+  padding-top: 18px; }
+
+.txt-uppercase {
+  text-transform: uppercase; }
+
+/*Modals*/
+.modal-footer {
+  border: 0px; }
+
+.modal-footer {
+  padding: 0px; }
+
+.modal-title {
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center; }
+
+.modal-content {
+  border-radius: 0px; }
+
+.modal-content .btn {
+  border: 0px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  border-radius: 0px; }
+
+.modal-content .btn:focus, .modal-content .btn:active:focus, .modal-content .btn.active:focus {
+  outline: none;
+  background-color: #FFFFFF !important;
+  box-shadow: none; }
+
+.modal-content .btn-default:hover, .modal-content .btn-default:focus, .modal-content .btn-default:active, .modal-content .btn-default.active {
+  background-color: #FFFFFF; }
+
+.modal-content .btn:hover {
+  background-color: #FFFFFF !important; }
+
+.txt-blue {
+  color: #1F97AE; }
+
+.txt-red {
+  color: #af272f; }
+
+.txt-green {
+  color: #0F7806; }
+
+.txt-gray {
+  color: #858585; }
+
+.txt-orange {
+  color: #F58220; }
+
+.txt-purple {
+  color: #702874; }
+
+.line-blue {
+  margin-left: 0px;
+  border-left: 1px solid #1F97AE; }
+
+.line-orange {
+  margin-left: 0px;
+  border-left: 1px solid #F58220; }
+
+.modal-footer .btn + .txt-red .btn {
+  border-left: 1px solid #B7202E;
+  font-weight: 700; }
+
+.modal-footer ul {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden; }
+
+.modal-footer ul li {
+  list-style: none;
+  overflow: hidden;
+  display: inline;
+  float: left;
+  text-align: center; }
+
+.one-button {
+  width: 100%; }
+
+.two-button {
+  width: 50%; }
+
+/* Expirar Session*/
+.panel-encuesta .text-area {
+  width: 100%;
+  min-height: 60px;
+  resize: none; }
+
+.txt-max {
+  text-align: right;
+  padding-top: 5px; }
+
+.txt-exclusive {
+  text-align: center;
+  margin: 0px;
+  padding: 0px 20px; }
+
+.thanks-question {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid #D1D1D1; }
+
+.porlet-right {
+  margin-left: 30px;
+  float: right; }
+
+.div-inline {
+  display: inline; }
+
+.input-date {
+  width: 200px; }
+
+.hr-black {
+  border-bottom: 1px solid #8A8A8A !important;
+  overflow: hidden;
+  padding-bottom: 5px; }
+
+.last-tr {
+  border: 0px; }
+
+.msj-ok {
+  width: 100%;
+  padding: 16px 10px;
+  background-color: #DFF0D8;
+  font-family: 'Roboto', sans-serif;
+  color: #000000; }
+
+.msj-ok-blue {
+  background-color: #DCE9F2; }
+
+.msj-ok p {
+  padding: 0px;
+  margin: 0px;
+  text-align: center; }
+
+.msj-ok i {
+  font-size: 10px; }
+
+.btn-pago, .btn-factura {
+  width: 49.5%;
+  float: left;
+  padding: 20px 10px;
+  font-size: 15px; }
+
+.btn-pago {
+  margin-right: 1%; }
+
+.msj-high a i {
+  font-size: 10px; }
+
+.msj-high-left {
+  background-color: #222222;
+  min-height: 69px;
+  color: #ffffff;
+  width: 4%;
+  float: left; }
+
+.msj-high-left i {
+  color: #ffffff;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  padding-top: 10px; }
+
+.msj-high-right {
+  background-color: #E8E8E8;
+  padding: 25px 0px 24px 10px;
+  width: 96%;
+  float: left; }
+
+.msj-high-right p {
+  margin: 0px; }
+
+#miConsumo .msj-high-left {
+  background-color: #222222;
+  min-height: 114px;
+  color: #ffffff;
+  width: 6%;
+  float: left; }
+
+#miConsumo .msj-high-right {
+  background-color: #E8E8E8;
+  min-height: 114px;
+  padding: 15px 10px 15px 10px;
+  width: 94%;
+  float: left; }
+
+#miConsumo .msj-high-left-red {
+  background-color: #B7202E; }
+
+.title-msj-high {
+  padding-bottom: 5px; }
+
+.accordion td {
+  /*padding-left: 30px !important;*/ }
+
+.ocultar td, .ocultar2 td {
+  padding-left: 30px !important; }
+
+.table {
+  overflow-x: auto;
+  display: block; }
+
+#detalleDeConsumos .table {
+  display: table; }
+
+.table i {
+  font-size: 20px; }
+
+#detalleDeConsumos .tab-content {
+  border: 1px solid #222222;
+  padding: 15px; }
+
+#detalleDeConsumos .tab-pane {
+  overflow: hidden; }
+
+#detalleDeConsumos .nav-tabs li {
+  font-size: 14px; }
+
+#detalleDeConsumos .nav-tabs .active a {
+  color: #222222;
+  border: 1px solid #222222;
+  border-bottom: 1px solid #FFFFFF; }
+
+#detalleDeConsumos .nav-tabs li a {
+  background-color: #FFFFFF;
+  border: 1px solid #858585;
+  border-radius: 0px;
+  color: #858585;
+  padding: 15px 25px;
+  border-bottom: 0px; }
+
+#detalleDeConsumos .nav-tabs > li {
+  margin-bottom: -1px; }
+
+#detalleDeConsumos a:focus {
+  outline: none; }
+
+#detalleDeConsumos .tab-content select {
+  float: left;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 7px 7px 7px 1px;
+  border: 1px solid #666666;
+  color: #666666;
+  margin-bottom: 10px; }
+
+#detalleDeConsumos .table {
+  font-size: 13px;
+  font-weight: 400; }
+
+#detalleDeConsumos .input-group {
+  width: 25%;
+  float: left;
+  margin-left: 10px; }
+
+#detalleDeConsumos .table {
+  display: table; }
+
+.table i {
+  font-size: 20px; }
+
+#detalleDeConsumos .tab-content {
+  border: 1px solid #222222;
+  padding: 15px; }
+
+#detalleDeConsumos .tab-pane {
+  overflow: hidden; }
+
+#detalleDeConsumos .nav-tabs li {
+  font-size: 14px; }
+
+#detalleDeConsumos .nav-tabs .active a {
+  color: #222222;
+  border: 1px solid #222222;
+  border-bottom: 1px solid #FFFFFF; }
+
+#detalleDeConsumos .nav-tabs li a {
+  background-color: #FFFFFF;
+  border: 1px solid #858585;
+  border-radius: 0px;
+  color: #858585;
+  padding: 15px 25px;
+  border-bottom: 0px; }
+
+#detalleDeConsumos .nav-tabs > li {
+  margin-bottom: -1px; }
+
+#detalleDeConsumos a:focus {
+  outline: none; }
+
+#detalleDeConsumos .tab-content select {
+  float: left;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 7px 7px 7px 1px;
+  border: 1px solid #666666;
+  color: #666666;
+  margin-bottom: 10px; }
+
+#detalleDeConsumos .table {
+  font-size: 13px;
+  font-weight: 400; }
+
+#detalleDeConsumos .input-group {
+  width: 25%;
+  float: left;
+  margin-left: 10px; }
+
+.export-excel, .export-pdf {
+  float: right !important;
+  padding: 10px 15px;
+  overflow: hidden;
+  height: 30px;
+  margin: 0px;
+  line-height: 10px;
+  margin-left: 10px !important;
+  color: #ffffff;
+  background-color: #444444 !important; }
+
+.export-excel:hover, .export-pdf:hover {
+  color: #ffffff !important;
+  background-color: #333333 !important; }
+
+.msj-solicitud-proceso-grey {
+  background-color: #EBEBEB;
+  padding: 15px; }
+
+.msj-solicitud-proceso-grey i, .msj-solicitud-proceso-green i {
+  font-size: 22px; }
+
+.msj-solicitud-proceso-green {
+  background-color: #DFF0D8;
+  padding: 15px; }
+
+.padding-roaming {
+  padding-left: 10px; }
+
+.form-control {
+  font-weight: 400; }
+
+/* Factura Eletrónica*/
+.box-grey {
+  width: 100%;
+  background-color: #EBEBEB;
+  padding: 15px 15px 15px 15px;
+  overflow: hidden; }
+
+#miConsumo .box-grey {
+  margin-left: 15px; }
+
+#miConsumo .box-grey i {
+  font-size: 20px; }
+
+.adherite-factura-electronica ul, #login .modal-gray ul {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  list-style: none; }
+
+.adherite-factura-electronica ul li {
+  list-style: none; }
+
+.adherite-factura-electronica ul li p {
+  font-size: 16px;
+  display: inline-block;
+  float: left;
+  margin: 0px;
+  padding: 8px 0px 0px 10px;
+  line-height: 35px; }
+
+.adherite-factura-electronica ul li span {
+  font-size: 35px;
+  display: inline-block;
+  float: left;
+  padding-right: 10px; }
+
+.big-icon {
+  font-size: 54px !important; }
+
+.btn-adherite {
+  float: right;
+  text-align: right;
+  margin-right: 30px;
+  padding: 15px 23px; }
+
+.txt-modificar {
+  padding-left: 20px; }
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background-color: #66B548;
+  border-color: #4DA133; }
+
+.btn-group {
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px; }
+
+#detalleDeConsumos .btn-group {
+  float: right;
+  margin-top: 5px;
+  margin-right: 0px; }
+
+.btn {
+  min-width: 80px;
+  border-radius: 3px !important; }
+
+.padding-estado {
+  padding: 8px 64px !important; }
+
+.line-40 {
+  line-height: 40px !important; }
+
+.display-block {
+  display: block; }
+
+.line-height-24 {
+  line-height: 24px !important; }
+
+#facturaElectronica .onoffswitch {
+  position: relative;
+  width: 113px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  float: right;
+  margin-right: 20px; }
+
+#facturaElectronica .onoffswitch-checkbox {
+  display: none; }
+
+#facturaElectronica .onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #999999;
+  border-radius: 13px; }
+
+#facturaElectronica .onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s; }
+
+#facturaElectronica .onoffswitch-inner:before, #facturaElectronica .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 34px;
+  padding: 0;
+  line-height: 34px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: normal;
+  box-sizing: border-box; }
+
+#facturaElectronica .onoffswitch-inner:before {
+  content: "ACTIVA";
+  padding-left: 10px;
+  background-color: #66B548;
+  color: #FFFFFF; }
+
+#facturaElectronica .onoffswitch-inner:after {
+  content: "INACTIVA";
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right; }
+
+#facturaElectronica .onoffswitch-switch {
+  display: block;
+  width: 14px;
+  margin: 10px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 75px;
+  border: 2px solid #999999;
+  border-radius: 13px;
+  transition: all 0.3s ease-in 0s;
+  margin: 9px 10px 13px 10px;
+  width: 18px; }
+
+#facturaElectronica .onoffswitch-checkbox:checked + #facturaElectronica .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0; }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label #facturaElectronica .onoffswitch-switch {
+  right: 0px; }
+
+/* Mis Datos */
+.change-mail {
+  background-color: #EBEBEB;
+  padding: 15px 0px 30px 15px;
+  display: none; }
+
+.input-mail {
+  width: 100%;
+  padding: 7px; }
+
+#facturaElectronica .input-mail {
+  width: 63%; }
+
+.alert-danger {
+  overflow: hidden; }
+
+.ingresar-mail {
+  background-color: #EBEBEB;
+  padding: 15px;
+  overflow: hidden; }
+
+.content-btn-registrar {
+  text-align: center; }
+
+.icon-alert {
+  float: left; }
+
+.txt-alert {
+  float: right;
+  width: 96%; }
+
+#facturaElectronica .error-activacion .txt-alert {
+  padding: 14px 0px; }
+
+.link-color-black {
+  color: #222; }
+
+.link-color-black:hover, .link-color-black:focus {
+  color: #222; }
+
+.icon-msj-ok {
+  float: left;
+  display: block;
+  font-size: 55px;
+  color: #0F7806;
+  height: 45px; }
+
+.icon-msj-danger {
+  float: left;
+  display: block;
+  font-size: 55px;
+  color: #AA2233;
+  height: 45px; }
+
+.main-msj {
+  clear: both;
+  overflow: hidden;
+  margin: 0px; }
+
+.ocultarMail, .change-mail {
+  margin-bottom: 10px;
+  overflow: hidden; }
+
+.none20 {
+  display: none; }
+
+.content-btn-registrar, .content-btn-cancelar {
+  text-align: center;
+  margin-top: 7px; }
+
+/* Factura Electronica*/
+#facturaElectronica .table tr td {
+  padding-bottom: 4px; }
+
+#facturaElectronica .panel-body .alert-danger {
+  padding: 0px;
+  min-height: 60px; }
+
+.notificaciones-sms .alert-danger {
+  padding: 10px 10px; }
+
+.total-bullet-red-error-activacion {
+  float: left; }
+
+.iconContribui {
+  padding-top: 12px; }
+
+.cancelarNotif {
+  line-height: 30px;
+  float: right;
+  padding-top: 5px;
+  padding-right: 25px; }
+
+.cancelarNotif i {
+  padding-right: 4px; }
+
+.cancelarNotif a {
+  color: #B7202E;
+  text-decoration: underline; }
+
+.cancelarNotif a:hover {
+  color: #94151D; }
+
+/*** Recarga Contrafactura ***/
+.boxGrayRecarga {
+  background-color: #EBEBEB;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  box-shadow: 1px 1px 5px #999; }
+
+.title-recarga {
+  padding: 10px 0px 15px 0px; }
+
+.precioContraFactura {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.iconRecarga {
+  font-size: 50px;
+  margin-bottom: 10px; }
+
+.boxGrayRecarga:hover {
+  background-color: #DA262C; }
+
+/* texto del mensaje de recarga contrafactura*/
+.txt-modal {
+  text-align: center; }
+
+/* manito de las tarjetas de recarga contrafactura */
+.hand-link {
+  color: #222222; }
+
+.hand-link:focus {
+  color: #222222; }
+
+.hand-link:hover {
+  color: #FFFFFF; }
+
+.hand-link:hover p {
+  color: #FFFFFF; }
+
+.mano-link {
+  color: #222222; }
+
+.mano-link:focus {
+  color: #222222; }
+
+.mano-link:hover {
+  color: #222222; }
+
+.mano-link:hover p {
+  color: #222222; }
+
+#recargaContraFactura .msj-inner-ok {
+  width: 100%;
+  padding: 25px 16px;
+  background-color: #DFF0D8;
+  font-family: 'Roboto', sans-serif; }
+
+#recargaContraFactura .msj-inner-error {
+  width: 100%;
+  padding: 20px 16px;
+  background-color: #F2DEDE;
+  font-family: 'Roboto', sans-serif; }
+
+.boxGrayRecargaInactivo {
+  background-color: #EBEBEB;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  box-shadow: 1px 1px 5px #999;
+  color: #858585; }
+
+.boxGrayRecargaInactivo p {
+  color: #858585; }
+
+/* Mi Consumo*/
+.rueda-credito {
+  min-height: 200px;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.rueda-internet {
+  min-height: 200px;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.rueda-sms {
+  min-height: 200px;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.data-porcent {
+  margin-bottom: -150px;
+  margin-top: 40px; }
+
+.data-porcent p {
+  margin: 0px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 12px; }
+
+.data-porcent p.porcentaje-linea {
+  font-size: 44px;
+  line-height: 50px;
+  font-weight: 400; }
+
+.data-porcent p.porcentaje-linea sup {
+  font-size: 22px;
+  top: -14px;
+  left: 2px; }
+
+.data-porcent p.usado-linea {
+  margin-top: -5px;
+  padding-bottom: 10px; }
+
+.linea-disponible {
+  width: 140px;
+  border-bottom: 1px solid #DCE2E3;
+  margin: 4px auto; }
+
+.linea-disponible-mini {
+  width: 140px;
+  border-bottom: 1px solid #DCE2E3;
+  margin: 4px auto;
+  float: left; }
+
+.btn-recompra {
+  width: auto;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #D1D1D1;
+  color: #858585;
+  text-shadow: #ffffff 0 1px 0;
+  pointer-events: none;
+  font-family: 'Roboto', sans-serif; }
+
+.margin-right-15 {
+  margin-right: 15px; }
+
+.margin-left-15 {
+  margin-left: 15px; }
+
+.miConsumoContent .txt-internet-dia {
+  margin-top: 3px;
+  font-weight: 400; }
+
+.miConsumoContent .txt-internet-dia a {
+  text-decoration: underline; }
+
+.txt-internet-dia .fa-info-circle {
+  padding-right: 3px; }
+
+.data-porcent p.tx-no-disponible {
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 400; }
+
+.data-porcent p.tx-ilimitado {
+  font-size: 26px;
+  line-height: 26px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 400; }
+
+.rueda-ilimitado .no-disponible {
+  margin-bottom: -150px;
+  margin-top: 45px; }
+
+.no-disponible {
+  margin-bottom: -130px;
+  margin-top: 30px; }
+
+.no-disponible2 {
+  margin-bottom: -130px;
+  margin-top: 43px; }
+
+.btn-recompra-active {
+  background-color: #1F97AE;
+  width: auto;
+  display: inline-block;
+  padding: 6px 12px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif; }
+
+#internet-dia .modal-body i {
+  font-size: 10px; }
+
+#internet-dia .modal-body a {
+  color: #FFFFFF; }
+
+.ultima-recarga {
+  padding: 5px 0px;
+  border-bottom: 1px solid #D1D1D1;
+  border-top: 1px solid #D1D1D1;
+  margin-left: 15px; }
+
+.content-chart-mini {
+  margin-top: 20px; }
+
+.data-porcent-min {
+  margin-bottom: -80px;
+  margin-top: 50px; }
+
+.padding-left-28 {
+  padding-left: 28px; }
+
+.txt-disp {
+  clear: both; }
+
+.content-chart-mini .line-grey {
+  margin-bottom: 0px; }
+
+.data-porcent p.txt-internet sup {
+  top: -9px; }
+
+#column-0 .txt-red {
+  color: #DA262D; }
+
+#error-home-main ul {
+  margin-bottom: 0px; }
+
+#error-home-line-2, #error-home-line-3 {
+  padding-left: 16px; }
+
+#ayuda-modal-2, #ayuda-modal-3 {
+  padding-left: 21px; }
+
+#miConsumo .miConsumoCruz {
+  display: block;
+  float: right;
+  font-size: 20px;
+  margin-top: -10px;
+  cursor: pointer;
+  margin-right: 3px; }
+
+.login-background-ar {
+  background-image: url("../img/loginBackgroundAR.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.login-background-uy {
+  background-image: url("../img/loginBackgroundUY.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.login-background-py {
+  background-image: url("../img/loginBackgroundPY.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.msj-nuevo-miclaro p {
+  float: left;
+  display: block; }
+
+/*Cambios Detalles de consumos */
+#detalleDeConsumos .dataTables_empty {
+  padding: 0px; }
+
+#detalleDeConsumos .no-premios {
+  min-height: 110px;
+  background-color: #F2DEDE;
+  border: 0px; }
+
+#detalleDeConsumos .no-resultados {
+  min-height: 110px;
+  background-color: #F9F9F9;
+  border: 0px; }
+
+/* Dejar siempre al ultimo */
+.txt-disp {
+  color: #222222; }
+
+.btnFacturaElectronica {
+  display: inline-block;
+  padding: 15px 23px;
+  margin: 0px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 0px; }
+
+.total-bullet-error-activacion {
+  color: #FFFFFF;
+  font-size: 17px;
+  text-align: center;
+  padding-top: 6px; }
+
+.total-bullet-red-error-activacion {
+  background-color: #AF272F;
+  min-height: 60px;
+  width: 25px; }
+
+.input-mail-error {
+  width: 63%;
+  margin-right: 65px;
+  padding: 7px;
+  border: 1px solid #AF272F; }
+
+.telefonoRegistrado {
+  margin-left: 10px; }
+
+.fullWidthMdFacturaElectronica {
+  width: 100%;
+  display: block; }
+
+.txtFacturaElectronica {
+  font-size: 12px; }
+
+.txt-alert {
+  float: right;
+  width: 96%; }
+
+.btnCancelarCambios {
+  float: left;
+  text-align: left;
+  margin-right: 30px;
+  padding-left: 10px;
+  padding-top: 20px; }
+
+.sizePhone {
+  font-size: 20px !important; }
+
+.txtCodigoDeArea {
+  margin-bottom: 0px; }
+
+.txtErrorActivacion {
+  margin-left: -10px; }
+
+#facturaElectronica .txtErrorActivacion {
+  margin-left: 10px; }
+
+.btnCancelarNotificacionInactiva {
+  margin-left: 15px; }
+
+.txtContribui {
+  line-height: 22px !important; }
+
+.btnGuardarCambios {
+  float: right;
+  text-align: right;
+  margin-right: 17px;
+  padding: 15px 23px; }
+
+.fondo-gray {
+  background-color: #EBEBEB;
+  padding: 5px;
+  margin-bottom: 2px; }
+
+.fondo-gray-chico {
+  background-color: #EBEBEB;
+  padding: 0px;
+  margin-bottom: 3px; }
+
+.fondo-verde-chico {
+  background-color: #66B548;
+  color: #FFFFFF;
+  padding: 0px;
+  margin-bottom: 3px; }
+
+.line-2 {
+  border-bottom: 2px solid #222222; }
+
+h3.line-2 {
+  border-bottom: 2px solid #222222; }
+
+.icon-left {
+  margin-right: 5px;
+  margin-left: 10px; }
+
+.tr-gray {
+  background-color: #444444;
+  color: #FFFFFF; }
+
+.tr-gris-claro {
+  background-color: #EBEBEB;
+  border-bottom: none; }
+
+.tr-linea-gris-claro {
+  border-bottom: 1px solid #CCCCCC; }
+
+.txt-negrita {
+  font-weight: bold !important; }
+
+#miConsumoCR .table {
+  display: table; }
+
+#miConsumoPP .table {
+  display: table; }
+
+.texto-alineado {
+  display: inline-flex; }
+
+.margin-right-2 {
+  margin-right: 2px; }
+
+.txt-link-recarga {
+  width: 35% !important; }
+
+.txt-12-margin-left-15 {
+  font-size: 12px;
+  margin: 0px 0px 0px 15px; }
+
+.block5 {
+  width: 100%;
+  height: 5px;
+  overflow: hidden; }
+
+.box-grey-sms-pack i {
+  font-size: 20px; }
+
+.btn-comprapack-active {
+  background-color: #1F97AE;
+  width: inherit;
+  display: inline-block;
+  padding: 6px 12px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center; }
+
+.icono-carrito {
+  margin-right: 5px;
+  font-size: 18px !important; }
+
+.icon-eco {
+  font-size: 50px; }
+
+.box-eco {
+  display: inline-flex; }
+
+.txt-eco {
+  margin: 10px; }
+
+.btn-adherite-active {
+  background-color: #66B548;
+  width: inherit;
+  display: inline-block;
+  padding: 6px 12px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center; }
+
+#facturaElectronica .modal-body p {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 15px; }
+
+#miConsumoConfirmacion .msj-general-error .fa-times {
+  display: block;
+  float: right;
+  font-size: 20px;
+  margin-top: -10px;
+  cursor: pointer;
+  margin-right: 3px; }
+
+#miConsumoConfirmacion .msj-general-ok .fa-times {
+  display: block;
+  float: right;
+  font-size: 20px;
+  margin-top: -10px;
+  cursor: pointer;
+  margin-right: 3px; }
+
+.linea-disponible-abajo {
+  width: 180px;
+  border-bottom: 1px solid #DCE2E3;
+  margin: 4px auto; }
+
+.btn-recompra-active:hover {
+  background-color: #075362; }
+
+.sup-pp {
+  top: -0.27em; }
+
+.margin-left-7 {
+  margin-left: 7px; }
+
+.especial-table {
+  text-align: right !important;
+  padding-right: 11.5% !important; }
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif; }
+
+#miConsumoCRSinPack .circle-gray i {
+  margin-left: 28px; }
+
+.txt-blanco {
+  color: #FFFFFF; }
+
+.btn-popup-black {
+  background-color: #000000;
+  padding: 5px 15px !important;
+  border-radius: 0px !important;
+  color: #FFFFFF; }
+
+.btn-popup-black:hover {
+  background-color: #444444;
+  color: #FFFFFF; }
+
+.input-popup {
+  width: 230px;
+  padding-bottom: 0.22em; }
+
+.msj-popup-ok {
+  width: 100%;
+  padding: 12px 10px;
+  background-color: #DFF0D8;
+  font-family: 'Roboto', sans-serif; }
+
+.msj-popup-ok p, .msj-popup-ok i {
+  color: #0F7806;
+  font-size: 18px;
+  display: block;
+  float: left; }
+
+.msj-popup-ok p {
+  margin: 0px;
+  margin-left: 10px; }
+
+.msj-popup-error {
+  width: 100%;
+  padding: 10px 10px;
+  background-color: #F2DEDE;
+  font-family: 'Roboto', sans-serif; }
+
+.msj-popup-error p, .msj-popup-error i {
+  color: #B7202E;
+  font-size: 15px;
+  display: block;
+  float: left;
+  line-height: 16px; }
+
+.msj-popup-error p {
+  margin: 0px;
+  margin-left: 10px; }
+
+.msj-popup-error i {
+  margin-top: 7px;
+  font-size: 18px; }
+
+.fa-qr {
+  font-size: 120px !important; }
+
+.fondo-blanco-qr {
+  background-color: #FFFFFF;
+  min-height: 150px; }
+
+.fondo-blanco-qr p {
+  color: #222222;
+  font-size: 12px;
+  line-height: 12px; }
+
+.line-height-18 {
+  line-height: 18px; }
+
+.txt-15 {
+  font-size: 15px;
+  margin: 0px;
+  line-height: 16px; }
+
+.padding-5 {
+  padding: 5px; }
+
+.padding-10 {
+  padding: 10px; }
+
+.line-height-25 {
+  line-height: 25px; }
+
+.line-height-35 {
+  line-height: 35px; }
+
+.inactive {
+  color: #858585 !important; }
+
+.box-confirma-gray {
+  width: 100%;
+  background-color: #E8E8E8;
+  min-height: 150px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.box-confirma-gray-3a {
+  width: 100%;
+  background-color: #E8E8E8;
+  min-height: 150px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.box-confirma-gray-3b {
+  width: 100%;
+  background-color: #E8E8E8;
+  min-height: 150px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.box-confirma-gray-3c {
+  width: 100%;
+  background-color: #E8E8E8;
+  min-height: 150px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.box-confirma-gray-3a {
+  min-height: 350px; }
+
+.box-confirma-gray-3b {
+  min-height: 800px; }
+
+.box-confirma-gray-3c {
+  min-height: 350px; }
+
+.box-confirma-white {
+  background-color: #FFFFFF;
+  min-height: 235px; }
+
+.margin-right-10 {
+  margin-right: 10px; }
+
+.margin-right-5 {
+  margin-right: 5px; }
+
+.padding-btn-negro {
+  padding: 5px 35px; }
+
+.padding-btn-purple {
+  padding: 5px 26px; }
+
+.msj-confirma {
+  width: 100%;
+  padding: 12px 0px;
+  font-family: 'Roboto', sans-serif; }
+
+.msj-confirma i {
+  color: #0F7806;
+  font-size: 18px;
+  display: block;
+  float: left;
+  margin-top: 8px;
+  margin-right: 10px; }
+
+.msj-confirma p {
+  color: #0F7806;
+  font-size: 18px;
+  display: block;
+  margin: 0px;
+  line-height: 35px; }
+
+.margin-left-25 {
+  margin-left: 25px; }
+
+#claroClub .margin-left-25 {
+  margin-left: 25px; }
+
+.qr-claro {
+  padding: 10px;
+  width: 100%; }
+
+#claroClub .input-beneficio-3 {
+  width: 100%;
+  margin-left: 0px;
+  padding: 0px;
+  border-left: none;
+  box-shadow: none;
+  height: 34px; }
+
+.input-beneficio-3:focus {
+  border: 1px solid #CCCCCC; }
+
+.btn-beneficio-black {
+  background-color: #000000;
+  padding: 6px 15px !important;
+  border-radius: 0px !important;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.btn-beneficio-black:hover {
+  background-color: #444444;
+  color: #FFFFFF; }
+
+.icon-mensaje {
+  background-color: #FFFFFF;
+  font-size: 20px; }
+
+.btn-purple-beneficio {
+  padding: 5px 70px; }
+
+.btn-negro-beneficio {
+  padding: 5px 35px; }
+
+#claroClub .input-beneficio {
+  width: 100% !important;
+  margin-left: 0px !important; }
+
+.btn-popup-black:hover {
+  background-color: #444444 !important; }
+
+.box-grey-sms-pack {
+  width: 100%;
+  background-color: #EBEBEB;
+  padding: 15px 15px 15px 15px;
+  overflow: hidden; }
+
+#claroClub input::-ms-clear {
+  display: none; }
+
+#cargosUnicos .table {
+  font-size: 13px;
+  font-weight: 400; }
+
+#cargosUnicos .input-group {
+  width: 25%;
+  float: left;
+  margin-left: 10px; }
+
+#cargosUnicos .table {
+  display: table; }
+
+.table i {
+  font-size: 20px; }
+
+#cargosUnicos .tab-content {
+  border: 1px solid #222222;
+  padding: 15px; }
+
+#cargosUnicos .tab-pane {
+  overflow: hidden; }
+
+#cargosUnicos .nav-tabs li {
+  font-size: 14px; }
+
+#cargosUnicos .nav-tabs .active a {
+  color: #222222;
+  border: 1px solid #222222;
+  border-bottom: 1px solid #FFFFFF; }
+
+#cargosUnicos .nav-tabs li a {
+  background-color: #FFFFFF;
+  border: 1px solid #858585;
+  border-radius: 0px;
+  color: #858585;
+  border-bottom: 0px; }
+
+#cargosUnicos .nav-tabs > li {
+  margin-bottom: -1px; }
+
+#cargosUnicos a:focus {
+  outline: none; }
+
+#cargosUnicos .tab-content select {
+  float: left;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 7px 7px 7px 1px;
+  border: 1px solid #666666;
+  color: #666666;
+  margin-bottom: 10px; }
+
+#cargosUnicos .table {
+  font-size: 13px;
+  font-weight: 400; }
+
+#cargosUnicos .input-group {
+  width: 25%;
+  float: left;
+  margin-left: 10px; }
+
+.margin-top-5 {
+  margin-top: 5px; }
+
+.red-claro {
+  background-color: #DA262C; }
+
+.line-height-5 {
+  line-height: 5px; }
+
+.txt-red-breadcrumb {
+  color: #af272f !important; }
+
+.margin-bottom-10 {
+  margin-bottom: 10px; }
+
+#miSlide .carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-left {
+  left: 0%;
+  margin-left: 5px; }
+
+#miSlide .carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right {
+  right: 0%;
+  margin-right: 5px; }
+
+.pagination-sm > li > a, .pagination-sm > li > span {
+  padding: 5px 9px; }
+
+.carousel-indicators {
+  bottom: -10px; }
+
+.text-initial {
+  white-space: initial; }
+
+#progress li:before {
+  border-left: 18px solid #000 !important; }
+
+.margin-0 {
+  margin: 0px; }
+
+.link-hand:hover {
+  cursor: pointer; }
+
+.vertical-middle {
+  vertical-align: middle !important; }
+
+.navbar-brand-login img {
+  width: 98px; }
+
+.contenedor-renovando {
+  background-color: #1F97AE;
+  overflow: hidden;
+  padding: 5px 0px; }
+
+.inner-renovando {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 94%; }
+
+.contenedor-icono-renovado {
+  width: 70px;
+  float: left;
+  margin-right: 10px; }
+
+.contenedor-texto-renovando {
+  display: table;
+  height: 51px; }
+
+.icono-renovando {
+  width: 70px; }
+
+.texto-renovando {
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  display: table-cell;
+  vertical-align: middle; }
+
+.txt-bread-crum {
+  color: #DA262D; }
+
+#claroClub .banner-superior {
+  min-height: 200px;
+  border: 1px solid #858585; }
+
+.logo-claro-club img {
+  width: 45%;
+  margin-top: 55px; }
+
+.logo-claro-club-inner {
+  min-height: 198px; }
+
+.logo-claro-club-inner img {
+  width: 45%;
+  margin-top: 14px; }
+
+.terminos-condiciciones {
+  background-color: #702874;
+  min-height: 198px;
+  padding: 25px 20px; }
+
+.txt-white {
+  color: #FFFFFF; }
+
+.link-white {
+  color: #FFFFFF;
+  text-decoration: underline; }
+
+.link-white:hover {
+  color: #FFFFFF;
+  text-decoration: underline; }
+
+.display-inline {
+  display: inline; }
+
+.btn-adherirme-desactivado {
+  border: none;
+  background-color: #AB89A8;
+  border-radius: 3px;
+  padding: 7px 45px;
+  color: #702874;
+  margin-left: 30px;
+  cursor: no-drop; }
+
+.btn-adherirme-activado {
+  border: none;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  padding: 7px 45px;
+  color: #222222;
+  margin-left: 30px;
+  cursor: cursor; }
+
+.banner-claro-club {
+  min-height: 198px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+#claroClub .mi-categoria-icono {
+  font-size: 16px !important;
+  vertical-align: bottom; }
+
+.div-prepago {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.txt-prepago {
+  font-size: 30px; }
+
+.ver-utlimos-movimientos {
+  padding-top: 5px; }
+
+.contenedor-gris {
+  background-color: #444444;
+  min-height: 50px;
+  margin-top: 1px;
+  padding: 8px 15px; }
+
+#claroClub select {
+  float: left;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 7px 7px 7px 1px;
+  border: 1px solid #666666;
+  color: #666666;
+  margin-bottom: 10px;
+  width: 250px; }
+
+#claroClub .input-group {
+  width: 23%;
+  float: left;
+  margin-left: 10px; }
+
+.radius-0 {
+  border-radius: 0px; }
+
+.filtrar-por {
+  margin-right: 10px;
+  padding-top: 7px; }
+
+.tabla-claro-club {
+  /*border-bottom: 2px solid #222222;*/ }
+
+.border-tabla-cclub {
+  border-bottom: 2px solid #222222;
+  width: 100%; }
+
+.ericson {
+  width: 100%;
+  text-align: center; }
+
+#claroClub .table {
+  display: inline-table;
+  overflow-x: auto;
+  width: 100%; }
+
+#claroClub .table tr {
+  border: none; }
+
+#claroClub .table tr td {
+  text-align: left;
+  vertical-align: middle; }
+
+#claroClub .table tr th.txt-right {
+  text-align: right; }
+
+#claroClub .table tr td.txt-right {
+  text-align: right; }
+
+.canjear-activo {
+  border-radius: 3px;
+  background-color: #702874;
+  color: #FFFFFF;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 6px 64px;
+  float: none;
+  margin-right: 5px;
+  margin-left: 5px; }
+
+.ver-mas-activo {
+  border-radius: 3px;
+  background-color: #333333;
+  color: #FFFFFF;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 6px 44px; }
+
+.ver-mas-activo:hover {
+  background-color: #212121; }
+
+#claroClub .txt-detalle-premio {
+  padding-right: 10px !important; }
+
+.canjear-activo:hover {
+  background-color: #591C59; }
+
+.beneficio-utilizado {
+  border-radius: 3px;
+  background-color: #D1D1D1;
+  color: #FFFFFF;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 6px 21px;
+  float: none;
+  margin-right: 5px;
+  margin-left: 5px; }
+
+.padding-0 {
+  padding: 0px !important; }
+
+#claroClub .msj-inner-error {
+  background-color: #F2DEDE;
+  padding: 15px 20px; }
+
+#claroClub .msj-inner-error i {
+  font-size: 24px; }
+
+#claroClub .msj-inner-error a, #claroClub .msj-inner-error a:hover {
+  color: #B7202E;
+  text-decoration: underline; }
+
+#claroClub .main-content-inner {
+  /*padding: 0px;*/ }
+
+.content-msj-error-cclub {
+  overflow: hidden;
+  margin: 0 0px; }
+
+.no-premios {
+  min-height: 110px;
+  background-color: #F2DEDE;
+  border-bottom: 2px solid #B7202E; }
+
+.no-premios i {
+  padding-right: 10px; }
+
+.no-premios {
+  padding: 44px 30px; }
+
+.no-resultados {
+  min-height: 110px;
+  background-color: #F9F9F9;
+  border-bottom: 2px solid #222222; }
+
+.no-resultados i {
+  padding-right: 10px; }
+
+.no-resultados p {
+  padding: 44px 0px; }
+
+#claroClub .dataTables_empty {
+  padding: 0px; }
+
+/*-------STEP BY STEP-------------*/
+* {
+  box-sizing: border-box; }
+
+#progress {
+  padding: 0;
+  list-style-type: none;
+  font-family: arial;
+  font-size: 12px;
+  clear: both;
+  line-height: 1em;
+  margin: 0px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #ccc;
+  overflow: hidden; }
+
+#progress li {
+  float: left;
+  padding: 10px 30px 10px 40px;
+  background: #F2F2F2;
+  color: #222222;
+  position: relative;
+  border-top: 1px solid #F2F2F2;
+  border-bottom: 1px solid #F2F2F2;
+  /*width: 33.174%;*/
+  width: 33.33333333%;
+  /*margin: 0 1px*/
+  /*margin: -1px 1px;*/
+  margin: -1px 0px; }
+
+#progress li:before {
+  content: '';
+  border-left: 18px solid #FFFFFF;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+#progress li:after {
+  content: '';
+  border-left: 18px solid #F2F2F2;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 20; }
+
+#progress li.active {
+  background: #702874;
+  color: #FFFFFF; }
+
+#progress li.active:after {
+  border-left-color: #702874; }
+
+#progress li.paso1:before {
+  content: none; }
+
+#progress li.paso3:after {
+  content: none; }
+
+#progress li.paso3 {
+  /*width: 33.5%;*/ }
+
+#claroClub .tr-light {
+  font-size: 14px; }
+
+/* Breakpoint 9*/
+/* Breakpoint 9*/
+@media (max-width: 1280px) {
+  .banner-claro-club {
+    background-size: 114%; } }
+/* Breakpoint 7*/
+@media (max-width: 1100px) {
+  #progress li {
+    padding: 10px 0px 10px 13px;
+    width: 33.152%; }
+
+  .banner-claro-club {
+    background-size: 114%; } }
+/* Breakpoint 6*/
+@media (max-width: 960px) {
+  .btn-adherirme-desactivado, .btn-adherirme-activado {
+    margin-left: 0px;
+    margin-top: 10px; }
+
+  #progress li {
+    padding: 10px 0px 10px 13px;
+    width: 33.0735%; }
+
+  .banner-claro-club {
+    min-height: 158px;
+    background-size: 130%; }
+
+  #claroClub .banner-superior {
+    min-height: 158px; }
+
+  .logo-claro-club-inner {
+    min-height: 158px; } }
+/* Breakpoint 5*/
+@media (max-width: 768px) {
+  .logo-claro-club {
+    min-height: 78px; }
+
+  .btn-adherirme-desactivado, .btn-adherirme-activado {
+    margin-left: 20px;
+    margin-top: 0px; }
+
+  .logo-claro-club img {
+    width: 30%;
+    margin-top: 15px; }
+
+  #progress {
+    font-size: 14px; }
+
+  #progress li {
+    padding: 13px 0px 10px 0px;
+    width: 33%; }
+
+  #claroClub .input-date {
+    margin-top: 0px; }
+
+  #claroClub .input-group {
+    width: 40%; }
+
+  #progress li.paso1 {
+    clear: both;
+    width: 100%; }
+
+  #progress li.paso2 {
+    clear: both;
+    width: 100%; }
+
+  #progress li.paso3 {
+    clear: both;
+    width: 100%; }
+
+  #claroClub select {
+    width: 240px; }
+
+  #progress li:before {
+    content: none; }
+
+  #progress li {
+    margin: 0px 0px; }
+
+  .content-msj-error-cclub {
+    overflow: hidden;
+    margin: 0 15px; }
+
+  .ver-mas-activo {
+    padding: 6px 7px; } }
+/* Breakpoint 4*/
+@media (max-width: 640px) {
+  .btn-adherirme-desactivado, .btn-adherirme-activado {
+    margin-left: 20px;
+    margin-top: 0px; }
+
+  .logo-claro-club {
+    min-height: 78px; }
+
+  .logo-claro-club img {
+    width: 40%;
+    margin-top: 15px; }
+
+  #progress li.paso1 {
+    clear: both;
+    width: 100%; }
+
+  #progress li.paso2 {
+    clear: both;
+    width: 100%; }
+
+  #progress li.paso3 {
+    clear: both;
+    width: 100%; }
+
+  #claroClub select {
+    width: 240px; }
+
+  #progress li:before {
+    content: none; }
+
+  #progress li {
+    margin: 0px 0px; }
+
+  .content-msj-error-cclub {
+    overflow: hidden;
+    margin: 0 15px; }
+
+  .ver-mas-activo {
+    padding: 6px 7px; }
+
+  .banner-claro-club {
+    min-height: 188px; } }
+/* Breakpoint 3*/
+@media (max-width: 485px) {
+  .btn-adherirme-desactivado, .btn-adherirme-activado {
+    margin-left: 0px;
+    margin-top: 10px; }
+
+  .logo-claro-club {
+    min-height: 78px; }
+
+  .logo-claro-club img {
+    width: 50%;
+    margin-top: 15px; }
+
+  #progress li.paso1 {
+    clear: both;
+    width: 100%; }
+
+  #progress li.paso2 {
+    clear: both;
+    width: 100%; }
+
+  #progress li.paso3 {
+    clear: both;
+    width: 100%; }
+
+  #claroClub select {
+    width: 140px; }
+
+  #progress li:before {
+    content: none; }
+
+  #progress li {
+    margin: 0px 0px; }
+
+  #claroClub .table {
+    display: block; }
+
+  .content-msj-error-cclub {
+    overflow: hidden;
+    margin: 0 15px; }
+
+  .ver-mas-activo {
+    padding: 6px 7px; }
+
+  .banner-claro-club {
+    min-height: 138px; } }
+/* Breakpoint 2*/
+@media (max-width: 320px) {
+  .btn-adherirme-desactivado, .btn-adherirme-activado {
+    margin-left: 0px;
+    margin-top: 10px; }
+
+  .logo-claro-club {
+    min-height: 78px; }
+
+  .logo-claro-club img {
+    width: 70%;
+    margin-top: 15px; }
+
+  #progress li.paso1 {
+    clear: both;
+    width: 100%; }
+
+  #progress li.paso2 {
+    clear: both;
+    width: 100%; }
+
+  #progress li.paso3 {
+    clear: both;
+    width: 100%; }
+
+  #claroClub select {
+    width: 160px; }
+
+  #progress li:before {
+    content: none; }
+
+  #progress li {
+    margin: 0px 0px; }
+
+  #claroClub .input-group {
+    display: none; }
+
+  #claroClub .table {
+    display: block; }
+
+  .content-msj-error-cclub p {
+    font-size: 14px; }
+
+  .content-msj-error-cclub {
+    overflow: hidden;
+    margin: 0 15px; }
+
+  .ver-mas-activo {
+    padding: 6px 7px; }
+
+  .banner-claro-club {
+    min-height: 86px; } }
+/* Breakpoint 1*/
+@media (max-width: 240px) {
+  .btn-adherirme-desactivado, .btn-adherirme-activado {
+    margin-left: 0px;
+    margin-top: 10px; }
+
+  .logo-claro-club {
+    min-height: 78px; }
+
+  .logo-claro-club img, .logo-claro-club-inner img {
+    width: 70%;
+    margin-top: 25px; }
+
+  #progress li.paso1 {
+    clear: both;
+    width: 100%; }
+
+  #progress li.paso2 {
+    clear: both;
+    width: 100%; }
+
+  #progress li.paso3 {
+    clear: both;
+    width: 100%; }
+
+  #claroClub select {
+    width: 160px; }
+
+  #progress li:before {
+    content: none; }
+
+  #progress li {
+    margin: 0px 0px; }
+
+  #claroClub .input-group {
+    display: none; }
+
+  #claroClub select {
+    width: 80px; }
+
+  #claroClub .table {
+    display: block; }
+
+  .content-msj-error-cclub p {
+    font-size: 14px; }
+
+  .content-msj-error-cclub {
+    overflow: hidden;
+    margin: 0 15px; }
+
+  .ver-mas-activo {
+    padding: 6px 7px; }
+
+  .banner-claro-club {
+    min-height: 60px; } }
+/* Breakpoint 9*/
+@media (min-width: 1560px) {
+  .bullet-option {
+    display: none !important; }
+
+  .modal-content .btn {
+    padding: 10px 12%; } }
+/* Breakpoint 9*/
+@media (min-width: 1280px) {
+  .bullet-option {
+    display: none !important; } }
+@media (max-width: 1280px) {
+  .claim {
+    padding: 0 10%; }
+
+  .bullet-option {
+    display: none !important; }
+
+  .modal-content .btn {
+    padding: 10px 12%; }
+
+  .pagination-sm > li > a, .pagination-sm > li > span {
+    padding: 5px 9px; } }
+/* Breakpoint 7*/
+@media (max-width: 1100px) {
+  .claim {
+    padding: 0 5%; }
+
+  .bullet-option {
+    display: none !important; }
+
+  .pagination-sm > li > a, .pagination-sm > li > span {
+    padding: 5px 9px; } }
+/* Breakpoint 6*/
+@media (max-width: 992px) {
+  .claim {
+    padding: 0 1%; }
+
+  .card .text {
+    font-size: 12px;
+    padding-left: 1px; }
+
+  .pagination-sm > li > a, .pagination-sm > li > span {
+    padding: 5px 6px; }
+
+  .txt-old {
+    font-size: 14px; }
+
+  .line-suspended p {
+    font-size: 13px; }
+
+  .txt-phone {
+    font-size: 19px; }
+
+  .txt-normal {
+    font-size: 16px; }
+
+  .bullet-option {
+    display: none !important; }
+
+  .btnFacturaElectronica {
+    margin-top: 10px;
+    float: left; }
+
+  .switchActivoInactivo {
+    float: left;
+    margin-top: 10px; }
+
+  .btnGuardarCambios {
+    margin-right: 0px;
+    padding: 15px 20px; }
+
+  #miConsumoPPSin .msj-high-left {
+    min-height: 155px; }
+
+  #miConsumoConfirmacion .msj-general-error p {
+    font-size: 15px; }
+
+  #miConsumoConfirmacion .msj-general-ok p {
+    font-size: 15px; }
+
+  #claroClub3e .fa-exclamation-circle {
+    display: none; }
+
+  #claroClub3e .margin-left-0 {
+    margin-left: 0px; } }
+/* Breakpoint 5*/
+@media (max-width: 768px) {
+  div.login {
+    margin: 5% 3% 0% 3%; }
+
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px; }
+
+  .options-right {
+    margin-right: 0px; }
+
+  .main-content {
+    padding: 0px 15px 0px 15px; }
+
+  .sidebar-content {
+    padding: 0px 15px 0px 15px; }
+
+  .card {
+    margin: 1px 5px 1px 0px;
+    box-shadow: none;
+    min-height: 50px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px; }
+
+  .card .icon {
+    font-size: 33px;
+    padding-top: 7px;
+    margin-bottom: 8px; }
+
+  .card .text {
+    padding-top: 15px;
+    margin-bottom: 0px; }
+
+  .card .doble-line {
+    padding-top: 5px; }
+
+  .panel-date .lineRed, .panel-encuesta .lineRed {
+    background-color: #ddd;
+    padding-top: 3px;
+    line-height: 40px;
+    padding-left: 5px; }
+
+  .txt-suspended {
+    font-size: 16px !important; }
+
+  .total-bullet {
+    font-size: 32px; }
+
+  .bullet-option {
+    display: block !important; }
+
+  .card:hover .bullet-option {
+    color: #FFFFFF; }
+
+  .modal-dialog {
+    width: 350px;
+    margin: auto; }
+
+  .porlet-right {
+    margin-left: 0px;
+    margin-top: 20px; }
+
+  #miFactura .sidebar-content, #detalleDeConsumos .sidebar-content {
+    display: none; }
+
+  .main-content-inner {
+    float: left;
+    padding: 0px 15px 0px 15px;
+    overflow: hidden; }
+
+  .input-date {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-top: 6px; }
+
+  .bread-crumbs {
+    display: none; }
+
+  #detalleDeConsumos .input-group {
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+    margin-bottom: 10px; }
+
+  .export-excel, .export-pdf {
+    width: 49%;
+    display: inline;
+    margin: 10px 0;
+    margin-bottom: 15px !important; }
+
+  .export-pdf {
+    float: left; }
+
+  .navbar-black {
+    padding: 0 25px; }
+
+  .content-btn-reenviar {
+    margin-top: 10px; }
+
+  .sidebar-content {
+    padding: 0px 15px 0px 15px; }
+
+  .slide {
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-right: 0px; }
+
+  #misDatos .msj-general-ok span {
+    display: none; }
+
+  .main-msj {
+    margin: 0px 15px; }
+
+  .none20 {
+    display: block; }
+
+  .box-grey .onoffswitch {
+    float: left; }
+
+  .btnFacturaElectronica {
+    margin-top: 10px;
+    float: left; }
+
+  .switchActivoInactivo {
+    float: left;
+    margin-top: 10px; }
+
+  .adherite-factura-electronica ul li p {
+    line-height: 18px;
+    width: 88%; }
+
+  .btn-adherite {
+    float: left; }
+
+  .txtErrorActivacion {
+    padding: 6px;
+    overflow: hidden;
+    margin-left: 0px; }
+
+  .total-bullet-red-error-activacion {
+    min-height: 72px; }
+
+  .btnGuardarCambios {
+    float: left;
+    margin-left: 12px;
+    margin-right: 0px; }
+
+  .sizePhone {
+    display: none !important; }
+
+  .telefonoRegistrado {
+    margin-top: 5px; }
+
+  .line-40 {
+    line-height: 24px !important; }
+
+  .telefonoRegistrado span {
+    font-size: 14px !important; }
+
+  .cancelarNotif {
+    padding-top: 0px;
+    line-height: 20px;
+    float: left;
+    padding-left: 10px; }
+
+  .cancelarNotif a i {
+    display: none; }
+
+  .notificaciones-sms .table tr td i {
+    display: none; }
+
+  .bootstrap-switch {
+    margin-top: -4px; }
+
+  .content-btn-registrar {
+    text-align: left;
+    margin-top: 7px; }
+
+  .content-btn-cancelar {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 15px; }
+
+  .margin-left-15 {
+    margin-left: 0px; }
+
+  .margin-right-15 {
+    margin-right: 0px; }
+
+  .credito-recarga {
+    margin-top: 20px; }
+
+  #miConsumo .box-grey, .ultima-recarga {
+    margin-left: 0px; }
+
+  #miConsumo .msj-high-left {
+    min-height: 115px; }
+
+  #miConsumoConfirmacion .msj-general-error .fa-times {
+    display: none; }
+
+  #miConsumoConfirmacion .msj-general-error .fa-times {
+    display: none; }
+
+  .especial-table {
+    padding-right: 14% !important; }
+
+  .msj-confirma p {
+    font-size: 16px; }
+
+  .qr-claro {
+    width: 40%; }
+
+  .btn-beneficio-black {
+    margin-top: 5px; }
+
+  #claroClub3e .margin-left-0 {
+    margin-left: 0px; }
+
+  #claroClub3e .fa-exclamation-circle {
+    display: none; }
+
+  .box-confirma-white {
+    padding: 10px; }
+
+  .mini-rueda .block40 {
+    display: none; }
+
+  .login-background-py, .login-background-uy, .login-background-ar {
+    background-image: none; }
+
+  .margin-msj {
+    margin-left: 15%;
+    margin-right: 15%; }
+
+  #facturaElectronica .input-mail {
+    width: 74%; }
+
+  #banner-msj .main-msj {
+    margin: 0px 8px; } }
+/* Breakpoint 4*/
+@media (max-width: 640px) {
+  div.login {
+    margin: 5% 3% 0% 3%; }
+
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px; }
+
+  .options-right {
+    margin-right: 0px; }
+
+  .total-bullet {
+    font-size: 23px; }
+
+  .bullet-option {
+    display: block !important; }
+
+  .card:hover .bullet-option {
+    color: #FFFFFF; }
+
+  .porlet-right {
+    margin-left: 0px; }
+
+  #miFactura .sidebar-content, #detalleDeConsumos .sidebar-content {
+    display: none; }
+
+  .main-content-inner {
+    float: left;
+    padding: 0px 15px 0px 15px;
+    overflow: hidden; }
+
+  .input-date {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+    padding: 6px 0px; }
+
+  .bread-crumbs {
+    display: none; }
+
+  #detalleDeConsumos .input-group {
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+    margin-bottom: 10px; }
+
+  .export-excel, .export-pdf {
+    width: 49%;
+    display: inline;
+    margin: 10px 0;
+    margin-bottom: 15px !important; }
+
+  .export-pdf {
+    float: left; }
+
+  .navbar-black {
+    padding: 0 25px; }
+
+  .content-btn-reenviar {
+    margin-top: 10px; }
+
+  .sidebar-content {
+    padding: 0px 15px 0px 15px; }
+
+  .slide {
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-right: 0px; }
+
+  #misDatos .msj-general-ok span {
+    display: none; }
+
+  .main-msj {
+    margin: 0px 15px; }
+
+  .none20 {
+    display: block; }
+
+  .box-grey .onoffswitch {
+    float: left; }
+
+  .btnFacturaElectronica {
+    margin-top: 10px;
+    float: left; }
+
+  .switchActivoInactivo {
+    float: left;
+    margin-top: 10px; }
+
+  .adherite-factura-electronica ul li p {
+    line-height: 18px;
+    width: 88%; }
+
+  .btn-adherite {
+    float: left; }
+
+  .txtErrorActivacion {
+    padding: 6px;
+    overflow: hidden;
+    margin-left: 0px; }
+
+  .total-bullet-red-error-activacion {
+    min-height: 72px; }
+
+  .btnGuardarCambios {
+    float: left;
+    margin-left: 12px;
+    margin-right: 0px; }
+
+  .sizePhone {
+    display: none !important; }
+
+  .telefonoRegistrado {
+    margin-top: 5px; }
+
+  .line-40 {
+    line-height: 24px !important; }
+
+  .telefonoRegistrado span {
+    font-size: 14px !important; }
+
+  .cancelarNotif {
+    padding-top: 0px;
+    line-height: 20px;
+    float: left;
+    padding-left: 10px; }
+
+  .cancelarNotif a i {
+    display: none; }
+
+  .notificaciones-sms .table tr td i {
+    display: none; }
+
+  .bootstrap-switch {
+    margin-top: -4px; }
+
+  .content-btn-registrar {
+    text-align: left;
+    margin-top: 7px; }
+
+  .content-btn-cancelar {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 15px; }
+
+  .margin-left-15 {
+    margin-left: 0px; }
+
+  .margin-right-15 {
+    margin-right: 0px; }
+
+  .credito-recarga {
+    margin-top: 20px; }
+
+  #miConsumo .box-grey, .ultima-recarga {
+    margin-left: 0px; }
+
+  #miConsumo .msj-high-left {
+    min-height: 115px; }
+
+  #miConsumoConfirmacion .msj-general-ok .fa-times {
+    display: none; }
+
+  #miConsumoConfirmacion .msj-general-error .fa-times {
+    display: none; }
+
+  .especial-table {
+    padding-right: 13.5% !important; }
+
+  .msj-confirma p {
+    font-size: 14px; }
+
+  .qr-claro {
+    width: 50%; }
+
+  .btn-beneficio-black {
+    margin-top: 5px; }
+
+  #claroClub3d .btn-md {
+    margin-left: 0px; }
+
+  #claroClub3d .fa-exclamation-circle {
+    display: none; }
+
+  #claroClub3e .fa-exclamation-circle {
+    display: none; }
+
+  #claroClub3e .margin-left-0 {
+    margin-left: 0px; }
+
+  .box-confirma-white {
+    padding: 10px; }
+
+  .mini-rueda .block40 {
+    display: none; }
+
+  .login-background-py, .login-background-uy, .login-background-ar {
+    background-image: none; } }
+/* Breakpoint 3*/
+@media (max-width: 485px) {
+  div.login {
+    margin: 5% 3% 0% 3%; }
+
+  .claim {
+    padding: 0 1%; }
+
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px; }
+
+  .options-right {
+    margin-right: 0px; }
+
+  .total-bullet {
+    font-size: 23px; }
+
+  .bullet-option {
+    display: block !important; }
+
+  .card:hover .bullet-option {
+    color: #FFFFFF; }
+
+  .porlet-right {
+    margin-left: 0px; }
+
+  .msj-high-left {
+    width: 6%; }
+
+  .msj-high-right {
+    width: 94%;
+    padding: 15px 0px 14px 10px; }
+
+  #miFactura .sidebar-content, #detalleDeConsumos .sidebar-content {
+    display: none; }
+
+  .main-content-inner {
+    float: left;
+    padding: 0px 15px 0px 15px;
+    overflow: hidden; }
+
+  .input-date {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+    padding: 6px 0px; }
+
+  .bread-crumbs {
+    display: none; }
+
+  #detalleDeConsumos .input-group {
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+    margin-bottom: 10px; }
+
+  .export-excel, .export-pdf {
+    width: 49%;
+    display: inline;
+    margin: 10px 0;
+    margin-bottom: 15px !important; }
+
+  .export-pdf {
+    float: left; }
+
+  .navbar-black {
+    padding: 0 25px; }
+
+  .content-btn-reenviar {
+    margin-top: 10px; }
+
+  .sidebar-content {
+    padding: 0px 15px 0px 15px; }
+
+  .slide {
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-right: 0px; }
+
+  #misDatos .msj-general-ok span {
+    display: none; }
+
+  .main-msj {
+    margin: 0px 15px; }
+
+  .none20 {
+    display: block; }
+
+  .box-grey .onoffswitch {
+    float: left; }
+
+  .btnFacturaElectronica {
+    margin-top: 10px;
+    float: left; }
+
+  .switchActivoInactivo {
+    float: left;
+    margin-top: 10px; }
+
+  .adherite-factura-electronica ul li p {
+    line-height: 18px;
+    width: 70%; }
+
+  .btn-adherite {
+    float: left; }
+
+  .txtErrorActivacion {
+    padding: 6px;
+    overflow: hidden;
+    margin-left: 0px; }
+
+  .total-bullet-red-error-activacion {
+    min-height: 92px; }
+
+  .btnGuardarCambios {
+    float: left;
+    margin-left: 12px;
+    margin-right: 0px; }
+
+  .sizePhone {
+    display: none !important; }
+
+  .telefonoRegistrado {
+    margin-top: 5px; }
+
+  .line-40 {
+    line-height: 24px !important; }
+
+  .telefonoRegistrado span {
+    font-size: 14px !important; }
+
+  .cancelarNotif {
+    padding-top: 0px;
+    line-height: 20px;
+    float: left;
+    padding-left: 10px; }
+
+  .cancelarNotif a i {
+    display: none; }
+
+  .notificaciones-sms .table tr td i {
+    display: none; }
+
+  .bootstrap-switch {
+    margin-top: -4px; }
+
+  .content-btn-registrar {
+    text-align: left;
+    margin-top: 7px; }
+
+  .content-btn-cancelar {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 15px; }
+
+  .margin-left-15 {
+    margin-left: 0px; }
+
+  .margin-right-15 {
+    margin-right: 0px; }
+
+  .credito-recarga {
+    margin-top: 20px; }
+
+  #miConsumo .box-grey, .ultima-recarga {
+    margin-left: 0px; }
+
+  #miConsumo .msj-high-left {
+    min-height: 115px; }
+
+  #miConsumoConfirmacion .msj-general-ok .fa-times {
+    display: none; }
+
+  #miConsumoConfirmacion .msj-general-error .fa-times {
+    display: none; }
+
+  #claroClub .fa-check-popup {
+    display: none !important; }
+
+  .qr-claro {
+    width: 60%; }
+
+  .btn-purple-beneficio {
+    padding: 12px 65px;
+    margin-top: 10px;
+    display: inline-block; }
+
+  .btn-beneficio-black {
+    margin-top: 5px; }
+
+  #claroClub3d .btn-md {
+    margin-left: 0px; }
+
+  #claroClub3d .fa-exclamation-circle {
+    display: none; }
+
+  #claroClub3e .fa-exclamation-circle {
+    display: none; }
+
+  #claroClub3e .margin-left-0 {
+    margin-left: 0px; }
+
+  .msj-confirma p {
+    margin-left: 0px; }
+
+  .box-confirma-white {
+    padding: 10px; }
+
+  .mini-rueda .block40 {
+    display: none; }
+
+  .login-background-py, .login-background-uy, .login-background-ar {
+    background-image: none; }
+
+  .margin-msj {
+    margin-left: 5%;
+    margin-right: 5%; } }
+/* Breakpoint 2*/
+@media (max-width: 320px) {
+  div.login {
+    margin: 5% 3% 0% 3%; }
+
+  .claim {
+    display: none; }
+
+  .block-mobile {
+    display: none; }
+
+  .box-captcha ul li {
+    padding: 10px 2px; }
+
+  .claim {
+    padding: 0 5%; }
+
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px; }
+
+  .options-right {
+    margin-right: 0px; }
+
+  .total-bullet {
+    font-size: 16px; }
+
+  .bullet-option {
+    display: block !important; }
+
+  .card:hover .bullet-option {
+    color: #FFFFFF; }
+
+  .modal-dialog {
+    width: 300px;
+    margin: auto; }
+
+  .modal-content .btn {
+    padding: 10px 12%; }
+
+  .porlet-right {
+    margin-left: 0px; }
+
+  .msj-high-left {
+    width: 6%; }
+
+  .msj-high-right {
+    width: 94%;
+    padding: 15px 0px 14px 10px; }
+
+  .btn-xs {
+    font-size: 11px; }
+
+  .msj-high-left i {
+    font-size: 13px; }
+
+  #miFactura .sidebar-content, #detalleDeConsumos .sidebar-content {
+    display: none; }
+
+  .main-content-inner {
+    float: left;
+    padding: 0px 15px 0px 15px;
+    overflow: hidden; }
+
+  .input-date {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+    padding: 6px 0px; }
+
+  .bread-crumbs {
+    display: none; }
+
+  .table {
+    font-size: 12px; }
+
+  #detalleDeConsumos .input-group {
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+    margin-bottom: 10px; }
+
+  .export-excel, .export-pdf {
+    width: 49%;
+    display: inline;
+    margin: 10px 0;
+    margin-bottom: 15px !important; }
+
+  .export-pdf {
+    float: left; }
+
+  #detalleDeConsumos .nav-tabs li a, #detalleDeConsumos .nav-tabs li a:hover {
+    padding: 10px 9px;
+    font-size: 12px; }
+
+  .btn-solicitar {
+    font-size: 14px; }
+
+  .box-captcha ul li a {
+    padding: 7px 11px; }
+
+  .navbar-black {
+    padding: 0 25px; }
+
+  .content-btn-reenviar {
+    margin-top: 10px; }
+
+  .sidebar-content {
+    padding: 0px 15px 0px 15px; }
+
+  .slide {
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-right: 0px; }
+
+  #misDatos .msj-general-ok span {
+    display: none; }
+
+  .main-msj {
+    margin: 0px 15px; }
+
+  .btnFacturaElectronica {
+    font-size: 12px;
+    margin-top: 10px;
+    float: left; }
+
+  .none20 {
+    display: block; }
+
+  .box-grey .onoffswitch {
+    float: left; }
+
+  .switchActivoInactivo {
+    float: left;
+    margin-top: 10px; }
+
+  .adherite-factura-electronica ul li p {
+    line-height: 18px;
+    width: 70%; }
+
+  .txt-modificar {
+    display: block;
+    padding-left: 0px; }
+
+  #facturaElectronica .table tr td span {
+    font-size: 13px !important;
+    padding-left: 4px; }
+
+  .btn-adherite {
+    float: left;
+    margin-right: 0px; }
+
+  .btnCancelarCambios {
+    padding: 10px 0px 0px 4px; }
+
+  .total-bullet-red-error-activacion {
+    min-height: 132px; }
+
+  .alert-danger {
+    overflow: hidden; }
+
+  .txtErrorActivacion {
+    padding: 6px;
+    overflow: hidden;
+    margin-left: 0px; }
+
+  .btnGuardarCambios {
+    margin-right: 70px; }
+
+  .sizePhone {
+    display: none !important; }
+
+  .telefonoRegistrado {
+    margin-top: 5px; }
+
+  .line-40 {
+    line-height: 24px !important; }
+
+  .telefonoRegistrado span {
+    font-size: 14px !important; }
+
+  .cancelarNotif {
+    padding-top: 0px;
+    line-height: 20px;
+    float: left;
+    padding-left: 10px; }
+
+  .cancelarNotif a i {
+    display: none; }
+
+  .notificaciones-sms .table tr td i {
+    display: none; }
+
+  .bootstrap-switch {
+    margin-top: -4px; }
+
+  .content-btn-registrar {
+    text-align: left;
+    margin-top: 7px; }
+
+  .content-btn-cancelar {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 10px; }
+
+  .margin-left-15 {
+    margin-left: 0px; }
+
+  .margin-right-15 {
+    margin-right: 0px; }
+
+  .credito-recarga {
+    margin-top: 20px; }
+
+  #miConsumo .box-grey, .ultima-recarga {
+    margin-left: 0px; }
+
+  #miConsumoPPSin .msj-high-left {
+    min-height: 155px; }
+
+  #miConsumo .msj-high-left {
+    min-height: 155px; }
+
+  #miConsumoConfirmacion .msj-general-ok .fa-times {
+    display: none; }
+
+  #miConsumoConfirmacion .msj-general-error .fa-times {
+    display: none; }
+
+  .especial-table {
+    padding-right: 10% !important; }
+
+  .btn-popup-black {
+    margin-top: 10px;
+    font-size: 12px !important; }
+
+  .fa-exclamation-popup {
+    display: none !important; }
+
+  .fa-check-popup {
+    display: none !important; }
+
+  .fondo-blanco-qr {
+    display: none; }
+
+  .msj-confirma p {
+    font-size: 14px;
+    margin-left: 0px; }
+
+  .msj-confirma {
+    padding: 12px 0px; }
+
+  .qr-claro {
+    width: 100%; }
+
+  .box-confirma-gray {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .btn-purple-beneficio {
+    padding: 10px 60px;
+    margin-top: 10px;
+    display: inline-block; }
+
+  .input-beneficio {
+    position: relative;
+    display: table !important;
+    border-collapse: separate; }
+
+  .btn-beneficio-black {
+    font-size: 10px;
+    margin-top: 5px; }
+
+  #claroClub3d .btn-md {
+    padding: 5px 20px;
+    margin-left: 0px; }
+
+  #claroClub3d .fa-exclamation-circle {
+    display: none; }
+
+  #claroClub3e .fa-exclamation-circle {
+    display: none; }
+
+  #claroClub3e .margin-left-0 {
+    margin-left: 0px; }
+
+  #claroClub3 .btn-md {
+    padding: 8px 6px;
+    font-size: 10px; }
+
+  .box-confirma-white {
+    padding: 10px; }
+
+  .mini-rueda .block40 {
+    display: none; }
+
+  .login-background-py, .login-background-uy, .login-background-ar {
+    background-image: none; }
+
+  .blockMobile {
+    display: none; }
+
+  ul.options-right li:nth-child(2) {
+    display: none; } }
+/* Breakpoint 1*/
+@media (max-width: 240px) {
+  div.login {
+    margin: 5% 3% 0% 3%; }
+
+  .nav-tabs > li {
+    font-size: 11px; }
+
+  .claim {
+    display: none; }
+
+  .block-mobile {
+    display: none; }
+
+  .box-captcha {
+    min-height: 80px; }
+
+  .box-captcha ul li {
+    font-size: 15px; }
+
+  .box-captcha ul li {
+    padding: 10px 0px !important; }
+
+  .claim {
+    padding: 0 5%; }
+
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px; }
+
+  .options-right {
+    margin-right: 0px; }
+
+  .panel-encuesta {
+    display: none; }
+
+  #miSlide {
+    display: none; }
+
+  .card .text {
+    font-size: 11px; }
+
+  .btn-ver {
+    width: 87px;
+    height: 30px;
+    font-size: 13px; }
+
+  .total-bullet-red {
+    min-height: 144px; }
+
+  .total-bullet-red .fa {
+    font-size: 15px; }
+
+  .line-suspended p {
+    font-size: 12px; }
+
+  .bullet-option {
+    display: block !important; }
+
+  .card:hover .bullet-option {
+    color: #FFFFFF; }
+
+  .modal-dialog {
+    width: 200px;
+    margin: auto; }
+
+  .modal-content .btn {
+    padding: 10px 5%;
+    font-size: 18px; }
+
+  .porlet-right {
+    margin-left: 0px;
+    margin-top: 20px; }
+
+  .msj-high-left {
+    width: 9%;
+    min-height: 89px; }
+
+  .msj-high-right {
+    width: 91%;
+    padding: 15px 0px 14px 10px; }
+
+  .btn-xs {
+    font-size: 11px; }
+
+  .msj-high-left i {
+    font-size: 13px; }
+
+  #miFactura .sidebar-content, #detalleDeConsumos .sidebar-content {
+    display: none; }
+
+  .main-content-inner {
+    float: left;
+    padding: 0px 15px 0px 15px;
+    overflow: hidden; }
+
+  .input-date {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+    padding: 6px 0px; }
+
+  .bread-crumbs {
+    display: none; }
+
+  .table {
+    font-size: 12px; }
+
+  #detalleDeConsumos .input-group {
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+    margin-bottom: 10px; }
+
+  .export-excel, .export-pdf {
+    width: 49%;
+    display: inline;
+    margin: 10px 0;
+    margin-bottom: 15px !important; }
+
+  .export-pdf {
+    float: left; }
+
+  #detalleDeConsumos .nav-tabs li a, #detalleDeConsumos .nav-tabs li a:hover {
+    padding: 10px 3px;
+    font-size: 10px; }
+
+  .btn-solicitar {
+    font-size: 10px; }
+
+  .box-captcha ul li a {
+    padding: 7px 11px; }
+
+  .navbar-black {
+    padding: 0 25px; }
+
+  .btn-reenviar {
+    margin-top: 15px; }
+
+  .content-btn-reenviar {
+    margin-top: 10px; }
+
+  .sidebar-content {
+    padding: 0px 15px 0px 15px; }
+
+  #misDatos .msj-general-ok span {
+    display: none; }
+
+  .slide {
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-right: 0px; }
+
+  .main-msj {
+    margin: 0px 15px; }
+
+  .btn-registrar {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 12px 20px; }
+
+  .input-mail {
+    width: 100%; }
+
+  .btnFacturaElectronica {
+    font-size: 12px;
+    margin-top: 10px;
+    float: left; }
+
+  .none20 {
+    display: block; }
+
+  .box-grey .onoffswitch {
+    float: left; }
+
+  .switchActivoInactivo {
+    float: left;
+    margin-top: 10px; }
+
+  .adherite-factura-electronica ul li p {
+    line-height: 18px; }
+
+  #facturaElectronica .table tr td span {
+    font-size: 13px !important;
+    padding-left: 4px; }
+
+  .txt-modificar {
+    display: block;
+    padding-left: 0px; }
+
+  .btn-adherite {
+    float: left;
+    margin-right: 0px; }
+
+  .btnCancelarCambios {
+    padding: 10px 0px 0px 4px; }
+
+  .btn-adherite {
+    padding: 15px 19px; }
+
+  .total-bullet-red-error-activacion {
+    min-height: 172px; }
+
+  .btnGuardarCambios {
+    float: left;
+    margin-left: 12px;
+    margin-right: 0px;
+    padding: 15px; }
+
+  .sizePhone {
+    display: none !important; }
+
+  .telefonoRegistrado {
+    margin-top: 5px; }
+
+  .line-40 {
+    line-height: 24px !important; }
+
+  .telefonoRegistrado span {
+    font-size: 14px !important; }
+
+  .cancelarNotif {
+    padding-top: 0px;
+    line-height: 20px;
+    font-size: 12px; }
+
+  .cancelarNotif a i {
+    display: none; }
+
+  .notificaciones-sms .table tr td i {
+    display: none; }
+
+  .bootstrap-switch {
+    margin-top: -4px; }
+
+  .content-btn-registrar {
+    text-align: left;
+    margin-top: 7px; }
+
+  .content-btn-cancelar {
+    text-align: left;
+    margin-top: 0px;
+    margin-left: 10px; }
+
+  #miConsumo .table {
+    display: block; }
+
+  .texto-alineado {
+    display: block; }
+
+  .margin-left-15 {
+    margin-left: 0px; }
+
+  .margin-right-15 {
+    margin-right: 0px; }
+
+  .credito-recarga {
+    margin-top: 20px; }
+
+  #miConsumo .box-grey, .ultima-recarga {
+    margin-left: 0px; }
+
+  #miConsumoCR .table {
+    display: block; }
+
+  #miConsumo .mini-rueda .block40 {
+    display: none; }
+
+  #miConsumoPPSin .msj-high-left {
+    min-height: 175px; }
+
+  .content-chart-mini .txt-33 {
+    font-size: 24px; }
+
+  #miConsumo .msj-high-left {
+    min-height: 174px; }
+
+  #miConsumoConfirmacion .msj-general-ok .fa-times {
+    display: none; }
+
+  #miConsumoConfirmacion .msj-general-error .fa-times {
+    display: none; }
+
+  .especial-table {
+    padding-right: 6% !important; }
+
+  .btn-popup-black {
+    margin-top: 10px;
+    font-size: 12px !important; }
+
+  .fa-exclamation-popup {
+    display: none !important; }
+
+  .fa-check-popup {
+    display: none !important; }
+
+  .fondo-blanco-qr {
+    display: none; }
+
+  .input-popup {
+    width: 180px; }
+
+  .padding-btn-purple {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 25.5px; }
+
+  .msj-confirma p {
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 0px; }
+
+  .msj-confirma {
+    padding: 12px 0px; }
+
+  .qr-claro {
+    width: 100%; }
+
+  .box-confirma-gray {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .btn-purple-beneficio {
+    padding: 11px 45px;
+    display: inline-block; }
+
+  .input-beneficio {
+    position: relative;
+    display: table !important;
+    border-collapse: separate; }
+
+  .btn-negro-beneficio {
+    padding: 6px 20px; }
+
+  .btn-beneficio-black {
+    font-size: 10px;
+    margin-top: 5px; }
+
+  #claroClub3d .btn-md {
+    padding: 5px 20px;
+    font-size: 8px;
+    margin-left: 0px; }
+
+  #claroClub3d .fa-exclamation-circle {
+    display: none; }
+
+  #claroClub3e .fa-exclamation-circle {
+    display: none; }
+
+  #claroClub3e .margin-left-0 {
+    margin-left: 0px; }
+
+  #claroClub3d .no-premios {
+    padding: 44px 25px; }
+
+  #facturaElectronica .txt-alert {
+    padding: 10px 0px; }
+
+  .box-confirma-white {
+    padding: 10px; }
+
+  .box-confirma-gray-3a {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  .box-confirma-gray-3b {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  .box-confirma-gray-3c {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  #claroClub3 .btn-md {
+    padding: 8px 6px;
+    font-size: 9px; }
+
+  .mini-rueda .block40 {
+    display: none; }
+
+  .login-background-py, .login-background-uy, .login-background-ar {
+    background-image: none; }
+
+  .blockMobile {
+    display: none; }
+
+  ul.options-right li:nth-child(2) {
+    display: none; } }
+
