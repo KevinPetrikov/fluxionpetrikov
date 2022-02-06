@@ -1,4 +1,4 @@
-//tealium universal tag - utag.9 ut4.0.201901301503, Copyright 2019 Tealium.com Inc. All Rights Reserved.
+//tealium universal tag - utag.9 ut4.0.202201301503, Copyright 2022 Tealium.com Inc. All Rights Reserved.
 var s=new AppMeasurement();s.account="huaweitemplate";s.trackDownloadLinks=true;s.trackExternalLinks=true;s.trackInlineStats=true;s.linkInternalFilters="Javascript:,#,e.huawei.com,enterprise.huawei.com,huawei.com,hweblog.com";s.linkLeaveQueryString=false;s.linkTrackVars="None";s.linkTrackEvents="None";s.usePlugins=false;s.currencyCode="USD";s.visitorNamespace="huawei";s.trackingServer="huawei.sc.omtrdc.net";s.trackingServerSecure="huawei.sc.omtrdc.net";s.charSet="UTF-8";s.expectSupplementalData=true;s.debugTracking=utag.cfg.utagdb;function scSendEvent(key,attribute){}
 function scSendPersonalizationFlag(flag,reason){}
 function scSendCookie(vidcookie){}
