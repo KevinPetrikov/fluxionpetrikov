@@ -1,12 +1,14 @@
-#!/bin/bash
-# identifier: Handshake Snopper
+#!/usr/bin/env bash
+# identifier: Handshake Snooper
 # description: Acquitte les hachages de cryptage WPA/WPA2.
 
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+HandshakeSnooperJammerInterfaceQuery="Select an interface for monitoring & jamming."
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 HandshakeSnooperMethodQuery="Sélectionnez une méthode de récupération de handshake"
 HandshakeSnooperMonitorMethodOption="Monitorer (${CYel}passif$CClr)"
 HandshakeSnooperAireplayMethodOption="Désauthentification aireplay-ng (${CRed}aggressif$CClr)"
-HandshakeSnooperMdk3MethodOption="Désauthentification mdk3 (${CRed}aggressif$CClr)"
+HandshakeSnooperMdk4MethodOption="Désauthentification mdk4 (${CRed}aggressif$CClr)"
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 HandshakeSnooperVerifierIntervalQuery="How often should the verifier check for a handshake?"
 HandshakeSnooperVerifierInterval30SOption="Every 30 seconds (${CGrn}recommended${CClr})."
@@ -18,7 +20,7 @@ HandshakeSnooperVerifierSynchronicityAsynchronousOption="Asynchronously (${CYel}
 HandshakeSnooperVerifierSynchronicitySynchronousOption="Synchronously (${CGrn}recommended${CClr})."
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 HandshakeSnooperStartingArbiterNotice="${CCyn}Handshake Snooper$CClr arbiter daemon running."
-HandshakeSnooperSnoopingForNSecondsNotice="Snooping for \$HANDSHAKEVerifierInterval seconds."
+HandshakeSnooperSnoopingForNSecondsNotice="Snooping for \$HandshakeSnooperVerifierInterval seconds."
 HandshakeSnooperStoppingForVerifierNotice="Stopping snooper & checking for hashes."
 HandshakeSnooperSearchingForHashesNotice="Searching for hashes in the capture file."
 HandshakeSnooperArbiterAbortedWarning="${CYel}Aborted${CClr}: The operation's been aborted, no valid hash was found."

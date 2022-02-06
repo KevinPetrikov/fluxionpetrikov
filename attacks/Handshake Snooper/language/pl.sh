@@ -1,12 +1,14 @@
-#!/bin/bash
-# identifier: Handshake Snopper
-# description: Retrieves WPA/WPA2 encryption hashes. (translate)
+#!/usr/bin/env bash
+# identifier: Handshake Snooper
+# description: Acquires WPA/WPA2 encryption hashes.
 
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-HandshakeSnooperMethodQuery="Tokalasma edinme methodu seciniz"
-HandshakeSnooperMonitorMethodOption="Monitor (${CYel}pasif$CClr)"
-HandshakeSnooperAireplayMethodOption="aireplay-ng deauthentication (${CRed}agresif$CClr)"
-HandshakeSnooperMdk3MethodOption="mdk3 deauthentication (${CRed}agresif$CClr)"
+HandshakeSnooperJammerInterfaceQuery="Select an interface for monitoring & jamming."
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+HandshakeSnooperMethodQuery="Select a method of handshake retrieval"
+HandshakeSnooperMonitorMethodOption="Monitor (${CYel}passive$CClr)"
+HandshakeSnooperAireplayMethodOption="aireplay-ng deauthentication (${CRed}aggressive$CClr)"
+HandshakeSnooperMdk4MethodOption="mdk4 deauthentication (${CRed}aggressive$CClr)"
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 HandshakeSnooperVerifierIntervalQuery="How often should the verifier check for a handshake?"
 HandshakeSnooperVerifierInterval30SOption="Every 30 seconds (${CGrn}recommended${CClr})."
@@ -18,7 +20,7 @@ HandshakeSnooperVerifierSynchronicityAsynchronousOption="Asynchronously (${CYel}
 HandshakeSnooperVerifierSynchronicitySynchronousOption="Synchronously (${CGrn}recommended${CClr})."
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 HandshakeSnooperStartingArbiterNotice="${CCyn}Handshake Snooper$CClr arbiter daemon running."
-HandshakeSnooperSnoopingForNSecondsNotice="Snooping for \$HANDSHAKEVerifierInterval seconds."
+HandshakeSnooperSnoopingForNSecondsNotice="Snooping for \$HandshakeSnooperVerifierInterval seconds."
 HandshakeSnooperStoppingForVerifierNotice="Stopping snooper & checking for hashes."
 HandshakeSnooperSearchingForHashesNotice="Searching for hashes in the capture file."
 HandshakeSnooperArbiterAbortedWarning="${CYel}Aborted${CClr}: The operation's been aborted, no valid hash was found."
