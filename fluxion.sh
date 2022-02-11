@@ -336,6 +336,7 @@ fluxion_shutdown() {
     echo -e "$CWht[$CRed-$CWht] `io_dynamic_output $FLUXIONKillingProcessNotice`"
     kill -s SIGKILL $targetPID &> $FLUXIONOutputDevice
   done
+  kill -s SIGKILL $authService &> $FLUXIONOutputDevice
 
   # Assure changes are reverted if installer was activated.
   if [ "$PackageManagerCLT" ]; then
@@ -1368,7 +1369,7 @@ fluxion_target_tracker_daemon() {
   while true; do
     echo "[T-Tracker] Captor listening for $monitorTimeout seconds..."
     timeout --preserve-status $monitorTimeout airodump-ng -aw "$capturePath" \
-      -c $FluxionTargetChannel -d "$FluxionTargetMAC" $FluxionTargetTrackerInterface &> /dev/null
+      -d "$FluxionTargetMAC" $FluxionTargetTrackerInterface &> /dev/null
     local error=$? # Catch the returned status error code.
 
     if [ $error -ne 0 ]; then # If any error was encountered, abort!
