@@ -1,0 +1,186 @@
+@font-face {
+  font-family: 'MovistarHeadline';
+  src: url("movistarheadline-bold-webfont.eot");
+  src: url("movistarheadline-bold-webfont.eot?#iefix") format("embedded-opentype"), url("movistarheadline-bold-webfont.woff") format("woff"), url("/appsuite/apps/themes/webmail_e/movistarheadline-bold-webfont.ttf") format("truetype"), url("/appsuite/apps/themes/webmail_e/movistarheadline-bold-webfont.svg#movistar_headlinebold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MovistarHeadline';
+  src: url("movistarheadline-regular-webfont.eot");
+  src: url("movistarheadline-regular-webfont.eot?#iefix") format("embedded-opentype"), url("movistarheadline-regular-webfont.woff") format("woff"), url("movistarheadline-regular-webfont.ttf") format("truetype"), url("/appsuite/apps/themes/webmail_e/movistarheadline-regular-webfont.svg#movistar_headlineregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.imagen-marca {
+  background: #00a9e0;
+  padding: 14px;
+  margin: 0 auto;
+}
+
+.logo-acceso {
+  font-family: MovistarHeadline,Arial,sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  color: #336699;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.desc-acceso {
+  color: #888;
+  font-size: 14px;
+  max-width: 360px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.enlace, .enlace:hover, .enlace a, .enlace a:hover {
+  color: #00a9e0 !important;
+  text-decoration: none;
+}
+
+.separador {
+  margin-top: 20px;
+}
+
+.enlace {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.enlace-ayuda-container {
+  color: #00a9e0 !important;
+  margin-top: 20px;
+  text-align: center;
+  vertical-align: middle;
+ }
+
+.enlace-ayuda-container a{
+  color: #00a9e0 !important;
+  font-size: 16px;
+  vertical-align: middle;
+  text-decoration: None;
+}
+
+.enlace-ayuda-container img, .enlace-ayuda-container span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#image-logo {
+  padding: 110px 307px 0px 0px;
+  background: url('logoe-movistar.png');
+  background-repeat: no-repeat;
+}
+
+#io-ox-login-background.wallpaper {
+  background-color: #fff;
+  background-image: None;
+}
+
+#io-ox-login-container .alert.alert-info {
+  background: none repeat scroll 0 0 #f5f5f5;
+  border-color: red;
+  color: black;
+  /*margin-top: 3em;*/
+}
+
+#io-ox-login-store {
+  color: #555;
+}
+
+#io-ox-login-container .btn-primary {
+    background-color: #00a9e0;
+    border-color: #00a9e0;
+}
+
+#io-ox-login-container input.form-control:focus{
+    border-color: #00a9e0;
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 102, 0.6);*/
+    box-shadow: 0 0 7px 0 #dcdcdc inset, 0 0 8px 0 #f7f7f7;
+  outline:0;
+}
+
+
+#io-ox-login-container {
+  max-width: 100%;
+  /*top: 20%;*/
+  top: auto;
+  display: inline;
+  -ms-transform: None;
+  transform: None;
+}
+
+.form-control:focus {
+    border-color: #00a9e0;
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 102, 0.6);*/
+    box-shadow: 0 0 7px 0 #dcdcdc inset, 0 0 8px 0 #f7f7f7;
+    outline: 0 none;
+}
+
+div.error4xx5xx a {
+    color: #00a9e0;
+}
+
+div.error4xx5xx a:hover {
+    color: #00a9e0;
+}
+
+@media (max-width: 768px), (max-height: 650px) {
+.pie {
+  display: none !important;
+}
+}
+
+.pie {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 14px 0 14px 0;
+  border-top: 1px solid #000;
+}
+
+.pie p {
+  border-top: 1px solid #000;
+  margin: 0 auto;
+}
+
+.pie p img{
+  margin-top: 17px;
+}
+
+#islpronto_link {
+  background-color: #00a9e0;
+  color: #fff!important;
+  border-radius: 20px;
+  padding: 7px 0;
+  text-decoration: none;
+  display: inline-block;
+  width: 172px;
+  height: 35px;
+}
+
+#islpronto_link:before {
+  content: url("c-ico-boton.png");
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+#xp_vista {
+  background-color: #00a9e0;
+  color: #fff!important;
+  border-radius: 20px;
+  padding: 7px 0;
+  text-decoration: none;
+  display: inline-block;
+  height: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
