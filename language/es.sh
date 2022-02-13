@@ -1,0 +1,98 @@
+#!/usr/bin/env bash
+# Spanish
+# native: Español
+
+FLUXIONInterfaceQuery="Seleccione una interfaz"
+FLUXIONAllocatingInterfaceNotice="Asignando interfaz reservada $CGrn\"\$interfaceIdentifier\"."
+FLUXIONDeallocatingInterfaceNotice="Desasignando interfaz reservada $CGrn\"\$interfaceIdentifier\"."
+FLUXIONInterfaceAllocatedNotice="${CGrn}Asignación de interfaz conseguida!"
+FLUXIONInterfaceAllocationFailedError="${CRed}Asignación de interfaz fallida!"
+FLUXIONReidentifyingInterface="Renombrando interfaz."
+FLUXIONUnblockingWINotice="Desbloqueando todas las interfaces inalámbricas..."
+#FLUXIONFindingExtraWINotice="Buscando interfaces inalámbricas extrañas..."
+FLUXIONRemovingExtraWINotice="Quitando interfaces inalámbricas extrañas..."
+FLUXIONFindingWINotice="Buscando interfaces inalámbricas extrañas disponibles..."
+FLUXIONSelectedBusyWIError="La interfaz inalambrica seleccionada esta en uso!"
+FLUXIONSelectedBusyWITip="Esto suele ser producido porque el gestor de la red esta usando la interfaz seleccionada. Le recomendamos que usted$CGrn detenga la red $CClr o la configure para que ignore la interfaz seleccionada. Como alternativa, ejecute \"export FLUXIONWIKillProcesses=1\" antes de fluxion para matar el proceso, pero le sugerimos $CRed evitar el uso de ${CClr}.
+FLUXIONGatheringWIInfoNotice="Obteniendo información de la interfaz..."
+FLUXIONUnknownWIDriverError="Imposible determinar las librerias de la interfaz!"
+FLUXIONUnloadingWIDriverNotice="Esperando desconexión de la interfaz: \"\$interface\"..."
+FLUXIONLoadingWIDriverNotice="Esperando conexión de la interfaz: \"\$interface\" ..."
+FLUXIONFindingConflictingProcessesNotice="Buscando servicios..."
+FLUXIONKillingConflictingProcessesNotice="Cancelando servicios..."
+FLUXIONPhysicalWIDeviceUnknownError="${CRed}Imposible determinar la interfaz física del dispositivo!"
+FLUXIONStartingWIMonitorNotice="Comenzando a monitorear interfaz..."
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FLUXIONTargetSearchingInterfaceQuery="Selecciona una interfaz inalámbrica como objetivo de búsqueda."
+FLUXIONTargetTrackerInterfaceQuery="Selecciona una interfaz inalámbrica para rastrear."
+FLUXIONTargetTrackerInterfaceQueryTip="${CSYel}Es necesario seleccionar una interfaz dedicada.$CClr"
+FLUXIONTargetTrackerInterfaceQueryTip2="${CBRed}Si no estas seguro, selecciona \"${CBYel}Skip${CBRed}\"!$CClr"
+FLUXIONIncompleteTargettingInfoNotice="Falta información ESSID, BSSID, o canal!"
+FLUXIONTargettingAccessPointAboveNotice="Fluxion esta interceptando el punto de acceso."
+FLUXIONContinueWithTargetQuery="Continuar con el mismo objetivo?"
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FLUXIONStartingScannerNotice="Escaneando, por favor, espera..."
+FLUXIONStartingScannerTip="Cinco segundos después de que el punto de acceso aparezca, cierra el escáner de FLUXION (ctrl+c)."
+FLUXIONPreparingScannerResultsNotice="Sintetizando resultados de escaneo, por favor, espera..."
+FLUXIONScannerFailedNotice="Tarjeta inalámrica no soportada (no APs encontrados)"
+FLUXIONScannerDetectedNothingNotice="No se han detectado puntos de acceso, volviendo..."
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FLUXIONHashFileDoesNotExistError="¡No existe fichero Hash!"
+FLUXIONHashInvalidError="${CRed}Error$CClr, fichero hash incorrecto!"
+FLUXIONHashValidNotice="${CGrn}Success$CClr, verificación hash completada!"
+FLUXIONPathToHandshakeFileQuery="Introduzca una ruta para el fichero de handshake $CClr(Ejemplo: /.../dump-01.cap)"
+FLUXIONPathToHandshakeFileReturnTip="Volver atrás, deja la ruta en vacía."
+FLUXIONAbsolutePathInfo="Ruta absoluta"
+FLUXIONEmptyOrNonExistentHashError="${CRed}Error$CClr, no existen puntos de ruta o el fichero hash está vacío."
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FLUXIONScannerChannelQuery="Seleccione canal"
+FLUXIONScannerChannelOptionAll="Todos los canales "
+FLUXIONScannerChannelOptionSpecific="Canal(es) específico(s)"
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FLUXIONScannerChannelSingleTip="Canal único"
+FLUXIONScannerChannelMiltipleTip="Canales múltiples"
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FLUXIONScannerHeader="FLUXION Escáner"
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FLUXIONHashSourceQuery="Seleccione un método para recuperar el handshake"
+FLUXIONHashSourcePathOption="Ruta del fichero para capturar"
+FLUXIONHashSourceRescanOption="Handshake directory (rescan)"
+FLUXIONFoundHashNotice="A hash for the target AP was found."
+FLUXIONUseFoundHashQuery="¿Quieres usar este fichero?"
+FLUXIONUseFoundHashOption="Hash usado no encontrado"
+FLUXIONSpecifyHashPathOption="Especifique una ruta para el hash"
+FLUXIONHashVerificationMethodQuery="Seleccione un método de verificación para el hash"
+FLUXIONHashVerificationMethodPyritOption="verificación pyrit"
+FLUXIONHashVerificationMethodAircrackOption="verificación aircrack-ng (${CYel}unreliable$CClr)"
+FLUXIONHashVerificationMethodCowpattyOption="verificación cowpatty (${CGrn}recommended$CClr)"
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FLUXIONAttackQuery="Seleccione un ataque inalámbrico para el punto de acceso"
+FLUXIONAttackInProgressNotice="${CCyn}\$FluxionAttack$CClr ataque en progreso..."
+FLUXIONSelectAnotherAttackOption="Seleccione otro ataque"
+FLUXIONAttackResumeQuery="Este ataque ya esta configurado."
+FLUXIONAttackRestoreOption="Restaurar ataque"
+FLUXIONAttackResetOption="Resetear ataque"
+FLUXIONAttackRestartOption="Reiniciar"
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FLUXIONGeneralSkipOption="${CYel}Saltar"
+FLUXIONGeneralBackOption="${CRed}Atrás"
+FLUXIONGeneralExitOption="${CRed}Salir"
+FLUXIONGeneralRepeatOption="${CRed}Repetir"
+FLUXIONGeneralNotFoundError="No_Encontrado"
+FLUXIONGeneralXTermFailureError="${CRed}Error al inciar una sesión xterm (posible falta configuración)."
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+FLUXIONCleanupAndClosingNotice="Limpiando y cerrando"
+FLUXIONKillingProcessNotice="Cancelando ${CGry}\$targetID$CClr"
+FLUXIONRestoringPackageManagerNotice="Restaurando ${CCyn}\$PackageManagerCLT$CClr"
+FLUXIONDisablingMonitorNotice="Deshabilitando interfaz de monitoreo"
+FLUXIONDisablingExtraInterfacesNotice="Deshabilitando interfaz"
+FLUXIONDisablingPacketForwardingNotice="Deshabilitando ${CGry}reenvio de paquetes"
+FLUXIONDisablingCleaningIPTablesNotice="Limpiando ${CGry}iptables"
+FLUXIONRestoringTputNotice="Restaurando ${CGry}tput"
+FLUXIONDeletingFilesNotice="Borrando ${CGry}ficheros"
+FLUXIONRestartingNetworkManagerNotice="Reiniciando ${CGry}Network-Manager"
+FLUXIONCleanupSuccessNotice="Limpieza realizada satisfactoriamente!"
+FLUXIONThanksSupportersNotice="Gracias por usar FLUXION"
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# FLUXSCRIPT END
